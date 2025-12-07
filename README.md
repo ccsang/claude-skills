@@ -1,6 +1,10 @@
 # Claude Skills
 
-This repository contains a collection of skills for Claude Code.
+This repository contains a collection of skills for Claude Code and serves as a **Claude Plugin Marketplace**.
+
+## Plugin Marketplace
+You can install skills directly from this repository using Claude Code.
+Registry file: [.claude-plugin/marketplace.json](./.claude-plugin/marketplace.json)
 
 ## Skills
 

@@ -1,0 +1,14 @@
+{
+    "name": "claude-skills",
+    "owner": {
+        "name": "Claude Skills Team"
+    },
+    "plugins": [
+        {
+            "name": "gemini-image-generator",
+            "source": "./skills/gemini-image-generator",
+            "description": "Generate high-quality AI images using Google's Gemini API",
+            "version": "1.0.0"
+        }
+    ]
+}
