@@ -19,6 +19,7 @@
     "author": "Claude Skills User",
     "license": "MIT",
     "dependencies": {
+        "@google/genai": "^1.31.0",
         "@google/generative-ai": "^0.21.0",
         "@ybd-project/ytdl-core": "^6.0.8",
         "chalk": "^5.6.2",

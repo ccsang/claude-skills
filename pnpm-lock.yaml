@@ -35,6 +35,9 @@ importers:
 
   skills/ydl-js:
     dependencies:
+      '@google/genai':
+        specifier: ^1.31.0
+        version: 1.31.0
       '@google/generative-ai':
         specifier: ^0.21.0
         version: 0.21.0
