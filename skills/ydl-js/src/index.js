@@ -250,7 +250,13 @@ function ensureLanguageMatch(subtitles, lang) {
     if (langLower.startsWith('en')) {
         const asciiRatio = asciiChars / totalChars;
         return asciiRatio >= 0.6;
-    } else if (langLower.startsWith('zh') || langLower.startsWith('ja') || langLower.startsWith('ko')) {
+    } else if (langLower.startsWith('zh')) {
+        const hanMatches = allText.match(/[\u4e00-\u9fff]/g) || [];
+        const kanaMatches = allText.match(/[\u3040-\u30ff]/g) || [];
+        const hanRatio = hanMatches.length / totalChars;
+        const kanaRatio = kanaMatches.length / totalChars;
+        return hanRatio >= 0.2 && kanaRatio <= 0.1 && hanMatches.length >= kanaMatches.length * 2;
+    } else if (langLower.startsWith('ja') || langLower.startsWith('ko')) {
         const cjkMatches = allText.match(/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uac00-\ud7af]/g) || [];
         const cjkRatio = cjkMatches.length / totalChars;
         return cjkRatio >= 0.2;
@@ -283,7 +289,8 @@ async function translateSubtitles(subtitles, targetLang) {
 
     for (let i = 0; i < subtitles.length; i += chunkSize) {
         const chunk = subtitles.slice(i, i + chunkSize);
-        const prompt = `Translate the following subtitles to ${targetLang}.
+        const prompt = `Translate the following subtitles to Simplified Chinese (${targetLang}).
+Use Chinese characters and avoid Japanese kana (hiragana/katakana).
 Return ONLY JSON (no markdown code fences).
 Keep the same start and dur values; only translate text.
 Input JSON: ${JSON.stringify(chunk)}`;
