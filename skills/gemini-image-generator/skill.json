@@ -1,0 +1,51 @@
+{
+  "name": "gemini-image-generator",
+  "version": "1.0.0",
+  "description": "Generate high-quality AI images using Google's Gemini API with customizable aspect ratios and artistic themes",
+  "author": "Claude Code User",
+  "main": "index.js",
+  "commands": {
+    "generate-image": {
+      "description": "Generate AI images using Gemini API with customizable themes and aspect ratios",
+      "handler": "./src/commands/generate-image.js",
+      "usage": "/generate-image <prompt> [options]",
+      "examples": [
+        "/generate-image a serene mountain landscape at sunset --theme photorealistic --ratio 16:9",
+        "/generate-image abstract cyberpunk city --theme anime --ratio 1:1",
+        "/generate-image vintage car on country road --theme oil-painting --ratio 4:3"
+      ]
+    }
+  },
+  "dependencies": {
+    "required": ["@google-ai/generativelanguage", "google-auth-library"]
+  },
+  "env": {
+    "required": ["GEMINI_API_KEY"],
+    "optional": ["DEBUG_MODE", "DEFAULT_THEME", "DEFAULT_RATIO"]
+  },
+  "config": {
+    "supportedThemes": [
+      "photorealistic",
+      "anime",
+      "oil-painting",
+      "watercolor",
+      "digital-art",
+      "sketch",
+      "impressionist",
+      "surreal",
+      "cyberpunk",
+      "fantasy",
+      "vintage",
+      "minimalist"
+    ],
+    "supportedRatios": [
+      "1:1",
+      "4:3",
+      "16:9",
+      "3:2",
+      "2:1",
+      "9:16",
+      "3:4"
+    ]
+  }
+}

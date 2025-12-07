@@ -1,0 +1,35 @@
+{
+  "name": "gemini-image-generator",
+  "version": "1.0.0",
+  "description": "Claude Code skill for generating high-quality AI images using Google's Gemini API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "ai",
+    "image",
+    "generation",
+    "gemini",
+    "google"
+  ],
+  "author": "Claude Code User",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.31.0",
+    "@google/generative-ai": "^0.21.0",
+    "google-auth-library": "^9.4.0",
+    "mime": "^4.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,320 @@
+const { GoogleGenAI } = require('@google/genai');
+const fs = require('fs');
+const path = require('path');
+const mime = require('mime').default || require('mime');
+
+class GeminiImageClient {
+  constructor() {
+    this.apiKey = process.env.GEMINI_API_KEY;
+    if (!this.apiKey) {
+      throw new Error('GEMINI_API_KEY environment variable is required');
+    }
+
+    this.client = new GoogleGenAI({
+      apiKey: this.apiKey,
+    });
+    // Use model that supports image generation
+    this.model = 'gemini-3-pro-image-preview';
+  }
+
+  /**
+   * Generate an image using Gemini API with streaming support
+   * @param {string} prompt - The text prompt for image generation
+   * @param {Object} options - Generation options
+   * @param {string} options.theme - Artistic theme to apply
+   * @param {string} options.aspectRatio - Aspect ratio (e.g., "16:9", "1:1")
+   * @param {string} options.style - Additional style parameters
+   * @param {number} options.quality - Quality factor (1-100)
+   * @param {boolean} options.enableGoogleSearch - Enable Google Search tool
+   * @param {string} options.imageSize - Image size ('1K', '2K', etc.)
+   * @param {Function} options.onProgress - Callback for streaming progress
+   * @returns {Promise<Object>} Generated image data
+   */
+  async generateImage(prompt, options = {}) {
+    try {
+      const {
+        theme = 'photorealistic',
+        aspectRatio = '16:9',
+        style = '',
+        quality = 80,
+        enableGoogleSearch = false,
+        imageSize = '1K',
+        onProgress = null
+      } = options;
+
+      // Enhance prompt with theme and style
+      const enhancedPrompt = this.buildEnhancedPrompt(prompt, theme, style, aspectRatio);
+
+      console.log('Generating image with prompt:', enhancedPrompt);
+
+      // Configure tools
+      const tools = [];
+      if (enableGoogleSearch) {
+        tools.push({
+          googleSearch: {}
+        });
+      }
+
+      // Configure generation
+      const config = {
+        responseModalities: ['IMAGE', 'TEXT'],
+        imageConfig: {
+          imageSize: imageSize,
+        },
+        ...(tools.length > 0 && { tools }),
+      };
+
+      const contents = [
+        {
+          role: 'user',
+          parts: [
+            {
+              text: enhancedPrompt,
+            },
+          ],
+        },
+      ];
+
+      // Use streaming API
+      const response = await this.client.models.generateContentStream({
+        model: this.model,
+        config,
+        contents,
+      });
+
+      let fileIndex = 0;
+      const generatedImages = [];
+      const generatedText = [];
+
+      // Process streaming response
+      for await (const chunk of response) {
+        if (!chunk.candidates || !chunk.candidates[0].content || !chunk.candidates[0].content.parts) {
+          continue;
+        }
+
+        const parts = chunk.candidates[0].content.parts;
+
+        for (const part of parts) {
+          if (part.inlineData) {
+            const fileName = `generated_image_${fileIndex++}`;
+            const inlineData = part.inlineData;
+            const fileExtension = mime.getExtension(inlineData.mimeType || 'image/png');
+            const buffer = Buffer.from(inlineData.data || '', 'base64');
+
+            // Save the image
+            const savedPath = await this.saveImageBuffer(buffer, `${fileName}.${fileExtension}`);
+            generatedImages.push({
+              path: savedPath,
+              mimeType: inlineData.mimeType,
+              data: inlineData.data
+            });
+
+            // Call progress callback if provided
+            if (onProgress) {
+              onProgress({
+                type: 'image',
+                fileName: `${fileName}.${fileExtension}`,
+                path: savedPath,
+                index: generatedImages.length - 1
+              });
+            }
+          } else if (part.text) {
+            generatedText.push(part.text);
+            console.log(part.text);
+
+            // Call progress callback if provided
+            if (onProgress) {
+              onProgress({
+                type: 'text',
+                content: part.text
+              });
+            }
+          }
+        }
+      }
+
+      if (generatedImages.length === 0) {
+        throw new Error('No images generated - empty response from Gemini');
+      }
+
+      return {
+        success: true,
+        images: generatedImages,
+        text: generatedText.join(' '),
+        metadata: {
+          prompt: enhancedPrompt,
+          theme: theme,
+          aspectRatio: aspectRatio,
+          quality: quality,
+          imageSize: imageSize,
+          enableGoogleSearch: enableGoogleSearch,
+          model: this.model,
+          timestamp: new Date().toISOString()
+        }
+      };
+
+    } catch (error) {
+      console.error('Gemini API error:', error);
+      return {
+        success: false,
+        error: error.message,
+        metadata: {
+          timestamp: new Date().toISOString()
+        }
+      };
+    }
+  }
+
+  /**
+   * Build an enhanced prompt that includes theme and style information
+   * @param {string} basePrompt - Original user prompt
+   * @param {string} theme - Artistic theme
+   * @param {string} style - Additional style
+   * @param {string} aspectRatio - Target aspect ratio
+   * @returns {string} Enhanced prompt
+   */
+  buildEnhancedPrompt(basePrompt, theme, style, aspectRatio) {
+    const themePrompts = {
+      'photorealistic': 'photorealistic, highly detailed, professional photography, natural lighting, realistic textures',
+      'anime': 'anime style, manga art, Japanese animation style, vibrant colors, clean lines',
+      'oil-painting': 'oil painting, classical art, brush strokes visible, rich textures, artistic masterpiece',
+      'watercolor': 'watercolor painting, soft edges, transparent colors, wet on wet technique, artistic',
+      'digital-art': 'digital art, modern illustration, clean, professional digital artwork',
+      'sketch': 'pencil sketch, charcoal drawing, black and white, detailed line work',
+      'impressionist': 'impressionist style, loose brush strokes, play of light, artistic interpretation',
+      'surreal': 'surrealism, dreamlike, abstract, imaginative, otherworldly',
+      'cyberpunk': 'cyberpunk aesthetic, neon colors, futuristic, sci-fi, high-tech low-life',
+      'fantasy': 'fantasy art, magical, ethereal, mythical, imaginative',
+      'vintage': 'vintage style, retro, aged, classic, nostalgic feel',
+      'minimalist': 'minimalist design, clean, simple, reduced complexity, essential elements'
+    };
+
+    const ratioPrompts = {
+      '1:1': 'square composition, balanced',
+      '16:9': 'wide landscape, cinematic composition',
+      '4:3': 'standard composition, traditional',
+      '3:2': 'photography standard, well-balanced',
+      '2:1': 'panoramic, wide format',
+      '9:16': 'portrait orientation, vertical composition',
+      '3:4': 'vertical portrait, traditional'
+    };
+
+    const themeDescription = themePrompts[theme] || themePrompts['photorealistic'];
+    const ratioDescription = ratioPrompts[aspectRatio] || ratioPrompts['16:9'];
+
+    let enhancedPrompt = `Generate a ${themeDescription} image of: ${basePrompt}. `;
+
+    enhancedPrompt += `The image should have a ${ratioDescription} aspect ratio. `;
+
+    if (style) {
+      enhancedPrompt += `Additional style: ${style}. `;
+    }
+
+    enhancedPrompt += 'Ensure high quality, artistic merit, and attention to detail.';
+
+    return enhancedPrompt;
+  }
+
+  /**
+   * Extract image data from Gemini response parts
+   * @param {Array} parts - Response parts from Gemini
+   * @returns {string|null} Base64 image data or null if not found
+   */
+  extractImageData(parts) {
+    for (const part of parts) {
+      if (part.inlineData && part.inlineData.data) {
+        return part.inlineData.data; // Base64 image data
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Save generated image buffer to file
+   * @param {Buffer} buffer - Image buffer data
+   * @param {string} filename - Output filename
+   * @param {string} outputDir - Output directory
+   * @returns {Promise<string>} Path to saved file
+   */
+  async saveImageBuffer(buffer, filename, outputDir = './output') {
+    try {
+      // Create output directory if it doesn't exist
+      if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+      }
+
+      const filePath = path.join(outputDir, filename);
+
+      await fs.promises.writeFile(filePath, buffer);
+      console.log(`File ${filename} saved to file system.`);
+      return filePath;
+    } catch (error) {
+      console.error('Error saving image buffer:', error);
+      throw new Error(`Failed to save image buffer: ${error.message}`);
+    }
+  }
+
+  /**
+   * Save generated image to file (legacy method for backward compatibility)
+   * @param {string} imageData - Base64 image data
+   * @param {string} filename - Output filename
+   * @param {string} outputDir - Output directory
+   * @returns {Promise<string>} Path to saved file
+   */
+  async saveImage(imageData, filename, outputDir = './output') {
+    try {
+      const buffer = Buffer.from(imageData, 'base64');
+      return await this.saveImageBuffer(buffer, filename, outputDir);
+    } catch (error) {
+      console.error('Error saving image:', error);
+      throw new Error(`Failed to save image: ${error.message}`);
+    }
+  }
+
+  /**
+   * Generate unique filename for image
+   * @param {string} prompt - Original prompt
+   * @param {string} theme - Theme used
+   * @returns {string} Unique filename
+   */
+  generateFilename(prompt, theme) {
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const promptSlug = prompt.toLowerCase().replace(/[^a-z0-9]/g, '-').slice(0, 20);
+    return `${promptSlug}-${theme}-${timestamp}.png`;
+  }
+
+  /**
+   * Validate API key and connection
+   * @returns {Promise<boolean>} True if API is accessible
+   */
+  async validateConnection() {
+    try {
+      // Simple test with streaming
+      const response = await this.client.models.generateContentStream({
+        model: this.model,
+        config: {
+          responseModalities: ['TEXT'],
+        },
+        contents: [
+          {
+            role: 'user',
+            parts: [{ text: 'Hello' }],
+          },
+        ],
+      });
+
+      // Try to read first chunk
+      for await (const chunk of response) {
+        if (chunk.text) {
+          return true;
+        }
+      }
+      return true;
+    } catch (error) {
+      console.error('API connection validation failed:', error.message);
+      return false;
+    }
+  }
+}
+
+module.exports = GeminiImageClient;
