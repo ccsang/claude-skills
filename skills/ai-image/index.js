@@ -4,7 +4,7 @@ const GenerateImageCommand = require('./src/commands/generate-image');
 class GeminiImageGeneratorSkill extends Skill {
   constructor() {
     super();
-    this.name = 'gemini-image-generator';
+    this.name = 'ai-image';
     this.version = '1.0.0';
   }
 

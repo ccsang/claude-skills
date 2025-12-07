@@ -1,0 +1,30 @@
+{
+    "name": "ydl-js",
+    "version": "1.0.0",
+    "description": "A fast, reliable YouTube subtitle downloader library and CLI tool",
+    "type": "module",
+    "main": "src/index.js",
+    "bin": {
+        "ydl-js": "./bin/ydl-js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "youtube",
+        "subtitle",
+        "downloader",
+        "cli"
+    ],
+    "author": "Claude Skills User",
+    "license": "MIT",
+    "dependencies": {
+        "@google/generative-ai": "^0.21.0",
+        "@ybd-project/ytdl-core": "^6.0.8",
+        "chalk": "^5.6.2",
+        "commander": "^14.0.2",
+        "dotenv": "^17.2.3",
+        "ora": "^9.0.0",
+        "youtube-caption-extractor": "^1.9.1"
+    }
+}

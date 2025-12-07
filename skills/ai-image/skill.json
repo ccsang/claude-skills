@@ -1,5 +1,5 @@
 {
-  "name": "gemini-image-generator",
+  "name": "ai-image",
   "version": "1.0.0",
   "description": "Generate high-quality AI images using Google's Gemini API with customizable aspect ratios and artistic themes",
   "author": "Claude Code User",
@@ -17,11 +17,20 @@
     }
   },
   "dependencies": {
-    "required": ["@google-ai/generativelanguage", "google-auth-library"]
+    "required": [
+      "@google-ai/generativelanguage",
+      "google-auth-library"
+    ]
   },
   "env": {
-    "required": ["GEMINI_API_KEY"],
-    "optional": ["DEBUG_MODE", "DEFAULT_THEME", "DEFAULT_RATIO"]
+    "required": [
+      "GEMINI_API_KEY"
+    ],
+    "optional": [
+      "DEBUG_MODE",
+      "DEFAULT_THEME",
+      "DEFAULT_RATIO"
+    ]
   },
   "config": {
     "supportedThemes": [

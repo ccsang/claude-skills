@@ -1,4 +1,4 @@
-# Gemini Image Generator Claude Code Skill
+# AI Image Generator Claude Code Skill
 
 A powerful Claude Code skill that generates high-quality AI images using Google's Gemini API with customizable aspect ratios and artistic themes.
 
@@ -35,16 +35,18 @@ A powerful Claude Code skill that generates high-quality AI images using Google'
 
 ## Usage
 
+To generate an image, run the `scripts/generate.js` script using `node`.
+
 ### Basic Command
 
 ```bash
-/generate-image "a serene mountain landscape at sunset"
+node skills/ai-image/scripts/generate.js "a serene mountain landscape at sunset"
 ```
 
 ### Advanced Usage with Options
 
 ```bash
-/generate-image "futuristic cyberpunk city" --theme anime --ratio 16:9 --save
+node skills/ai-image/scripts/generate.js "futuristic cyberpunk city" --theme anime --ratio 16:9 --save
 ```
 
 ### Command Options
@@ -55,7 +57,7 @@ A powerful Claude Code skill that generates high-quality AI images using Google'
 | `--ratio` | `-r` | string | Aspect ratio of the image | `16:9` | See ratios below |
 | `--style` | `-s` | string | Additional style description | `""` | Any text |
 | `--quality` | `-q` | number | Image quality (1-100) | `80` | 1-100 |
-| `--save` | | boolean | Save the generated image to file | `false` | |
+| `--save` | | boolean | Save the generated image to file | `true` | |
 | `--output-dir` | | string | Output directory for saved images | `./output` | |
 | `--filename` | | string | Custom filename (without extension) | Auto-generated | |
 | `--verbose` | `-v` | boolean | Enable verbose output | `false` | |
@@ -89,27 +91,27 @@ A powerful Claude Code skill that generates high-quality AI images using Google'
 
 ### 1. Generate a realistic landscape
 ```bash
-/generate-image "a serene mountain landscape at sunset" --theme photorealistic --ratio 16:9
+node skills/ai-image/scripts/generate.js "a serene mountain landscape at sunset" --theme photorealistic --ratio 16:9
 ```
 
 ### 2. Create anime-style character art
 ```bash
-/generate-image "futuristic cyberpunk character" --theme anime --ratio 1:1 --save
+node skills/ai-image/scripts/generate.js "futuristic cyberpunk character" --theme anime --ratio 1:1 --save
 ```
 
 ### 3. Generate artistic painting
 ```bash
-/generate-image "vintage car on country road" --theme oil-painting --ratio 4:3 --save --output-dir ./artwork
+node skills/ai-image/scripts/generate.js "vintage car on country road" --theme oil-painting --ratio 4:3 --save --output-dir ./artwork
 ```
 
 ### 4. Create surreal abstract art
 ```bash
-/generate-image "abstract geometric patterns" --theme surreal --ratio 1:1 --style "vibrant colors, flowing shapes" --save
+node skills/ai-image/scripts/generate.js "abstract geometric patterns" --theme surreal --ratio 1:1 --style "vibrant colors, flowing shapes" --save
 ```
 
 ### 5. Generate minimalist design
 ```bash
-/generate-image "clean geometric logo" --theme minimalist --ratio 1:1 --quality 100 --save
+node skills/ai-image/scripts/generate.js "clean geometric logo" --theme minimalist --ratio 1:1 --quality 100 --save
 ```
 
 ## Output
@@ -173,11 +175,13 @@ This skill uses Google's Gemini API with the `gemini-2.0-flash-exp-image-generat
 ## File Structure
 
 ```
-gemini-image-generator/
+ai-image/
 ├── skill.json              # Skill configuration
 ├── index.js               # Main skill entry point
 ├── package.json           # Node.js dependencies
 ├── README.md             # This documentation
+├── scripts/
+│   └── generate.js        # Standalone execution script
 ├── src/
 │   ├── commands/
 │   │   └── generate-image.js  # Main command handler

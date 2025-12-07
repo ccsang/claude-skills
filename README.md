@@ -8,8 +8,9 @@ Registry file: [.claude-plugin/marketplace.json](./.claude-plugin/marketplace.js
 
 ## Skills
 
-### [Gemini Image Generator](./skills/gemini-image-generator)
-A skill that allows Claude to generate images using Google's Gemini API.
+###*   [AI Image Generator](skills/ai-image/README.md)- `ai-image`: Generate images using Google Gemini.
+*   [YouTube Subtitle Downloader](skills/ydl-js/README.md)- `ydl-js`: Download YouTube subtitles.
+*   [YouTube Search](skills/youtube-search/README.md)- `youtube-search`: Search for YouTube videos.
 Features:
 - Text-to-Image generation
 - Streaming support

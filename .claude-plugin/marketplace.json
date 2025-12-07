@@ -1,14 +1,18 @@
 {
     "name": "claude-skills",
     "owner": {
-        "name": "Claude Skills Team"
+        "name": "CCSang"
     },
     "plugins": [
         {
-            "name": "gemini-image-generator",
-            "source": "./skills/gemini-image-generator",
-            "description": "Generate high-quality AI images using Google's Gemini API",
-            "version": "1.0.0"
+            "name": "claude-skills",
+            "source": "./",
+            "skills": [
+                "./skills/ai-image",
+                "skills/ydl-js",
+                "skills/youtube-search"
+            ],
+            "description": "Collection of Claude Code skills"
         }
     ]
 }

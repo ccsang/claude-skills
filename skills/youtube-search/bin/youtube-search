@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+import { Command } from 'commander';
+import chalk from 'chalk';
+import ora from 'ora';
+import { searchVideos } from '../src/index.js';
+
+const program = new Command();
+
+program
+  .name('youtube-search')
+  .description('Search for YouTube videos')
+  .version('1.0.0')
+  .argument('<query>', 'Search query')
+  .option('-n, --max-results <number>', 'Maximum number of results', '5')
+  .action(async (query, options) => {
+    const spinner = ora('Searching YouTube...').start();
+    try {
+      const results = await searchVideos(query, parseInt(options.maxResults));
+      spinner.succeed(`Found ${results.length} videos for "${query}"`);
+
+      results.forEach((video, index) => {
+        console.log(chalk.bold(`${index + 1}. ${video.title}`));
+        console.log(chalk.gray(`   Channel: ${video.channelTitle}`));
+        console.log(chalk.blue.underline(`   URL: ${video.url}`));
+        console.log('');
+      });
+    } catch (error) {
+      spinner.fail(chalk.red(error.message));
+      process.exit(1);
+    }
+  });
+
+program.parse();

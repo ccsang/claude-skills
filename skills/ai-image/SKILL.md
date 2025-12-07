@@ -1,8 +1,8 @@
 ---
-name: gemini-image-generator
+name: ai-image
 description: Generate high-quality AI images using Google's Gemini API with customizable aspect ratios and artistic themes.
 ---
-# Gemini Image Generator Skill
+# AI Image Generator Skill
 
 ## Description
 Generate high-quality AI images using Google's Gemini API with customizable aspect ratios and artistic themes.
@@ -13,7 +13,7 @@ To generate an image, run the `scripts/generate.js` script using `node` or the `
 
 **Syntax**:
 ```bash
-node skills/gemini-image-generator/scripts/generate.js "<prompt>" [options]
+node skills/ai-image/scripts/generate.js "<prompt>" [options]
 ```
 
 **Options**:
@@ -29,8 +29,8 @@ node skills/gemini-image-generator/scripts/generate.js "<prompt>" [options]
 
 **Examples**:
 ```bash
-node skills/gemini-image-generator/scripts/generate.js "a serene mountain landscape" --theme photorealistic --ratio 16:9
-node skills/gemini-image-generator/scripts/generate.js "cyberpunk city" --theme anime --ratio 1:1 --output-dir ./my-images
+node skills/ai-image/scripts/generate.js "a serene mountain landscape" --theme photorealistic --ratio 16:9
+node skills/ai-image/scripts/generate.js "cyberpunk city" --theme anime --ratio 1:1 --output-dir ./my-images
 ```
 
 **Output**:

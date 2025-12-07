@@ -1,4 +1,4 @@
-# Gemini Image Generator Skill - 使用指南
+# AI Image Generator Skill - 使用指南
 
 ## 🎯 技能概述
 
@@ -15,12 +15,12 @@ export GEMINI_API_KEY="your_gemini_api_key_here"
 
 #### 基础命令
 ```
-/generate-image "a beautiful sunset over mountains"
+node scripts/generate.js "a beautiful sunset over mountains"
 ```
 
 #### 完整选项命令
 ```
-/generate-image "futuristic cyberpunk city" --theme anime --ratio 16:9 --save --quality 95
+node scripts/generate.js "futuristic cyberpunk city" --theme anime --ratio 16:9 --save --quality 95
 ```
 
 ## 🎨 支持的艺术主题
@@ -56,27 +56,27 @@ export GEMINI_API_KEY="your_gemini_api_key_here"
 
 ### 示例 1: 生成真实风景
 ```bash
-/generate-image "serene mountain landscape at sunset with golden light" --theme photorealistic --ratio 16:9 --save
+node scripts/generate.js "serene mountain landscape at sunset with golden light" --theme photorealistic --ratio 16:9 --save
 ```
 
 ### 示例 2: 动漫角色
 ```bash
-/generate-image "futuristic cyberpunk character with neon accessories" --theme anime --ratio 1:1 --quality 95 --save
+node scripts/generate.js "futuristic cyberpunk character with neon accessories" --theme anime --ratio 1:1 --quality 95 --save
 ```
 
 ### 示例 3: 艺术绘画
 ```bash
-/generate-image "vintage car on country road" --theme oil-painting --ratio 4:3 --style "impressionist style" --save --output-dir ./artwork
+node scripts/generate.js "vintage car on country road" --theme oil-painting --ratio 4:3 --style "impressionist style" --save --output-dir ./artwork
 ```
 
 ### 示例 4: 抽象艺术
 ```bash
-/generate-image "geometric patterns with flowing shapes" --theme surreal --ratio 1:1 --style "vibrant colors" --quality 90
+node scripts/generate.js "geometric patterns with flowing shapes" --theme surreal --ratio 1:1 --style "vibrant colors" --quality 90
 ```
 
 ### 示例 5: 极简设计
 ```bash
-/generate-image "clean geometric logo" --theme minimalist --ratio 1:1 --save --filename my-logo
+node scripts/generate.js "clean geometric logo" --theme minimalist --ratio 1:1 --save --filename my-logo
 ```
 
 ## ⚙️ 命令选项
@@ -96,19 +96,19 @@ export GEMINI_API_KEY="your_gemini_api_key_here"
 
 ### 调试模式
 ```bash
-/generate-image "test image" --verbose
+node scripts/generate.js "test image" --verbose
 ```
 
 ### 批量生成
 ```bash
-/generate-image "mountain landscape" --theme photorealistic --save
-/generate-image "same mountain" --theme anime --save
-/generate-image "same mountain" --theme watercolor --save
+node scripts/generate.js "mountain landscape" --theme photorealistic --save
+node scripts/generate.js "same mountain" --theme anime --save
+node scripts/generate.js "same mountain" --theme watercolor --save
 ```
 
 ### 自定义保存路径
 ```bash
-/generate-image "my artwork" --save --output-dir ~/Documents/AI_Art --filename my-masterpiece
+node scripts/generate.js "my artwork" --save --output-dir ~/Documents/AI_Art --filename my-masterpiece
 ```
 
 ## ✅ 输入验证

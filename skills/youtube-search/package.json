@@ -1,0 +1,22 @@
+{
+    "name": "youtube-search",
+    "version": "1.0.0",
+    "description": "Claude Code skill for searching YouTube videos",
+    "type": "module",
+    "main": "src/index.js",
+    "bin": {
+        "youtube-search": "bin/youtube-search"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Claude Code User",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "commander": "^12.0.0",
+        "dotenv": "^16.4.5",
+        "googleapis": "^133.0.0",
+        "ora": "^8.0.1"
+    }
+}
