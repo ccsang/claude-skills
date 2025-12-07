@@ -3,7 +3,7 @@
 This document guides AI agents interacting with this repository.
 
 ## Project Overview
-This repository hosts a collection of "skills" for Claude Code. It is structured as a monorepo using **pnpm workspaces**.
+This repository hosts a collection of "skills" for Claude Code. It is structured as a monorepo using **pnpm workspaces**. The workspace lives at `/Users/xixiaohai/code/claude-skills`—start sessions by running `cd /Users/xixiaohai/code/claude-skills`.
 
 ## Architecture & Structure
 - **Package Manager**: `pnpm` (required for workspaces).
@@ -14,8 +14,9 @@ This repository hosts a collection of "skills" for Claude Code. It is structured
     - The root `package.json` scripts (`test`, etc.) generally delegate to these workspaces.
 
 ### Current Skills
-- **Gemini Image Generator**: `skills/gemini-image-generator`
-    - Uses Google's Gemini API for image generation.
+- **AI Image Generator**: `skills/ai-image`
+- **YouTube Subtitle Downloader**: `skills/ydl-js`
+- **YouTube Search**: `skills/youtube-search`
 
 ## Development Guidelines
 

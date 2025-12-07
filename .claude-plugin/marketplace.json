@@ -9,10 +9,10 @@
             "source": "./",
             "skills": [
                 "./skills/ai-image",
-                "skills/ydl-js",
-                "skills/youtube-search"
+                "./skills/ydl-js",
+                "./skills/youtube-search"
             ],
-            "description": "Collection of Claude Code skills"
+            "description": "Collection of Claude Code skills (workspace at /Users/xixiaohai/code/claude-skills; run commands after cd into that path)"
         }
     ]
 }
