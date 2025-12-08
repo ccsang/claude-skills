@@ -41,7 +41,7 @@ export async function downloadSubtitles(videoId, lang = 'en') {
         }
 
         // Validate language heuristically to avoid silent fallbacks.
-        const languageLooksRight = ensureLanguageMatch(subtitles, lang);
+        const languageLooksRight = await ensureLanguageMatch(subtitles, lang);
         if (languageLooksRight) {
             return subtitles;
         }
@@ -229,41 +229,92 @@ async function fetchTimedtextSubtitles(videoId, lang) {
 }
 
 /**
- * Heuristic language guard: fail if subtitles do not resemble requested language.
+ * Guard: fail if subtitles do not match requested language.
+ * Uses Gemini API if available, otherwise falls back to a permissive heuristic.
  * @param {Array<{text: string}>} subtitles
  * @param {string} lang
+ * @returns {Promise<boolean>}
  */
-function ensureLanguageMatch(subtitles, lang) {
+async function ensureLanguageMatch(subtitles, lang) {
     if (!subtitles || subtitles.length === 0) {
         return false;
     }
 
-    const allText = subtitles.map(s => s.text || '').join(' ');
-    if (!allText.trim()) {
-        return false;
+    const hasGeminiKey = Boolean(getGeminiApiKey());
+    if (hasGeminiKey) {
+        try {
+            return await detectLanguageWithGemini(subtitles, lang);
+        } catch (e) {
+            console.warn(`Gemini language detection failed: ${e.message}. Falling back to heuristic.`);
+        }
     }
 
-    const totalChars = allText.length;
-    const asciiChars = allText.replace(/[^\x00-\x7F]/g, '').length;
+    // Permissive Fallback Heuristic
+    // Only fail if it looks heavily like English but the user asked for something else (e.g. Chinese).
+    // This allows French/Spanish ASCII, Symbols, etc. to pass through.
+
+    const allText = subtitles.slice(0, 50).map(s => s.text || '').join(' '); // Sample first 50 lines
+    if (!allText.trim()) return false;
+
     const langLower = lang.toLowerCase();
 
-    if (langLower.startsWith('en')) {
-        const asciiRatio = asciiChars / totalChars;
-        return asciiRatio >= 0.6;
-    } else if (langLower.startsWith('zh')) {
-        const hanMatches = allText.match(/[\u4e00-\u9fff]/g) || [];
-        const kanaMatches = allText.match(/[\u3040-\u30ff]/g) || [];
-        const hanRatio = hanMatches.length / totalChars;
-        const kanaRatio = kanaMatches.length / totalChars;
-        return hanRatio >= 0.2 && kanaRatio <= 0.1 && hanMatches.length >= kanaMatches.length * 2;
-    } else if (langLower.startsWith('ja') || langLower.startsWith('ko')) {
-        const cjkMatches = allText.match(/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uac00-\ud7af]/g) || [];
-        const cjkRatio = cjkMatches.length / totalChars;
-        return cjkRatio >= 0.2;
-    } else {
-        // For other languages, just ensure we didn't silently fall back to empty/ASCII-only.
-        const asciiRatio = asciiChars / totalChars;
-        return asciiRatio <= 0.95;
+    // If user asked for English, and we rely on heuristic, it's usually safe to accept unless it's obviously CJK.
+    // But honestly, the main failure mode we want to prevent is: User asks for Zh, YT gives En.
+
+    if (langLower.startsWith('zh') || langLower.startsWith('ja') || langLower.startsWith('ko')) {
+        // If target is CJK, but text is > 80% ASCII/Latin, it's likely English fallback.
+        const totalChars = allText.length;
+        const asciiChars = allText.replace(/[^\x00-\x7F]/g, '').length;
+        if (asciiChars / totalChars > 0.8) {
+            console.warn(`Heuristic check: Requested ${lang} but text is >80% ASCII. Rejecting.`);
+            return false;
+        }
+    }
+
+    return true; // Default to trust
+}
+
+async function detectLanguageWithGemini(subtitles, targetLang) {
+    const apiKey = getGeminiApiKey();
+    // Use the already imported GoogleGenerativeAI class
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-001" });
+
+    // Sample representative text
+    const sample = subtitles
+        .slice(0, 30) // First 30 lines
+        .map(s => s.text)
+        .join('\n');
+
+    const prompt = `Identify the primary language of the following text SAMPLE. 
+Return strictly a JSON object with a single key "language_code" (ISO 639-1, e.g. "en", "zh", "fr").
+SAMPLE:
+${sample}`;
+
+    const result = await model.generateContent(prompt);
+    const responseText = result.response.text();
+    const cleanJson = responseText.replace(/```json|```/g, '').trim();
+
+    try {
+        const parsed = JSON.parse(cleanJson);
+        const detected = parsed.language_code ? parsed.language_code.toLowerCase() : 'unknown';
+        const target = targetLang.toLowerCase().split('-')[0]; // simple match: zh-CN -> zh
+
+        console.log(`Gemini detected language: ${detected} (Target: ${target})`);
+
+        // Exact match or strict mismatch check
+        if (detected === target) return true;
+
+        // Special case: Chinese vs Cantonese vs Mandarin might all map strangely, but usually 'zh' covers it.
+        // If detected is 'unknown', assume yes to be safe.
+        if (detected === 'unknown') return true;
+
+        // If detected is completely different (e.g. en vs zh), fail.
+        return false;
+
+    } catch (e) {
+        console.warn('Failed to parse Gemini language response:', responseText);
+        return true; // Fail open
     }
 }
 
