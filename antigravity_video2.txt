@@ -1,0 +1,362 @@
+Hello all, my name is Prash Nayak and
+welcome to my YouTube channel. So guys
+uh recently Google has announced its own
+ID which is called as Google
+anti-gravity
+and this specific ID is like a next
+generation ID which supports agentic AI
+development and all uh you will be able
+to it's it's kind of a competitor for
+cursor also uh VS code also and I have I
+hope you have seen me making
+applications in VS code in cursor. So in
+this specific video, this is the first
+time that I'm using this. Uh I have just
+downloaded the .exe file. Uh we'll make
+this video a little bit interesting. Uh
+so that you'll also understand that how
+I specifically do my research, how uh I
+like any new thing comes, you know, uh
+how do I probably go ahead with it? You
+know, what are the important things that
+I usually check, right? So please make
+sure that you watch this video till the
+end. we will go ahead step by step in
+understanding what all uh amazing things
+this ID can actually do. Okay. So first
+of all uh the Google anti-gravity here
+you can see that it is the next
+generation ID. Here you have lot of use
+cases like here you have three main use
+cases. Uh if I probably talk about one
+is professional, front end and full
+stack. When we talk about professional,
+at its core, anti-gravity is still a
+fully featured AI ID, but the agent
+manager provides a new mission control
+surface for background agents to tackle
+backlog task, perform codebased
+research, and reduce context switching.
+Okay. And recently, if you know, Google
+has also come up with its Giny 3 uh and
+five. By far, it is probably the best
+model, I guess, uh because uh we were
+seeing the metrics, it was very very
+good when compared to the other models,
+right? And if you can see over here if I
+just go ahead and click on explore use
+cases uh with respect to professionals
+uh you can do a lot of task here you can
+see Google anti-gravity streamlined
+workflows by offering tools for
+parallelization customization and
+efficient knowledge management
+um and there are like you know
+background agents codebased
+understanding uh you can actually do
+reduce context switching build for trust
+and there are a lot of videos also which
+we which you can also see for this right
+and then You have another features like
+for front end you can use browser in the
+loop iteration that basically means if
+you're doing the coding probably on the
+left hand side on the right hand side
+you can directly see how the UI may
+actually look right so that will
+actually give you the visual feedback
+which is really really good uh you know
+because you have a kind of a browser
+integration kind of stuff over there
+right and there is also one more which
+is called as full stack uh it places an
+emphasis on verification communication
+to user via artifacts and all Right. And
+here uh there is also kind of pricing uh
+individual plan. This is the best thing
+about Google. It launches everything for
+free. So here you have $0 per month. And
+uh you will be having access to Gemini 3
+Pro which is good. Cloud set 4.5 which
+uh you know cloud code also has this
+specific model GPT OSS which is an open
+source model also right? Unlimited tab
+completion unlimited command request
+generous rate limit. So this is the best
+thing about Google. It provides you for
+free. It has huge amount of money. So
+you can go ahead and try it out. Okay.
+Now let's go ahead and download it. So
+for downloading all you have to do is
+just click over here. I have already
+downloaded it over here. Right. And uh
+as soon I started the execution. Here
+you can see that the first option that I
+got was to choose the editor theme type.
+Uh I have selected dark. And here you
+can see there are a lot of options.
+Agentdriven development, agent assisted
+development, reviewdriven development,
+custom configuration. So let's say that
+you are a kind of a VIP coding guy. You
+can go ahead with agent-driven
+development. But I would like to have
+agent assisted development because I
+still believe I'm a good developer and
+uh review policies. Agent decides here
+you can also select always proceed
+request review. Uh all these things are
+so right now we'll keep this use the
+default alloy list for the browser. I'll
+go ahead and select next. Configure your
+keyboard binding. There is options
+normal. uh there are some seven
+extensions popular extension it is going
+to install and it is also going to have
+a command line tool to open anti-gravity
+with agy okay now I can go ahead and
+sign it with Google I will go ahead and
+use one of my email id for doing that
+and once I do that I think we should be
+able to open the anti-gravity perfect so
+now it is setting up as our account okay
+we'll go step by step I'm also using it
+for the first time okay so this looks
+code here you can see uh the UI is is
+almost like VS code but VS code has more
+information right uh here I've also
+opened cursor so you can see cursor is
+over here okay and in the cursor also
+you'll be able to find uh on the right
+hand side there will be a chat for the
+agent and all right so this is how my
+anti-gravity this looks like I can open
+my folder so let's say that I go ahead
+and open any of the project So many
+different projects that I have actually
+created you know. So let's open some
+cloudy projects stock rack. Okay I I'll
+just open this particular project. Okay
+just type trust author. So this is my
+entire project structure. Again it looks
+good over here. Let me hide my face so
+that you'll be able to see this. Uh this
+is the agent here. You can actually do
+planning each and everything. I'll
+dismiss this. Okay. See planning fast
+agent can plan before executing task.
+Use for deep research and all. agent
+will execute the task directly used for
+simple task that can be compiled faster
+and here you have lot of options with
+respect to the model again as said it is
+free for a specific user you can go
+ahead and try it out right so here I'll
+just go ahead and ask a question uh
+explain me about the code base okay so
+now probably we'll go ahead and hit this
+particular request and see uh it is
+examining the code structure it is fast
+it is fast this is really good I think
+I'm going to probably switch to the
+anti-gravity. Um, but still I have that
+very good feeling about VS Code because
+I've been using it for a long time. But,
+uh, this looks good, you know, and uh,
+let me just zoom in so that you will
+also be able to see this. So, here it is
+analyzing all the projects uh, run
+injection, run API. So, I've created a
+lot many things over here, right? So,
+here is my source folder. I have this
+embedding. I I was basically creating a
+rag application. So here you'll be able
+to see everything and it is doing really
+fast is using this Germany 3 pro and it
+is probably making that specific
+decisions quickly right this is good and
+this free version can definitely be very
+very important for all the people out
+there who do not like to pay any kind of
+money for the pro version. So getting
+started to run the system you typically
+set up your environment with open AI API
+key python run this one python run API
+to start the server each and every
+information you are basically given uh
+let's say that I go ahead and ask can
+you provide some
+improvements on the code
+on the code
+just
+suggest okay so let's say that I've
+again asked some of the questions uh
+we'll see some more uh options with this
+coding agent edit code in line all the
+things uh one by one okay so here you
+can see I'm diving into this this this
+all the information is there reading
+vector stroke crawl and implementation
+everything is there okay um then we will
+see this three important functionalities
+that it has right and I feel this is the
+future guys uh you have to probably do
+the development with the help of agents
+uh that is what we can actually see okay
+uh one thing that I could not see over
+Here just a second if I go ahead and
+write okay images option is also there
+workflow option is also there mention
+you can add context based on this but I
+did not see any MCP options uh which
+usually cursor usually uh cloud code
+usually has but this does not have that
+basically means it is just focusing on
+itself I've analyzed the core and list
+recommended uh this one uh recommended
+improvements so here you can see all the
+information is basically there now let's
+uh do one thing let's uh open the agent
+agent manager once I'll just go ahead
+and press Ctrl E. So here you can see
+that uh it is an agent manager. You can
+start the conversation. Uh here is the
+agent manager. When you do ctrl E agent
+manager basically uh uh it it starts
+agents on task like deep research
+longunning projects or background task
+you can monitor the progress of multiple
+agents and all are there right? So I'll
+go ahead and say okay you can probably
+open any number of agents in short.
+Right? So that is what this is all
+about. Uh if you want to try coding with
+code with agents uh I will just press
+Ctrl L which is this one. Okay. And edit
+code inline Ctrl I. Let's open my fun
+file. Ctrl I. So here you can see do you
+want to install the uh recommended
+Python extension for MS Python? Yes,
+I'll go ahead and install it. So here
+you can go ahead and install any kind of
+uh um you know extensions that you
+specifically require. And if you really
+want to start with any kind of ID, you
+need to have installation of Python and
+all, right? If you want to go ahead and
+start it, right? So if you want to go
+ahead and execute it. So that that
+option is there. So you you can go ahead
+and install it. I will close this. Okay.
+So mostly these are the functions. Along
+with this, you have this one. You have
+options of committing the code. All the
+ID functionality is almost same. Nothing
+so different. But I think this three are
+there. The best thing for the user is
+that you have you use it completely for
+free. You can actually work with uh any
+kind of agents over here. You can do
+wipe coding. Uh the look and feel um I
+would not say exactly it is like VS
+code. It is a little bit different but
+you know at the end of the day you don't
+have to do anything you need you if you
+believe in Google Germany models uh
+which they actually providing you to for
+completely for free can go ahead and
+start planning and executing your code
+with respect to this. Okay that was uh
+most of it but all the other tasks that
+you actually do in most of the projects
+this can be really really handy. Okay.
+Now let me do one thing. Let me go ahead
+and create one project from scratch so
+that you can also see that how fast it
+can actually do it. Okay. So I'll go to
+aentic AI. I will make a new folder
+saying that okay this is my anti-gravity
+demo. I will start completely from
+scratch. I will open this.
+Okay let's open this particular folder.
+open folder
+cloudy agentic AI
+and let me see anti-gravity demo okay so
+here it is uh yes I trust the authors
+let's open the terminal the terminal
+also looks almost same like how it is
+for GitHub copilot okay command prompt
+let's see I will go ahead and write uv
+in it so it is initialized this
+particular project repository I will go
+ahead and write uvv and
+So this is my environment.
+Okay. I will go ahead and activate
+things. Okay. And uh quickly I will go
+ahead and write UV add let's say fast
+API. I want to go ahead and add this
+particular packages. Okay. Clear the
+screen. Okay. Now I can go ahead and say
+hey uh create a simple calculator.
+calculator
+app with fast API. Okay, the reason why
+I'm using fast API is basically that I
+can actually run this also. Okay, now it
+is probably planning and it does not
+have anything as such. Here you can see
+that uh uh UV also it is able to detect
+because you have this pi project to ml
+file. So here you have installed pi fast
+uh API. Okay. And now here you can see
+right all the information is basically
+coming up. See
+now let's see uh open implementation
+plan. So I will go ahead and open it. I
+will proceed it. Okay something is
+coming over here. I'll dismiss this.
+Okay implementation plan. So this is the
+plan. It probably creates this create a
+simple plan calculator. Uh
+here you can see I'll go ahead and
+accept this. It'll run the command.
+Everything is happening. You can see
+modify main.py py all the information is
+basically here and then you can execute
+it by using this command uicon right so
+I will go ahead and accept it
+uicon is also been executed see the
+command is also getting executed and I
+hope so it is basically getting executed
+within the same environment right and
+here you can see all the information see
+terminal things everything is basically
+happening the UI uh still the UI needs
+to be better but I feel Yeah, if if a
+normal developer is there, I think he
+should be able to understand it. Okay,
+implemented backend logic. So in the
+main.py, you can see all the information
+is there. I will accept this. Okay.
+Accept it.
+And then you can see that we can run
+this particular command in order to go
+ahead and execute this. Okay.
+So now you can just open this particular
+link and your calculator has started.
+Yeah. So everything is working
+absolutely fine. So see how quickly
+within just a couple of minute. Okay.
+And I can just say stop the app. Okay.
+When we say stop the app, you will be
+able to see that it'll just go ahead and
+close the app. From here also you can go
+ahead and execute it. Uh uh from this
+side also you can go ahead and execute
+it. Right? So overall I liked the
+anti-gravity. You should also definitely
+go ahead and try it out. This was it
+from my side. I hope you like this
+particular video. Please do make sure to
+hit like share with all your friends.
+I'll see you all in the next video.
+Bye-bye. Ticker.

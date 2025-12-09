@@ -1,32 +1,25 @@
 {
-    "name": "claude-skills",
+    "name": "xxh-claude-skills",
     "owner": {
         "name": "CCSang"
     },
+    "metadata": {
+        "description": "A collection of Claude skills",
+        "version": "0.1.0"
+    },
     "plugins": [
         {
-            "name": "ai-image",
+            "name": "xxh-claude-skills",
+            "description": "Personal collection of Claude skills",
             "source": "./",
+            "strict": false,
             "skills": [
-                "./skills/ai-image"
-            ],
-            "description": "AI Image Generator skill (workspace at /Users/xixiaohai/code/claude-skills; run commands after cd into that path)"
-        },
-        {
-            "name": "ydl-js",
-            "source": "./",
-            "skills": [
-                "./skills/ydl-js"
-            ],
-            "description": "YouTube Subtitle Downloader (workspace at /Users/xixiaohai/code/claude-skills; run commands after cd into that path)"
-        },
-        {
-            "name": "youtube-search",
-            "source": "./",
-            "skills": [
-                "./skills/youtube-search"
-            ],
-            "description": "YouTube Search skill (workspace at /Users/xixiaohai/code/claude-skills; run commands after cd into that path)"
+                "./skills/ai-image",
+                "./skills/ydl-js",
+                "./skills/youtube-search",
+                "./skills/wx-uploader",
+                "./skills/imitate-writing"
+            ]
         }
     ]
 }

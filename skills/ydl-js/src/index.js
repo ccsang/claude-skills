@@ -167,6 +167,15 @@ ${sub.text}
 }
 
 /**
+ * Format subtitles to plain text.
+ * @param {Array} subtitles - Array of caption objects.
+ * @returns {string} - Plain text string.
+ */
+export function toText(subtitles) {
+    return subtitles.map(sub => sub.text).join('\n');
+}
+
+/**
  * Helper to format seconds to SRT time format (00:00:00,000).
  * @param {number|string} seconds 
  * @returns {string}

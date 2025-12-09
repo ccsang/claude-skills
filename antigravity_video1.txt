@@ -1,0 +1,331 @@
+Welcome to anti-gravity. Now this is the
+new IDE from Google. Now of course it's
+not new for Google. They have built
+multiple IDs for different use cases but
+this is a AI powered IDE. Now again this
+is not the first time we are getting
+this type of ids from any other company
+or maybe even for Google but this is a
+standalone ID which you can run on your
+machine. Now it is AI powered. So of
+course you can use AI agents. it will
+help it will be your assistant AI
+assistant when you're building project.
+uh but let's see how it works and before
+we do that I just want to show you using
+this you can build different kind of
+applications maybe front end fullstack
+applications and interestingly pricing
+this is free to start with I mean for
+individual they are saying uh it's free
+but I'm not sure till when it will be
+free but at this point it's free again
+they're into testing phase uh the team
+plan enterprise plan is not there yet
+it's just released and how to download
+it's very simple you can just click on
+download here and you will at the
+version on your machine. Now, one of the
+thing about anti-gravity is it is also
+based on let me show you. So, this is
+the anti-gravity when you download and
+install. Uh the only thing is if you
+want to use this, you have to log into
+your account a Google account then only
+you can use it. But if you go to help
+and about this is based on the
+opensource version of VS code. So again
+there are multiple IDEs AI based ids
+which are based on VS code. So if you
+are used to VS code you will know how to
+use it. So this is the screen where you
+can write the code. You got the project.
+So you just have to open the folder. I
+got a folder called test anti-gravity.
+Uh and this is where you can write your
+requirements right or the prompts. Now
+in the prompt you can see we have option
+of planning and fast. So basically this
+is almost same as ask and uh agent mode.
+But then in the planning it also acts
+like a agent mode where it will show you
+the entire steps and I'll show you the
+steps in some time. But what makes this
+IDE better than the other IDs? Two
+things. One is the agent manager and
+second is the inbuilt browser. So if you
+want to do some UI testing and uh you
+can ask the browser to do it for you. I
+have not tested it yet in that sense but
+uh okay you have to add extension as
+well. We'll do that. So I will open the
+agent manager here and basically you can
+work with multiple projects at the same
+time. So you can create multiple agents
+for multiple projects and you can switch
+between the projects there. Uh this is
+my workspace and I can type the thing
+here or I can type the code there. You
+can change the model. So you got Germany
+3 pro which is a very good model. But if
+you want to use set you can try that. Uh
+you can use GPD the oss and you can also
+use that. Okay. But I will not be
+working in the agent manager at this
+point. I will just stick to the agent
+mode here. So let me create a simple
+project and the project may be for the
+personal finance. Okay. So I want to
+know where I'm spending money from where
+I'm getting the money uh so that I can
+plan it better. So I want to say build a
+personal finance app using Python fast
+API and react in front end. Okay. I
+should be able to uh declare it and uh
+debit and show weekly report. Okay.
+Okay. So this this is the plan. Okay.
+And of course you can customize it. But
+then the beautiful thing about this is
+when you when you go into the planning
+phase. Let me click here. It will show
+you the entire plan. So uh it will go
+step by step. So it's analyzing the
+project structure and uh it will create
+a initial blueprint. Okay. Looks good.
+It's still thinking. But it will start
+assigning tasks as well. Okay. This was
+I was talking about. Uh so if you
+dismiss this, so this is the task it's
+going to complete. is going to create a
+new uh project which will have this
+files which is main model schema
+database in the front end it will do all
+the structure
+and it is going to use ubicon to run
+this I'm just concerned which package
+manager it is going to use let's see so
+I will click on
+uh okay I could also submit the command
+in fact you can add the command I'm not
+sure which package manager it's going to
+use so I will specifically ask it to use
+Choose UV
+package manager and you can add the
+comment and it will use it. So I'll
+click on proceed. Now it might change
+the plan. I'm not sure what it was
+thinking when it was creating the
+project. I mean what package man is
+going to use but based on my command is
+it might change its process. So you can
+see somewhere it is mentioned updating
+the implementation plan to include UV as
+a package manager. Okay. So it is
+adopting the commands as well and this
+is helpful right? The one of the problem
+with the wipe coding which we say is
+when you build a project it will give
+you the project and then it will take a
+lot of time to debug it. It might not
+follow the plan. Uh but when you see the
+plan when you see the task you can
+actually select the task and you can add
+comments there. What are things you have
+to want to modify. Uh and now this is
+the implementation plan it's going to go
+with. And I think I'm okay with the plan
+and I can start this. So it's
+implementing now. Okay. It says it's got
+the green light. Okay. So it will create
+different folder structure, right? And I
+just have to accept it. If you don't
+want to wait for the steps, you can go
+into the fast mode where it will do
+everything for you. Uh but I will stick
+to the planning mode and Okay. Accept
+this. Except this. Okay. So a prompt
+model trying to start a new
+conversation. Okay. There was some
+issue. Is it still continuing? Okay.
+What a time to get the error. I'll say
+continue. So maybe there was some issue.
+So I should have read the error
+properly. Okay, it says add the Python
+extension. Again, this is given by the
+ID, not by the agents. Uh I don't want
+to do that. So you can see it is slowly
+creating all the folder structure. It's
+not touching the UI at this point. It's
+only focusing on the back end. I mean
+that's how the things should go and okay
+it's editing the file adding some things
+again something similar which we see in
+the other ids and now it's starting with
+the front end. Let me accept that
+install with npm. Yes, not given the
+prompt yet. Agent terminated due to
+error. Okay, I'm not sure if if the
+Google team when they were demoing this,
+they got the error, but I'm getting a
+lot of errors. Not sure why.
+Maybe this is a feedback for them. So,
+front end is also ready. I just want to
+check the versions. Uh, okay. Looks
+good. Version looks good. And we got all
+the files here. Okay, so now it says run
+the command. Yes, except. Okay, so it it
+found some errors and it should be able
+to uh solve that now. So by time it is
+happening, I can open the agent manager
+and I can start with the new project or
+I can say add a cloud monitor. Yeah,
+this is what I was expecting but it's
+going to change the architecture. Okay,
+it's doing this task. So once it is
+complete, I think it will put that into
+inbox that your task is completed and it
+will give some suggestions. But by the
+time it is happening, I will just accept
+it here. And again, there's a error. Not
+sure what the error is. Let me know when
+you try this on your machine. Are you
+facing any issues? Let me know in the
+comments.
+Okay, let's
+run this accept. Okay, now it will use
+the browser to test it. So, let me set
+up the browser and I have to add the
+extension.
+Add to Chrome. Okay, I have to sign in
+here as well. I thought it will use my
+default browser. It's not doing that.
+Okay. So, it found the error and then it
+will start debugging it now. So, we
+don't have to actually click anywhere.
+It will just do it automatically. So,
+it's clicking somewhere. I'm not sure
+where. Back view.
+So, when you see this blue borders, that
+means it is doing something with the UI.
+Okay. It's making a lot of changes. I
+should have went for the fast mode.
+Okay. Again, error. So let's see what
+the troubleshooting guide says. Okay,
+they don't have much. Okay, no problem.
+Let's continue. So when you get error,
+you ask the AI tool to solve it and AI
+itself is giving you an error. So are we
+successfully failing to demo the
+anti-gravity? Still working out. Still
+working out. Is it because it is
+interfering with my two projects? I
+don't think so. We started this later
+and this is currently working. This has
+just stopped. So it will ask my
+permissions and what to do. So that will
+go ahead. But yeah, looks looks good.
+Okay. Uh restarting front end server,
+verifying functionality, creating.
+Okay, looks good. We walk through. And
+now if I just click this. Okay, I think
+there's something wrong with the CSS and
+we can just test it out there. But if I
+add a transaction, so let's say I'm
+adding a transaction of I received
+$1,000 from somewhere and then this was
+my uh freelance work. Some description
+add transaction. Okay, great. Just went
+up. It was 5,000. Now it became 6,000.
+So working is there and it is
+maintaining this. How do I get the
+weekly report? There's no button for the
+weekly report. Oh, this is a weekly
+report itself. Okay, I can just test it.
+I can ask use your browser testing to
+check something is wrong
+with layout. Okay, let's see if it is
+using the browser to check it properly.
+Okay, so you can see blue borders it is
+it will do the things by itself now. So
+that's their goal. Okay, we don't have
+to do anything apart from accepting what
+they what the changes they are trying to
+make. Or maybe this was the plan UI from
+from uh Germany. I should have said I
+need a proper UI. Okay, it found the
+error. It created the error. But this
+changes which you made is giving me an
+error. Solve it like it's not doing
+anything and the blank front end. Run
+the project.
+I mean the project is running otherwise
+we could have got some other error
+except some changes. Nothing in the
+front end yet. Maybe it's also true for
+the AI. If something is working, don't
+touch. Oh, okay. I fix the layout
+issues. Refactor. The project is
+running. You can check now. Project is
+still okay. Uh, yeah, this is running
+now. But I can change the layout the way
+I want. Uh, I can say modernize the
+layout
+but keep it simple. Let's see. And while
+the happening, let me just check out the
+backend files. The model it is going to
+follow. So, transactions.
+Okay, they're using SQL Alchemy and uh
+so they got three APIs for the
+transaction post, get and weekly report.
+Okay, perfect. And
+for the CR operations, these are the
+methods for the CRUD. Looks good. Okay,
+the code looks good compared to what AI
+normally generates. So, accept all the
+changes and it broke.
+Okay.
+Is it running with those changes? No.
+Error in front end.
+So, normally you don't have to copy
+paste the code. It will do it for you.
+But you got the gist, right? So, it
+basically run through the UI using the
+browser and it will make the changes.
+So, made some changes in the UI file and
+it's blank. Okay. UI is blank.
+and error. So I'll say continue. This is
+the worst product review or maybe the
+best one
+because things are not working. Please
+try again later. Oh, because the model
+provide is overloaded.
+Now I saw the error
+because of of the huge demand. Okay,
+it's testing it. If this looks good, I
+I'm going to use it. I need to spend I
+need to monitor my money. It's going.
+Let's see if it can solve its own bug.
+So accept the changes. Did some changes.
+Okay. Finally, finally we got the UI. So
+you can add the transaction. It will
+look here. And then this is the total
+credit, total debit. I got this much of
+balance.
+Okay. Looks good. Looks good. This is
+what you can do with this. And uh one of
+the best thing about this again this is
+not you can only do it with this. There
+are multiple uh AI based ids available
+but this planning which it was showing
+is amazing and next time I will wait for
+Google to sponsor the videos. So we have
+got work through we got the browser in
+build. So it looks good. So let me know
+your thoughts in the comment section and
+try it out. Uh I'm not sure if I'm going
+to use it for Java but I should try
+that. So today we tried with Python and
+React. Maybe I'll try it with Java as
+well and we'll let you know in the
+comments how was my experience. Let know
+your comments.

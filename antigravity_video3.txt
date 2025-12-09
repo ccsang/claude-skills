@@ -1,0 +1,845 @@
+Hey guys, so Google just announced their
+own AI editor called Anti-gravity. And I
+can confidently say after stress testing
+this editor all weekend, this is by far
+the most powerful AI editor I've ever
+used. And it honestly feels like cursor
+put on steroids with all the features
+and functionalities they've added in
+there for us to make AI development and
+vibe coding feel like a breeze. And
+there's a bunch of highlights that I
+want to cover in this video with you
+guys and break everything down. But a
+few of the coolest ones I think you guys
+are going to like is it has the same
+look and feel of a normal IDE to where
+we get to view all the changes. They've
+added in a bunch of new features around
+agent development to where we have a new
+thing called an agent inbox to where we
+can tackle working on multiple projects
+and multiple tasks all in parallel.
+Absolutely love this new feature. And
+one of the coolest things that I think
+you guys are absolutely going to love is
+you get access to Gemini 3 Pro
+completely for free inside of
+anti-gravity. You get up to 50 requests
+every 5 hours which if you kind of do
+the math it the best deal online for AI
+coding tools. So you're absolutely going
+to want to try it out. I know I've been
+having a ton of fun been blown away with
+Gemini 3. I actually have a whole extra
+video recommend you checking that out
+and a breakdown. But enough of talking
+about Gemini. back to anti-gravity. And
+the rest of this video, I'm going to be
+showing you guys a bunch of use cases,
+examples, and walk you through all the
+new features you need to know about this
+new AI coding tool so that you can start
+to use it on your own projects and start
+AI vibe coding like an absolute beast.
+So, without further ado, let's go ahead
+and dive into the video. And also, a
+quick shout out to Google. Thank you
+guys so much for providing early access.
+I've had a ton of fun trying out
+anti-gravity, and I'm super excited for
+everyone else to get a try, too. So,
+let's go ahead and hop on into the
+video. All right. So, before we dive
+into all the new amazing features of
+anti-gravity, I think it's super helpful
+for us to take a high-level overview of
+understanding how Google envisions us
+using anti-gravity so that we can better
+understand how everything connects and
+how we can most appropriately use this
+new tool. So, here's what Google has
+done from what like I can tell after
+using the tool. It feels like they have
+looked at all the other different tools
+that are out there, cursor, windfied
+what these tools have done, right? and
+wrong when it comes to how we as AI
+developers are actually using these
+tools and they have come away with three
+core components that are an absolute
+must for developing with AI in 2025. So
+first things first what they have done
+is obviously they've noticed that the
+editor isn't going anywhere. So the look
+and feel of cursor to where you have the
+ability to actually look at your files,
+you know, select stuff, add it as
+context, talk to the model, say, "Please
+fix this. Here's what I'm trying to come
+up with." They've nailed that. They've
+also really nailed down the fact that we
+like to plan to say, "Hey, here's my
+plan before you just start going through
+code. I want to come up with like a
+10-step plan of how we're going to fix
+this." They've really nailed down that
+workflow, which then leads us to once we
+have figured out what we want to do with
+AI. We then go into part two, which is
+coding. So, the second we're done, you
+know, prompting and planning, we're now
+going into coding. And for most of us,
+if you know, you're a developer, you're
+kind of just sitting there waiting for
+it to do the code, which is, you know,
+can take too much time, which if you're
+like most developers who are kind of
+going speed mode, what really is
+happening in most of our development
+life cycles is we're actually doing this
+in parallel. Meaning, we are constantly
+looking at multiple tasks that we can
+work on and we are just saying, "Hey,
+AI, knock out this, knock out this,
+knock out this." which is where it looks
+like Google with their new anti-gravity
+tool have really doubled down on this
+asynchronous workflow style of AI
+development and have come up with
+something called the agent manager
+inbox. Now let's actually dive in just
+highle overview of what it looks like
+right now which is it looks and feels
+just like a regular email inbox except
+the key thing is what you're doing is
+you're actually having conversations
+with your different projects. So you can
+work on any one of your different
+projects. you kick it off just like you
+normally would do to where you're saying
+like, "Hey, this page is broken. I would
+like to fix this." And once you send it
+off, it's just going to go start working
+on in the background and then you start
+a new conversation. So, it's kind of
+like one of those you just send it and
+forget it, which is the whole point of
+anti-gravity. It is focused around it
+seems like this new asynchronous AI
+development work cycle that from what
+I've seen and everyone in my community,
+this is the new way AI projects get
+built. It is fire and forget it. And
+then at the very end, we are reviewing
+everything, which is where part three of
+Google's anti-gravity new platform works
+is they have builtin AI browser support.
+Now, what this looks like is, you'll see
+it in just a second, but whenever we
+actually hop over into a specific
+editor. So, like over here, there's a
+new browser button where this will
+actually open up an interactive browser
+where our agents can control it. And
+this thing is wild. It's unlike any
+other browser tool I've seen. It records
+live sessions. It's super interactive.
+They've absolutely crushed it with the
+browser tool. It's funny. Google,
+Google, Chrome, of course they know what
+they're doing with browsers. So, this is
+everything that I have seen when it
+comes to actually using anti-gravity.
+And I just wanted you guys to see kind
+of the core components. And we're going
+to dive deep into each one of these so
+you can see in action as we actually
+build out some real world features using
+anti-gravity. But the core thing to get
+around when thinking about anti-gravity
+is it is focused around this new AI
+asynchronous development to where we're
+just cranking out things and you know
+kind of following what everyone's doing
+nowadays when it comes to building out
+code. So enough highle talk. Let's
+actually go in and start using the
+editor so you can see everything in
+action and we'll take it from there
+looking at the other amazing features.
+So let's go ahead and dive in. All
+right, guys. So, now it's time to dive
+into anti-gravity and showcase some of
+the core features and functionalities of
+this new tool. And we're going to start
+off simple so you can understand the
+core workflows that we were talking
+about earlier where we're basically
+going to be going through the process of
+working on different tasks for our
+project in parallel. So, let's dive in
+and work on kicking off two different
+tasks in parallel. One in agent mode and
+the other in editor mode so that we can
+kind of get a feel for both. So, let us
+dive in. So, first things first, I'll
+zoom in for you guys. So, here's what
+we're going to do. We are going to start
+a new conversation and we're going to
+pick the project that we're working on.
+What is cool, you can have multiple
+workspaces where you're working on
+multiple projects in parallel. Right now
+that we're going to work on what I'm
+calling the worker SAS, which is a quick
+application that I have as one of the
+templates inside of Shipkit, a project
+that I built for you guys to help you
+build AI applications in days instead of
+months. And this is the hero section.
+And for our first task, what I want to
+do is showcase how we can use
+anti-gravity to actually build out
+really cool UI components. So, we want
+to update the first task to where it
+shows a more, you know, a better looking
+UI instead of what it shows right here.
+I think we can make it look better. So,
+here's what we're going to do. We're
+going to say, "Hey, anti-gravity, while
+we're in our agent manager mode, can you
+please look at my hero section and make
+a more engaging UI element for the
+upload step? make sure that the, you
+know, whatever mockup you create. It's
+beautiful. Stick to our current color
+scheme. If you have any questions, let
+me know. Now, we're going to use Gemini
+3 Pro and we definitely want to use
+planning to showcase a few of the cool
+new features and functionalities that
+they have. So, we're going to kick that
+one off. And now, as soon as we have
+this running, I want to call out a few
+important things that you need to be
+aware of when working inside of
+anti-gravity. So, first things first,
+this following button, what it's going
+to do is it's going to help you follow
+what the agent is doing. So, right now,
+the agent is spinning up a new task
+document. This is what they're calling
+an artifact. So, every time it comes up
+with images or plans or anything that is
+not pure code, it's going to make an
+artifact. So, these artifacts are just a
+really cool way for us to track what the
+agent is thinking about doing. And
+what's really cool, and you're going to
+see here in just a minute, we can
+actually collaborate on these different
+artifacts. We can add comments. We can
+edit them. It's a really cool feature
+that they have set up. So, you can see
+right now, I'll zoom out so you guys can
+see what it's doing. But what's really
+cool is, so it's gone through, it's
+analyzed the current design, and what
+it's doing right now is it's actually
+generating an image. So, this is one of
+my favorite parts about working with
+anti-gravity is we're using Google
+models. And Google models have access to
+nano banana which means it can actually
+create cool elements and mockups for us
+to preview and we can actually provide
+feedback on these different assets and
+basically just like really collaborate
+with agents in its truest form. This is
+unlike anything you guys have ever seen
+before. So let's actually walk into
+collaborating on some of these assets.
+So I think this is really really cool.
+So what I can do though and you guys can
+do this as well. So I just click open.
+And what this has done is it has opened
+up a asset now real fast because I want
+to like go slow so I don't do too much
+at the same time. What is interesting is
+right we were in agent mode but we could
+also hop over to editor mode and do it
+over here as well. So you don't always
+have to do it in agent mode. You can do
+it in agent mode or editor mode. You
+have the choice is yours. Now what is
+cool is you can see artifacts. Sorry I
+meant to say artifacts, not assets. You
+can see this is an actual artifact. So
+you can see it has an access to this new
+upload audio mockup. These are artifacts
+that anti-gravity is creating. So we get
+to keep track of everything. So let's
+actually dive into providing feedback on
+the plan that's being generated. So
+what's really cool is you can actually
+just highlight stuff and start to
+provide access to different parts right
+here. So I'm going to highlight this and
+I can add a comment and I can say this
+looks great. Can you make the image a
+little bit smaller so it's easier to see
+the like text at the bottom where we're
+saying we're uploading a specific
+podcast episode because it would be nice
+if we had like a little loading animated
+bar for the podcast episode so we can
+kind of see that it's being uploaded. So
+that's what I would like to see and
+please create a new version of this
+mockup. So you can add this comment and
+the second you add it you can then just
+say review. Basically, we can just like
+submit the review and just say, "Please
+look at my feedback." And what we'll do
+now is it's going to go, "All right, I
+will now go through the process of
+reviewing all of the different feedback
+that you provided." So, it's saying,
+"Hey, the user provided some feedback on
+the different like the UI elements that
+were uploaded. I will make it slightly
+smaller, reducing it to 70% of its
+former size, and now it's going to
+generate a new image." So, it's crazy.
+The first time I saw this, I was like,
+man, not only does this feel like cursor
+to where I'm like talking with agents,
+but it feels like all of the best parts
+of Lovable as well, because now I'm just
+like spinning up cool UI things and now
+it's just generating them. So, you can
+now see in image 2, it's much smaller.
+It also has a little upload progress bar
+at the bottom. This looks freaking
+awesome. So, now that it's done working
+on making the new version of the mockup,
+we can actually go ahead and open up the
+plan. And what's cool, not only can we
+just provide comments and feedback on
+different, you know, images, what's
+really cool is you can also provide
+feedback on these task documents. So you
+can actually come in here and start to
+read through it. And it's like, all
+right, we're trying to work on this
+component. Here's what we're going to be
+changing. We're going to be modifying
+this. And you know, in this case, I'm
+pretty happy with everything that it's
+going to do. But you know what you can
+always do is just hit these like comment
+buttons and you can add inline comments
+to the plan. So, it's a really nice
+interactive way because going back to
+what we talked about earlier, like we're
+here where we're prompting and planning
+and then now the AI is about to go do
+the 80% coding. So, this is really
+really cool. So, at this point, I'm
+going to just click the proceed button
+to where now it's going to go implement
+the plan. Now, while this is going, hey,
+let's keep working, guys. So, what I'm
+going to do is click start a new
+conversation. And instead of actually
+kicking this one off in agent mode,
+let's go try some stuff out over here in
+editor mode. So for this one, what we're
+going to do, we'll close out of
+everything. We're going to once again
+open up the hero section of my
+application. And what we're going to do
+is highlight the demo preview. The demo
+preview. This is part that you guys can
+see right here where we were initially
+showcasing this. This is the demo
+preview. So what I can do is just come
+down here. Uh, where did the demo
+preview go? Yeah. So, I can just
+highlight the demo preview, hit command
+L, add it in right to our chat, and now
+I can say, can you please work on making
+sure that as a user, they should have
+the capabilities to actually click
+through the steps. And if they want to
+just look at a step for a while, the you
+know auto scroll should pause and allow
+the user to manually start to go through
+the different steps so that they can
+better understand the process of working
+with this transcription service that
+we've made. If you have any questions,
+please let me know and then at this
+point we can actually kick it off. Once
+again, we're still in planning mode.
+We're still using Gemini. So we can kick
+it off. So what's cool is you guys are
+now seeing how we're using the agent
+inbox. So, what's cool, hey, we got
+mail, guys. In this case, we got AI mail
+where it's going to say, hey, I'm
+working on this task. You can see our
+other task is in the process of running
+right now. And I can just open it up and
+it's going to say, hey, I've actually
+gone through the process. I built the
+engaging upload UI walkthrough. You
+should now see some like animated
+walkthroughs. And, you know, basically,
+this is what you should see in the new
+one. So, we're going to probably
+refresh. We might actually have to
+restart the server cuz it actually
+probably made some changes to the global
+CSS. Yeah, you can see now it's
+providing some really cool feedback. So,
+we're working on two task at once. So,
+it's kind of hard to see it, but you can
+actually see right now the upload audio.
+You can see it looks really really good.
+Like I I'm blown away. So, here is what
+we can do next. So, back we can close
+out of this walkthrough and we're going
+to go once again open this up and we
+need to start providing some more
+information and feedback to it. So this
+is where we can actually start to submit
+some messages and basically say like
+provide some feedback. Now this is where
+things are a little bit weird and like
+you know trying to figure out the like
+how do you actually start to chat again
+with this? Oh, you just double click it.
+That's all you got to do. I was silly on
+that. So what we need to do now is to
+actually make sure the audio waveform
+shows up properly. We can just say like,
+"Hey, can you actually open up the
+browser and go look at the hero section
+on the landing page?" Because you will
+see on full screen, it doesn't actually
+look nice. For whatever reason, the
+animation's kind of going into the
+navbar. So now, at this point, it's
+going to start working on it. And we're
+going to switch over to fast mode
+because, hey, we've already implemented
+most of the plan. Now, we just want it
+to go forth and actually make the
+changes. Now, what's cool is what we
+should see here in just a second is it's
+going to actually open up the browser.
+So, we're going to see it in just a
+second to where it should start to take
+control of our browser. So, here's what
+it's going to do. It's going to open up
+our browser. Just a second. So, you can
+see it's opening up our browser. So,
+tada, blue mode. So, we're now in
+browser mode. So, it's watching this.
+It's getting the DOM elements and it's
+going to take screenshots. And you can
+see hopefully here in a second, it's
+actually going to analyze our hero
+section and it's going to see, oh yeah,
+I can definitely see stuff is out of the
+way. So, it's gone through, it's taking
+screenshots, and it's going to try and
+wait again to actually get a screenshot
+of step one. So, you can see it's really
+smart. Like, it's actually figuring out
+in real time like, hey, I'm not getting
+the right thing. So, it's it's trying to
+actually do it again and again and
+again. So, it's struggling, but it's
+getting there. Like, this is once again,
+this is just happening in the
+background. Like, you shouldn't be
+watching this. we should just be, hey,
+on to the next one. And it's still
+struggling. It's uh it needs to do an
+odd number so it can actually get to uh
+step one. So, it's figuring out the
+cycle. So, it's it's doing its thing.
+And what I'm really excited for in here
+in just a second to show you guys is we
+can actually eventually go through and
+view the browser session. So, in just a
+second, we should be able to see this.
+So, we're going to let this run because
+hey, we are we're productive. We're
+coders. So, we're going to go ahead and
+move on to the next thing while this is
+still trying to figure it out. And we
+can go look at our next task. So, we can
+see, all right, when it comes to working
+on hero section interactivity, it's
+saying, "Hey, I plan to make the hero
+section interactive." Everything looks
+great. So, it's going to add an isaused
+state. So, we can actually ask questions
+before we generate the plan. We can
+either do comments. So, I mean, heck, we
+can actually just add a comment here.
+So, we're going to say, is there a way
+to where we can actually whenever we
+click on a step, we can just have it
+pause for, let's say, 8 seconds. And
+then after 8 seconds, we should just
+auto resume the process instead of
+having them click something again. So,
+we're going to add that. We're going to
+do that. And then we're going to just
+say review and submit the review. And
+now it's going to go review our
+implementation plan and say, "Oh yeah,
+I'll make sure after 8 seconds of pause,
+we just get back to it." So that's
+really cool. So now we can hop back over
+to our email or our inbox and we can see
+we have multiple things happening at the
+same time. So this is this feels
+beautiful. So so excited for you guys to
+do this. Now what's really cool is you
+can actually see in real time we can
+actually click on the analyzed part and
+normally what happens is we might have
+to wait for the hero section to get
+done. But what you will usually see is
+it'll actually autoplay in real time. So
+you get to like feel like you were the
+agent watching the screen and it
+normally records it in real time. So you
+can see it's still trying to do it. So I
+might have given it a little bit too
+hard of a task, but hey, hopefully we
+don't burn through too many credits. And
+like I said, this is just like a weird
+animation one. So I'm actually going to
+stop it just so we can actually get to
+the point. And I'll just take a manual
+screenshot of it. So here we go. And
+let's actually click upload. So let's go
+to image. And this should be on my
+desktop really fast. So desktop
+screenshot. Yeah, that's that one.
+Here's an updated screenshot just so we
+can knock this out faster. And at this
+point, fantastic. So, we're just proing
+feedback. I will say normally when it's
+clicking around for like most task where
+we're not having to do heavy animations,
+it absolutely crushes it. So, that's
+going to go. It's going to fix it. And
+then finally, for our other task, which
+is to, you know, enhanced interactivity,
+it's going through the process of making
+sure that everything's good. It's going
+to make sure that it's autocl. So now we
+have the other agent actually working on
+it. So we should hopefully see we can
+actually maybe open this one up. Can't
+tell if it's So this is like the hard
+part of me learning this as well. I
+can't tell if it actually opened up a
+new tab. Yeah. So we have two tabs
+going. So we have tab one not being
+controlled and tab two is being
+controlled. So if we go check on tab
+one. Oh my gosh. It already built the
+feature to where I can click around.
+It's also built a feature to where after
+8 seconds it's going to go through the
+process of you know start to auto resume
+to actually start going through the
+process of showcasing again. So
+beautiful. The agent worked great for
+some UI task. And hopefully a lot of
+this makes sense. Hopefully you got to
+see, you know, the follow capabilities
+to where we're actually following the
+task in real time. You also got to see
+the ability for us to actually use the
+browser preview, which is also great. So
+you can see right now it's controlling
+our browser, which is awesome. Yeah,
+here's the blue browser. So it's
+controlling it. So, now that that's out
+of the way, what I want to do is start
+to go through a few more of the really
+interesting features that are a part of
+anti-gravity. And I also want to show
+you how we can start to push this to its
+limits by working on a harder task.
+Let's go ahead and hop over to our next
+demo. All right, so let's dive into our
+second big example where we're really
+going to push Gemini 3 and anti-gravity
+to its limits. So, let's walk through
+the big example that we're going to pass
+in. So, here is the AI summary page of
+the application where basically the user
+can click, hey, generate an AI summary.
+And this goes off and kicks off some
+background jobs to where it's going to
+take in the transcript, throw it over to
+AI, and come out with a really specific
+formatted summary. Now, what we want to
+do is really see if Gemini 3 can connect
+all the dots when working on big tasks
+like this. So, what we're going to say
+is, "Hey, Gemini, can you please go
+through and look at the transcript
+summary page? And whenever user clicks
+that generate AI summary button, could
+you do the normal process of making the
+summary? However, in addition to making
+the summary, I want you to make a new
+background task. We're using a tool
+called trigger.dev. And what I want you
+to do is to make a new task that's going
+to use OpenAI texttospech to generate a
+new voice recording of this transcript.
+Can you uh make sure that you save the
+voice recording to our blob store? Also,
+make sure that you update our database
+to have like a new new column to save
+this URL for the MP3 file. And then make
+sure that you update the UI to have a
+new play button for this voice
+recording. Do you have any questions
+before we kick things off? So, as you
+can see, we are pushing it to the limit.
+We're basically making it touch
+everything. Our backend, our blob store,
+our database, our UI. This is making it
+do everything. So, we're now going to
+kick it off. We're going to put it in
+plan mode just so we can see how well
+everything goes. So, let's actually go
+through the process of enabling it to go
+off and explore. So, already it's like
+let's kick this close this out. So yeah,
+we're going to basically let this run
+for a little bit and I'll start to
+review it with you guys here in just a
+second and give you a quick playbyplay
+of what it did so you can see on a beefy
+task, can it stand up and actually, you
+know, hold its own and build out really
+complex workflows. So we'll pause and
+come back as soon as it's ready and to
+go. All right, guys. This is crazy. So
+all I had to do, I sent this off and I
+basically copy and pasted maybe four
+error messages saying like, "Hey, this
+is going wrong. This is going wrong." It
+works, guys. So, let me just play it
+real fast so you guys can hear this
+summary being actually transcribed
+thanks to anti-gravity. Let's go ahead
+and play it.
+>> How to build real-time AI summaries with
+OpenAI and trigger.dev. Video overview.
+This video provides a step.
+>> Guys, that's crazy. So, if we think
+about it, what this just did is it went
+through explored my whole codebase,
+figured out exactly how I have actually
+structured this ship kit template and
+figured out all the core tools, how
+everything works. From there came up
+with the implementation plan and like I
+said I had to do very very very few
+tweaks of basically saying like hey can
+you please make sure you push stuff to
+the database and after that there was
+just I think only like like I said two
+rounds of feedback of just saying like
+here's an error and then outside of that
+here's another error and then yeah
+finally one other error. So, you know,
+just normal vine coding like, "Hey, it's
+broke. Fix it." And by the very end, you
+can see it actually created the brand
+new feature and functionality to where
+it's updating our background processing
+jobs, our database, our blob store, our
+backend code, our front end code. It
+changed everything. Like, this is
+breaking my brain. So, the combination
+between anti-gravity Gemini 3 Pro, this
+is just an absolute game changer and I'm
+so excited for you guys to try it out.
+So, now that you've kind of seen some of
+the core features and workflows, what I
+want to do is just now hop over to some
+of the core things that you need to know
+about anti-gravity, how I'm going to be
+changing my AI development tech stack
+thanks to this new amazing tool, and
+give you guys a few features that I
+would love to see in anti-gravity, so
+you can know what to be aware of when
+actually using this tool. So, let's go
+ahead and hop over to Final Part. Oh,
+and real quick. If you're an AI
+developer looking to launch your own AI
+applications or to start freelancing as
+an AI developer, you're absolutely going
+to love ShipKit because we help you
+launch real world AI applications in
+days instead of months. And we have
+project templates for the most common
+types of real world applications like
+chat, rag, agents, and background
+workers. So, inside of Shipkit, you
+obviously saw one of the newest
+templates that we just dropped today.
+And this is where we teach people how to
+build real world AI background
+processing jobs like the ones that you
+saw in this video. And once you're
+inside Shipkit, man, we have you
+covered. We walk you through the entire
+process of helping you convert your idea
+that you have in your head for your own
+AI application, convert it to a plan,
+then we walk through the process of
+converting that plan into an application
+where we use AI every step along the way
+and how to finally deploy your
+application to production. Inside
+Shipkit, we also have videos to walk you
+through every step along the way.
+Whether it's coming up with your app
+idea, your UI, your logo, your
+wireframe. We have videos to help you
+every step of the way. Heck, you can
+even chat with the videos cuz obviously
+it is a AI first. And to make it even
+easier inside of Shipkit, you always get
+access to AI documents in every single
+project template that you get access to
+where you basically say, "Hey AI, can
+you please follow these steps and
+actually help me come up with an app
+name?" Basically, the AI does the work
+for you when you're using Shipkit to
+help you launch your own AI application.
+So, if this sounds interesting to you,
+definitely recommend checking out
+Shipkit while we have a Black Friday
+sale going on. Get $75 off Shipkit and
+grab it right now for $350. If you have
+questions, always shoot me an email, but
+you can check out more information in
+the description below. But enough of
+that, back to Anti-gravity. All right,
+guys. So, now that anti-gravity has hit
+the scene, what am I going to be using
+for my coding stack? So, let's quickly
+break it down. Here is what my current
+code stack looks like. I have a $200 a
+month plan for Claude Code and $20 a
+month for Cursor. Claude Code does most
+of my heavy lifting right now. I'm
+cranking out code non-stop with this.
+That's why, hence the $200 plan. Outside
+of that, I'm using Cursor strictly for
+accessing the 1 million token context
+window as well as sometimes I just like
+to experiment with new models. Well, now
+that anti-gravity has hit the scene, I'm
+completely dropping cursor. There's
+really no reason for me to use cursor
+now that anti-gravity is here.
+Specifically, if you actually go to
+start to use anti-gravity once it
+actually fully launches, you're going to
+notice I think we can actually show it
+here. Laugh. It's not going to show it,
+but normally there will be other models
+in here as well. So, you should see
+things like clawed models and you should
+see I think potentially AI models. I'm
+not 100% sure on OpenAI models, but for
+sure you will see Claude models in here
+tomorrow. So, there's actually no reason
+for me to pay cursor anymore.
+anti-gravity is going to be my new
+default. Outside of that, I'm going to
+actively try to see how low I can get my
+Claude code subscription. So, meaning I
+ideally would love to, you know, I would
+love to spend zero dollars on coding.
+However, I'm sure as soon as I hit some
+limits inside of anti-gravity that I'm
+going to have to basically, you know,
+potentially fall back on cloud code.
+This is still testing. I have not had
+enough time to fully crank out as much
+activity as I'd like with anti-gravity
+to see how often I hit rate limits. So,
+I will be sure to do a future video
+covering this very soon of my tech stack
+after a week or so of testing. So, be
+sure to, you know, like and subscribe so
+you can see that video as soon as it
+comes out. Now, with that out of the
+way, definitely recommend you checking
+out maybe changing your tech stack to
+this as well. Would love to hear your
+comments on this. But with that out of
+the way, I do want to cover a few quirks
+before you pull the plug on your
+subscriptions and hopping completely
+over to anti-gravity. I want to share a
+few concerns I have that you might need
+to be aware of as you start to use this
+new tool. So, that's a wrap for this
+video, guys. I hope you enjoyed seeing
+this first look of anti-gravity. And I
+cannot wait to hear down in the comments
+below, what do you think of this new
+tool? Are you going to drop your cursor
+and claude code subscription? Go all in
+on anti-gravity. Would love to hear your
+comments down below. Also, just a few
+quick reminders. We're definitely
+starting to kick off the new Black
+Friday deal for Shipkit. You're going to
+get $75 off when you order between now
+and Cyber Monday. Quick reminder,
+Shipkit, we help you build your own AI
+projects in days instead of months. And
+definitely Anti-gravity can help you
+crank out projects even faster when you
+start to use it inside of Shipkit.
+Outside of that, if you're just looking
+for free help and want to meet other
+additional AI developers just like you,
+we have a school community with over
+10,000 AI developers. weekly free
+coaching calls every Tuesday at 600 p.m.
+Eastern time. Definitely would love to
+see you over there as well. Definitely
+check out the links in description below
+for both of these. And with that out of
+the way, I have a ton of other AI videos
+right here on this channel that I
+definitely recommend you checking out.
+And I cannot wait to see you guys in the
+next one. See you. Have a great day.
+Bye.
