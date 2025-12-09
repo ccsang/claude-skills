@@ -94,18 +94,28 @@ export async function learnStyle(source, name) {
 
     const model = getGeminiModel();
     const prompt = `
-    You are an expert literary analyst. Analyze the writing style of the following text.
-    Focus on:
-    1. Tone and Voice (e.g., formal, conversational, authoritative, humorous)
-    2. Sentence Structure (e.g., short/punchy, complex/academic, varied)
-    3. Vocabulary (e.g., technical, simple, flowery, slang-heavy)
-    4. Formatting/Structure (e.g., use of headers, bullet points, paragraph length)
-    5. Rhetorical Devices (e.g., metaphors, questions to reader)
+    You are an expert literary analyst and ghostwriter. Your goal is to create a "Style Guide" that allows another AI to perfectly imitate the author of the following text.
 
-    Output a JSON object with the following fields:
-    - "name": A short file-system safe slug (kebab-case) representing this style (e.g. "paul-graham-essays", "tech-crunch-news").
-    - "instruction": A concise but comprehensive "System Prompt" instruction that I can give to an AI to make it write exactly like this author.
+    **Step 1: Deconstruct the Text**
+    Analyze the provided text deeply. Select 3-4 distinct excerpts that best showcase the author's unique voice. For each excerpt, analyze WHY it works (e.g., "Notice the use of a rhetorical question here," or "See how they transition instantly from a joke to a serious data point").
+
+    **Step 2: Formulate the Instruction**
+    Output a JSON object with:
+    - "name": A short file-system safe slug (kebab-case) for this style.
+    - "instruction": A comprehensive System Prompt. It MUST include:
+        1. **Role/Persona**: Who is the writer?
+        2. **Tone & Voice**: Precise adjectives.
+        3. **Sentence Rhythm**: Staccato vs Flowing, etc.
+        4. **Vocabulary & Diction**: Slang, jargon, formality.
+        5. **Micro-Habits**: Punctuation, capitalization, formatting.
+        6. **Negative Constraints**: What NOT to do.
+        7. **Structure/Template**: How is a typical piece organized?
+        8. **Style Deconstruction (Few-Shot Examples)**:
+           - Include the 3-4 excerpts you selected in Step 1.
+           - For each, provide a brief "Style Note" explaining what the AI should emulate from that specific snippet.
     
+    The "instruction" should be ready-to-use. When I use this prompt, I want the AI to not just know *about* the style, but to have concrete examples to follow.
+
     TEXT TO ANALYZE:
     ${truncatedContent}
     `;
