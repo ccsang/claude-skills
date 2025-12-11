@@ -69,10 +69,15 @@ async function fetchContent(source) {
                 $('.qr_code_pc_outer').remove();
             }
 
-            return htmlToText($.html(), {
+            const text = htmlToText($.html(), {
                 wordwrap: 130,
                 pathVerification: 'off' // Disable image path verification to save time/errors
             });
+
+            if (!text || text.trim().length < 50) {
+                throw new Error('Content too short or empty. The URL might be blocked or empty.');
+            }
+            return text;
         } finally {
             await browser.close();
         }
@@ -110,9 +115,10 @@ export async function learnStyle(source, name) {
         5. **Micro-Habits**: Punctuation, capitalization, formatting.
         6. **Negative Constraints**: What NOT to do.
         7. **Structure/Template**: How is a typical piece organized?
-        8. **Style Deconstruction (Few-Shot Examples)**:
-           - Include the 3-4 excerpts you selected in Step 1.
-           - For each, provide a brief "Style Note" explaining what the AI should emulate from that specific snippet.
+        8. **Classic Sentence Patterns (Deconstruction)**:
+           - Select 3-4 *verbatim* excerpts that showcase the author's most "classic" or recognizable sentence structures.
+           - For each, provide a "Pattern Analysis" explaining the syntax/rhythm (e.g. "Starts with a negative assertion, follows with a pivot").
+           - Explain *how* to use this pattern in a new context.
     
     The "instruction" should be ready-to-use. When I use this prompt, I want the AI to not just know *about* the style, but to have concrete examples to follow.
 
