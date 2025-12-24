@@ -87,7 +87,7 @@ async function downloadAndTranscribe(videoId, lang) {
 
 async function downloadAudio(url, outputPath) {
     return new Promise((resolve, reject) => {
-        const stream = ytdl(url, {
+        const stream = new ytdl(url, {
             filter: format => format.container === 'm4a' && !format.hasVideo,
             quality: 'highestaudio'
         });

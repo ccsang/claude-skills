@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Claude Code skill for generating high-quality AI images using Google's Gemini API",
   "main": "index.js",
+  "bin": {
+    "ai-image": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -22,6 +25,7 @@
   "dependencies": {
     "@google/genai": "^1.31.0",
     "@google/generative-ai": "^0.21.0",
+    "commander": "^14.0.2",
     "dotenv": "^17.2.3",
     "google-auth-library": "^9.4.0",
     "mime": "^4.1.0"

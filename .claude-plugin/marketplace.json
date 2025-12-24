@@ -18,7 +18,8 @@
                 "./skills/ydl-js",
                 "./skills/youtube-search",
                 "./skills/wx-uploader",
-                "./skills/imitate-writing"
+                "./skills/imitate-writing",
+                "./skills/ai-detect"
             ]
         }
     ]

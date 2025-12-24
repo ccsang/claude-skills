@@ -8,6 +8,21 @@ importers:
 
   .: {}
 
+  skills/ai-detect:
+    dependencies:
+      chalk:
+        specifier: ^5.3.0
+        version: 5.6.2
+      commander:
+        specifier: ^11.1.0
+        version: 11.1.0
+      ora:
+        specifier: ^8.0.1
+        version: 8.2.0
+      puppeteer:
+        specifier: ^24.32.1
+        version: 24.32.1
+
   skills/ai-image:
     dependencies:
       '@google/genai':
@@ -16,6 +31,9 @@ importers:
       '@google/generative-ai':
         specifier: ^0.21.0
         version: 0.21.0
+      commander:
+        specifier: ^14.0.2
+        version: 14.0.2
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
