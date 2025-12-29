@@ -1,0 +1,452 @@
+so I used to use chat gbt a lot for work
+but I pretty much never use it now
+there's a new tool that I started using
+it's free to use and it's become one of
+my favorite and honestly one of the most
+powerful tools on the Internet it's
+called notebook LM it's from Google and
+check this out last week for example I
+wanted to learn about an investment I
+had four PDFs totaling over a 100 pages
+I just uploaded these four PDFs to
+notebook LM and it generated an AI
+podcast that I listen to on my commute
+and I'm not the only one who uses this
+Spotify use notebook LM to power Spotify
+wrapped this year which had a ton of AI
+in it so in this video I want to show
+you what notebook LM is why I like it
+and 13 things you should be doing with
+notebook LM to go from beginner to power
+user and level up your business your
+education your Investments or honestly
+just your life in general so to start
+off I'm going to show this all in real
+time on here we can go to notebook lm.
+goole.com I can put a link in the
+description as well but when you first
+land here you just click on a little
+popup and then you want to make sure you
+signed into your Google account that's
+how it saves everything in The Notebook
+here and we can create our first
+notebook so just clicking on that it'll
+tell you to upload some sources and that
+brings me to number 13 on this list of
+13 different things you should be doing
+with this and that is uploading multiple
+sources we already know on chat gbt or
+Gemini for example you can upload a
+source and ask some questions about it
+and that's very useful but notebook LM
+specifically is designed to interpret a
+lot of sources and it can handle a lot
+of different kinds of sources as well
+PDFs website links videos copied text
+Google Docs slideshows even like
+markdown doc documents a lot of
+different files can be interpreted here
+so if I have like a full Audi book and
+it's an MP3 file I can upload that it'll
+interpret the entire thing transcribe it
+all and then it'll have answers for me
+that we'll use later in this video so
+you can see we have a bunch right there
+up to 50 different sources I'm going to
+choose a file right now so I just
+selected three PDFs that are about
+investing in Timberland for example you
+can upload them and then what we're able
+to do as you can see on the bottom very
+simply like we see on a lot of other
+llms like this you're able to ask
+questions so I could just say like what
+are some risks of investing in
+Timberland hit enter and it's going to
+answer that question and that brings me
+into number 12 which is you can ask very
+specific questions in the text field
+about the information that you uploaded
+and it references different files the
+source files here which is way better
+than contrl F so if you have a job where
+you're doing control Eon you're always
+looking for something in a large
+document this may be a great alternative
+where you can simply upload the files
+here and if you don't have the exact
+wording that you would need for contrl f
+instead you could search for it here
+it'll find it you can see the sources
+like Source number three Source number
+two and if I click on that it'll show me
+where in the source it actually got that
+information and so again if you want to
+find exactly like one specific code from
+a Township or uh you know anything like
+that from maybe a quarterly earnings
+report you can do all of that right here
+moving on to number 11 you can actually
+make a podcast to learn from up to 50
+different sources that's kind of what I
+I showed in the beginning of this video
+and there's really a lot of Endless
+Options we'll talk more about how to
+customize this but one example I like as
+I kind of mentioned earlier is for
+earning earnings reports so we'll do it
+with this example right here with Timber
+but earnings reports is a great example
+where you don't want to listen
+necessarily to the entire earnings
+report but maybe you want to get like a
+summary of how your favorite company's
+doing you can upload the earnings report
+either the transcript or just the entire
+report as a PDF here and then on the
+bottom if you click on Notebook guide
+let me make sure you can actually see
+that here so just click on Notebook
+guide and here you can see generate a
+podcast so we're going to get into some
+more interesting ideas on how to do this
+just to start you can click on generate
+and for something small like this like
+just three PDFs that they're not small
+PDFs but they're all on a pretty similar
+topic usually it's about a 10 to 12
+Minute Podcast shorter subjects might be
+like three or four Minute Podcast and if
+you add a lot of information you can get
+a significantly longer podcast on here
+or what I like to do is make multiple
+podcast you can ask different questions
+which brings me into number 10 so WS is
+generating number 10 is to customize the
+podcast to focus on one topic or one
+question as a common thread for that
+podcast all right well um I was wrong
+about this one I thought it'd be about
+10 minutes this one's thir minutes which
+is pretty great we can just play a
+sample right now and you'll see kind of
+the setup it's a bit like um just two
+voices they sound pretty natural and the
+AI does a good job of making it like
+genuinely sound like people talking like
+there's a lot of pauses sometimes much
+like any other podcaster there is kind
+of some filler talk in there so it's not
+perfect but if you're driving it's a
+great way to summarize you know contents
+from a huge library of content that
+you're trying to digest that would
+normally be readable or just take you a
+lot of time so I like to do this for my
+commute typically just a cool way to
+learn but let's give it a listen and see
+what this one sounds like all right
+let's take a look at this research you
+sent about Timberland and farmland
+Investments it looks like you're trying
+to decide if these alternative asset
+classes are right for your portfolio
+Okay so first 10 seconds sounds like a
+podcast let's jump a little bit later
+into it maybe like 8:30 we'll go to like
+8:30 and see what that sounds like key
+difference is the income potential okay
+Farmland can generate more consistent
+income than Timberland MH through things
+like lease payments all right so he's
+comparing it to Farmland things that I
+would genuinely be interested to know
+about it's just going to pick up more
+information and hopefully take time that
+you'd otherwise just be wasting while
+you're driving listening to music and
+you could you know choose exactly what
+you want to learn if we click on the
+drop down here we can also change the
+playback speed you can download it so if
+you wanted to have a bunch and string
+them together or maybe you wanted to you
+know upload them to YouTube or Spotify
+or whatever obviously look into like the
+terms for whatever platform you're doing
+if it's allowing AI generated content
+but it's something that I think is
+really quite interesting you could do
+here but moving on to number nine you're
+able to actually customize the podcast
+that you are creating so I'm going to
+close out of this I want to make a new
+note let's just do a totally new one I
+don't want to lose this podcast it's
+pretty good if we just click on Notebook
+LM at the top you'll see we have our
+first notebook right there we can say
+create new and make an entirely new
+notebook with new sources maybe this
+time I want to learn a little bit more
+about say how to build a tiny home so I
+have four sources that are downloaded
+I'm just going to add one at a time and
+you'll also notice that every source
+that you upload if you just click on the
+source on the left it'll show you the
+entire source and on the right side in
+the notebook guide it gives you a
+summary of what the sources are so if
+you have a lot of different notebooks
+and you don't recognize the file name
+for them of course you can open them you
+can see a summary of each source so this
+will tell me a summary of that right
+there key topics in there you know and
+we can also see a summary of all the
+sources combined over here just to kind
+of keep your not your notebooks more
+organized kind of also helps you to
+summarize it in case you want to get a
+quick glimpse of what actually what
+something actually is so let's say we
+want to make a a podcast for this one
+right here how to make a tiny home but
+we don't want it to just be a generic
+summary of all the content we uploaded
+instead you can click on customize and
+we can add a lot of details here to
+really Target a specific a audience
+maybe so you could say you know make a
+podcast as if I were you know an expert
+in the field or make a podcast as if I
+were you know a child and it's is really
+you know a very high level summary of
+the content so they give you a couple
+examples of what you could do here all
+right so I have that I'm going to say
+generate and this is going to generate a
+podcast for that as well so once it's
+generated we'll play back a sample of
+that moving on to number eight you can
+actually use notebook LM to analyze
+presentations or calls that you were
+involved in so this would be a great
+business move if you have maybe you
+presented something you have you know
+this the slideshow you have your audio
+recording you can upload that and tell
+notebook LM to analyze the language
+patterns the consistency and overall
+messaging to kind of help you analyze
+yourself give it you know it could pick
+up on some patterns maybe and uh
+hopefully find some hidden trends for
+you so for example if you have like 25
+successful videos or calls and maybe 25
+that failed you could upload all 50 of
+them and ask to see if there's any kind
+of Trends in there and hopefully help
+improve your sales success ratio in the
+future number seven you can have
+notebook LM create a study guide uh to
+increase your memory retention this is
+very easy to do with a single button on
+the left side so if I just click on
+create study guide the way notebook LM
+is set up is within each notebook you
+have notes it's not my favorite uh ux
+right here but you'll see we have this
+is going to show up as a note we can add
+other notes and these all kind of show
+up in a in an array a grid right here
+that you can click into each of them and
+kind of manage them like that but it's
+going to create a study guide right here
+now it's not going to it's going to take
+a second to do this because it is also
+generating that podcast as at the same
+time you can see the new note it shows
+us right here essentially the study
+guide so what are all the questions we
+can go through them and try to answer
+them so if you're studying for an exam
+maybe and you have like you know your
+textbook you can have it make a study
+guide based on a certain chapter or you
+could do the same thing with you know a
+lecture or any anything that you have
+that you're going to upload as a source
+down here we have the answers then so
+that I think is kind of a useful way to
+study if you don't want it you could
+always just delete that but we have
+quite a few other things we can do as
+far as notes go as well we can add a
+blank note and just kind of add whatever
+you want typical note creation right
+there I'm going to close that and we
+could also convert all the notes to a
+source I don't really use that
+particularly often number six though we
+can have notebook LM create a timeline
+which is very interesting if you have
+like a lot of events going on a huge
+project or if you're just you know
+learning a lot about history and you
+have you know some autobiography of JP
+Morgan and you want a timeline of
+everything that was talked about in the
+book the way we do that is again going
+down to notebook guide and simply just
+click on timeline now that doesn't
+really make a lot of sense on this um
+but I'm going to click on it and see
+what it's able to come up with maybe
+it's going going to show me like how
+long it takes to do different parts of a
+project or I'm not sure exactly what
+it'll come up with but if it was a
+historical document that would make a
+lot more sense to show you the actual
+dates for certain things okay wow this
+actually did come up with a timeline
+about tiny homes and how large homes
+were in different years and when they
+were used and stuff like that so that's
+that's very fascinating that's not what
+I expected at all number five you can
+create a briefing doc so again going
+back to notebook guide right here
+briefing Doc is another example so this
+would be great if you're onboarding new
+employees and you have you want to
+create a document about how to do
+something maybe you have a training
+video already maybe you have you know
+just a lot of resources on the topic you
+can go and create a briefing dock to get
+them up to speed on how to do something
+or similarly if you are trying to just
+summarize an entire project and present
+it to a manager maybe you can upload all
+of your files here and create a briefing
+dock based on that this could really be
+useful in many different situations
+leave a comment if you have any other
+ideas honestly for any of these of where
+you would apply them but just kind of
+something that I think in many
+businesses would be quite useful number
+for you can add multiple notes to your
+notebook I kind of showed that a little
+bit earlier right here so let's click on
+Notebook guide and hide that we have a
+lot of notes in this notebook and all of
+them are going to be showing up right
+here if we create new ones of course
+they are going to show up here and you
+can rename them and change a lot about
+them um but the other ones that
+personally I use are just saved
+responses so notebook guide and really
+these right here are going to be the
+primary ones I use or anytime you have
+responses and conversations down here
+those are going to be something that I
+would also save in notes if you find
+that it's something you want to come
+back back to number three speaking of
+different notes you can select multiple
+notes so if I select two of them right
+here I can combine them to make study
+guides to create outlines to just create
+a combined note as well or suggest
+related ideas or even summarize them as
+well so again you're just going more and
+more layers deep on the same information
+something that just is a little bit
+different than you're able to do on
+Gemini or chat gbt where you kind of
+start going you know too many prompts
+down and it kind of loses track of the
+whole process you're doing but this is a
+really interesting way to organize all
+your thoughts and all the ideas that in
+the and the answers into a very visual
+display number two then you can use
+notebook LM to analyze complex code this
+is great for you know summarizing
+projects or adding notes into your code
+projects hey guys this video is ready to
+go live but Google launched an update
+already like this is a really fast
+changing software so I wanted to show
+you two new things first change is the
+layout so you can see we no longer have
+a little bubble on the bottom the
+podcast is over on the right side now so
+you can see if you click on this little
+panel up on the top right there that's
+where you access that and the second
+thing is that you can actually interact
+with the podcast now uh it's a feature
+that's rolling out from Google right now
+so I can't demonstrated yet I don't have
+access to it but from Google's own demo
+you basically just like raise your hand
+or call in kind of like on a radio show
+you can think of it like that uh and
+you're able to uh just ask questions and
+kind of change the direction of the
+podcast a little bit uh using your own
+voice and then number one you can use
+the AI podcast to help you make a
+decision maybe to help you like feel
+better about your mental health or
+whatever it might be like I I've seen
+people use this to upload like their
+journal entries and then you know ask it
+to kind of make a podcast and then
+you're just listening to people kind of
+talking about what you're already
+thinking about but maybe in a different
+light maybe just kind of making you
+think it think about it a little
+differently and hopefully helping you to
+sort things out so ultimately this is a
+tool this is not going to be something
+that like comes up with new information
+or really makes decisions for you but
+the idea is to kind of Shuffle
+information around present it to you
+differently help you learn more quickly
+and uh hopefully help you make better
+decisions to really amplify things or
+like I said before if you just want to
+use this to make podcasts and publish
+that as content you could totally do
+that as well a couple cautions to be
+aware of Google does like to discontinue
+things so I recommend using this tool
+but proceed with caution like you don't
+want to save all of your information in
+here it might be a good idea to download
+a lot of content and save it to another
+drive just in case Google decides that
+hey this is a great tool but they're
+going to like discontinue it in a couple
+years you never know Google does do that
+quite a bit other things to note that
+this is really being used in a lot of
+different platforms as I said already
+Spotify used this for Spotify rap this
+year and I suspect it will be bundled
+into many other Integrations into the
+future but let me know how you think
+you'll be using notebook LM if you
+enjoyed the video consider liking and
+subscribing I'm Michael Brian with
+santal media and I'll see you in the
+next video

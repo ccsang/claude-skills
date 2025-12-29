@@ -1,0 +1,45 @@
+welcome to notebook LM this is where you
+can start exploring the power of
+generative AI the first thing you need
+to do is start a new notebook select the
+create button here to get
+started once you do that you'll be
+prompted to add some Source
+documentation notebook LM supports PDFs
+text files markdown or audio files like
+MP3 you can also add documents from
+Google Drive you can add links from
+websites or YouTube and even paste in
+texts
+let's try this out and upload these
+documents McKenzie's report on the
+economic potential of generative Ai and
+Google Cloud's white paper on building
+an effective AI
+strategy okay and once those documents
+are't uploaded this text box at the
+bottom is ready to enter your props
+think of it similarly to Gemini as
+having a conversation with a super smart
+assistant but think of notbook LM as a
+research assistant that relies only on
+the documents you provided for context
+there you go the book LM will create a
+concise summary drawing directly from
+the uploaded documentation and provides
+citations for easy reference you can ask
+notebook LM questions about the source
+material give it creative tasks or have
+it summarize highly complex information
+you'll also notice in the right panel
+Studio panel you'll see two sections an
+audio overview and a note section the
+audio overview section will will
+actually generate a podcast from Two
+Hosts based on the source
+documentation and the note section will
+autogenerate a note or a study guide a
+briefing doc an FAQ or even a
+timeline so now it's your turn to
+explore and see what things you can
+unlock with notebook Ellen

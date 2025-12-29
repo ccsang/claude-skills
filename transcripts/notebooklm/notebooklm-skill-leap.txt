@@ -1,0 +1,524 @@
+Notebook LM from Google is one of the
+best AI tools available today. It's been
+around since 2023. I've used it almost
+every single day since. Now, if you
+haven't used Notebook LM before, it's an
+AI powered research assistant from
+Google and it works in a really unique
+way. All your knowledge is organized
+into individual notebooks and you could
+upload your own sources of information.
+So you could upload PDFs, for example,
+links to websites, link to YouTube
+videos, and then you could use AI to get
+knowledge and research directly
+extracted from that information. Now, in
+this one video, I want to show you
+everything Notebook LM has to offer,
+including creating things like mind maps
+with your own notes, turning your notes
+into interactive podcasts, and even
+turning your notes with one click into
+an entire video. So, you can access
+Notebook LM at notebookm.google.
+And I'm going to show you first the free
+plan and everything the free plan has to
+offer and then we'll switch over to
+Notebook LM Pro at the end of the video.
+There are some things worth the upgrade
+that I'll mention then. Now, here's a
+brand new account, a free account. And
+to create a notebook where everything is
+organized, you just press create a
+notebook button here. And this is the
+very first thing you could do with
+Notebook LM. You could create notebook
+usually about a specific topic. So all
+your notes, all your sources that you
+have online are organized into a
+individual notebook. right over here.
+You could upload sources by dragging and
+dropping it or clicking here to choose
+them from your computer. And they could
+be different things like PDFs, text
+files, markdowns, audio files. You could
+upload any of that here on the bottom.
+This is one of my favorite option is you
+could actually bring things from your
+Google Drive. So I usually have my notes
+organized into Google Docs or Google
+Slides. I will bring those here in the
+center. You could even bring in things
+from individual websites. You just type
+in a link of a website and you could
+also bring in YouTube video links. That
+is helpful. And you could just copy text
+here. If you have text in your notes
+app, for example, you could just copy
+and paste that over here. And if you see
+on the bottom, it says zero out of 50.
+So you have 50 individual different
+types of documents. And you could mix
+and match. So you could have 10 YouTube
+videos, 10 PDFs, and 10 audio files, for
+example, inside of an individual
+notebook. So that's the very first thing
+I wanted to show you with notebook LM is
+creating notebooks from all these
+different sources and then using AI on
+the next page to interact with them.
+Okay. The next thing I wanted to show
+you is summarizing your documents. And
+you could do this really really fast
+with notebook LM. So I have added just
+one document. As soon as you add on the
+previous page I showed you, it brings
+you right here inside of Notebook LM.
+And anytime you want to add more
+sources, you could just press add.
+Brings you back to this page. So I only
+have one out of 50. I dropped the text
+file here, but you could add more from
+this page as well. And all I have to do
+now to summarize it is I have to click
+that source. And this is the summary
+that I just got here in real time. This
+is the summary of that text document.
+And it shows you the key topics here. So
+you could dive a bit deeper. So this is
+a fantastic way to get yourself an
+instant summary in one click by
+uploading any type of source. Now the
+next thing I wanted to show you is
+asking questions with chat. So as long
+as you have at least one available
+source over here and you could again add
+a lot more in the center you could ask
+AI to help you go through this document
+or multiple documents. Now this is
+powered by Google Gemini one of the best
+AIs available today. The nice thing is
+it also will know what your information
+is all about and it will give you some
+recommendation prompts over here too.
+So, this script I just uploaded was
+actually about Notebook LM. So, if I go
+ahead and type this out or press one of
+these suggestions, it will quickly give
+me an answer here. And you could see I
+only have one source, but it will give
+you these little annotations and it will
+show you where it got that information
+from. And the nice thing is this works
+like any AI chatbot. So, I could just
+ask for a follow-up prompt to reformat
+this in just three key bullet points and
+it will go to work again using Gemini.
+And here's the three key bullet points.
+Now, the next thing you have is you also
+have this discover tab right here. So,
+if you press this, you could actually
+get Gemini, Google Gemini in the
+background to go and find you things.
+So, I'm going to ask for Google Notebook
+LM for work use cases. I'm going to go
+ahead and submit that. And it's going to
+go search the web and find me a bunch of
+different sources that I could add to
+this specific notebook here. Okay, it
+found me a bunch of different docs. It
+found me a YouTube video. It found
+things on Reddit. And if I want to
+import all of them, I could import all
+10 sources or I could pick and choose
+which one I want to import. But if I
+import them now, you see my notebook is
+populated with a lot more information
+than just that initial text document
+that I uploaded. So what documents can
+notebook LM process? I'll click on this.
+And now you could see these little
+numbers make a lot more sense, right?
+They're coming from not just source
+number one, but all these other sources
+as well. Now, next one is creating
+podcasts or what notebook LM calls audio
+overviews. So, on the right side, you'll
+have this panel here. And with any of
+these panels, if you don't need them,
+you could collapse them and it will
+change it to these little icons. But
+this right here, audio overview, is one
+of the most viral things that ever came
+out in the world of AI. So, let me demo
+this for you. If you click this, it will
+generate a podcast between two AI hosts
+based on your own documents. It's one of
+my all-time favorite things. Now the
+podcast is ready. It pulled it from nine
+sources and it's about 17 minutes and 43
+seconds. Let me play a little bit of it
+here for you so you get a sense of it.
+>> Information overload is well it's real.
+It really slows things down.
+>> Yeah, absolutely. Sifting through it all
+feels like a full-time job sometimes.
+>> So what if there was an AI assistant
+like designed specifically for that
+challenge? What is Notebook LM at its
+core?
+>> Right. So basically it's Google's
+personalized AI research assistant. It's
+built, you know, specifically to stop
+those AI hallucinations where the AI
+just makes stuff up. That's a big deal
+compared to a lot of general chatbots
+out there.
+>> Okay, I think you get the idea here. And
+that's another benefit of notebook LM.
+It actually is going through your
+handpicked sources that you gave it as
+your knowledge base. So, it usually is a
+lot more useful than general AI
+chatbots, even Google Gemini that goes
+and searches the web for you. Now, the
+next one I wanted to show you is right
+next to audio overview is called video
+overview. And with Notebook LM, you
+could now transform all your sources
+into an AI generated slideshow video.
+And it has really interesting visuals
+that go along with it. So, I'm going to
+click on this now and I'll show you
+exactly what you get out of this option.
+Okay, the video is done. Let's go ahead
+and click on it here and I'll make it
+full screen and play a bit of it for
+you.
+>> Hey everyone and welcome. Today we are
+diving into a tool that I've started
+using pretty much daily and honestly
+it's a total gamecher for anyone who has
+to deal with a lot of information. We're
+talking about Google's Notebook LM. So
+here's what we're going to do. We're
+going to break it all down. We'll kick
+things off with what Notebook LM
+actually is. Then we'll get into its
+secret weapon, what's called the source
+grounded advantage. After that, I'll
+walk you through how you can go from
+just a pile of documents to some real
+actionable insights. Okay, let me scrub
+through some other points of this so you
+could kind of see it created all kinds
+of different visual for us and you could
+see the voice is very natural, same as
+the audio overview function, but really
+really useful way to get through a lot
+of different documents this way. Now,
+this style of video is definitely
+useful, but it's a lot like an upgraded
+PowerPoint presentation, but I want to
+show you how to level that up. So, we're
+going to go ahead and combine this video
+from Notebook LM with Hen, the sponsor
+of today's video, and I want to show you
+how to get something really unique from
+combining those two. Now, if you haven't
+used Hen before, it's an AI video
+platform that lets you create lifelike
+avatars to streamline the whole video
+creation process. They have something
+called a digital twin though that I
+wanted to show you that enables creators
+like me to clone themselves into a
+hyperrealistic AI avatar. And now this
+runs on their new AI motion engine. And
+when combined with their AI avatar 4
+technology, it creates avatars that look
+and feel more realistic than I've ever
+seen. So this updated digital twin
+allows you to upload a real video of
+yourself. So I actually uploaded the
+beginning of this video that I just
+recorded. And it just doesn't capture
+the face. It captures your authentic
+expression, natural gestures, and unique
+body language. And this is the first
+technology of this kind in the whole
+world. Okay. To create a video, I'm just
+going to click on my clone here and I'm
+going to go ahead and create a landscape
+video directly from here. Next, I'm
+going to bring that notebook LM video
+that I've downloaded. So, I just have to
+go to this media tab. You could upload
+any type of video. This is the notebook
+LM video I've already uploaded. And I'm
+going to set this as my background. And
+I'm going to take my video here. And I'm
+already using Avatar 4 here. So, I'm
+going to make sure that's turned on. And
+I'm going to go ahead and shrink this
+down to the corner right over here. Now
+on the left side, I'm going to use my
+own clone voice, but I'm going to bring
+in the audio here. So, upload audio.
+It's going to let me upload that same
+audio that I got from the Notebook LM
+video that I have over here. And since I
+want my own voice, not this audio, I'm
+going to go ahead and click this and I'm
+going to turn this audio into text. That
+will just transcribe it for me over
+here. And I just have to press generate
+on top. Okay. Does this sound familiar
+to you? Maybe you're a student prepping
+for exams or a researcher with just
+stacks of papers or a project manager
+trying to juggle meeting notes, reports,
+and all that stakeholder feedback. It
+feels like a constant flood, right?
+PDFs, web links, videos, notes
+everywhere. And just trying to keep it
+all straight, let alone find the actual
+insights inside. Well, it can feel
+pretty much impossible. And I'll include
+a link in the description to the new
+digital twin inside of Hey Gen so you
+could try it out for yourself. Thanks
+for hen for sponsoring this video. Okay,
+the next thing I wanted to show you is
+actually part of audio overview, but
+it's called interactive podcast. So that
+audio overview I created has this little
+icon called interactive mode where you
+could actually interrupt the podcasters
+and ask them questions. It's a really
+really useful learning tool. So let me
+show you how this works. So, all you
+have to do is play the regular podcast,
+but then you could join and interrupt.
+>> You know that feeling, right? It's like
+the digital version of being buried
+under paper. Stacks of articles. Uh, a
+mountain of research.
+>> Oh, wait. Someone wants to join. Hey, go
+for it.
+>> Hey, sorry, I only have like 15 seconds.
+Can you tell me what all this is all
+about in 15 seconds?
+>> Absolutely. We can totally do that for
+you. So, in a nutshell, we're talking
+about Google Notebook LM. It's your
+personalized AI research assistant
+designed to help you make sense of loads
+of information fast.
+>> You upload all your documents like PDFs,
+web links, even YouTube videos.
+>> And Notebook LM then summarizes them,
+finds key insights, and answers your
+questions using only your sources.
+>> And then he naturally actually resumes
+back after he answers your question into
+the podcast that he already generated.
+So this is very, very useful. Okay. Next
+on our list is this option called mind
+maps. So with mind maps, it turns your
+sources into an interactive diagram and
+visually maps out your key topics and
+their connections. So let me go ahead
+and create this one for you. And this is
+the mind map from this source. And you
+could dive deeper in any of these by
+just clicking the mind map. It will
+expand it out here for you. And then it
+will also ask the chat for a follow-up
+answer here. Again, pulling those from
+your sources in the center. And you
+could click this right here. And this
+will expand all the different notes here
+in the mind map. And let me just zoom
+out here. I mean it created all these
+different related topics here. And again
+you could zoom in and explore each one
+and then use chat to interact further.
+Now under reports you have a few
+different useful things. So the first
+one I want to show you is briefing docs.
+If you click a briefing doc option, it
+generates from your notes a briefing
+dock. It's usually two to three pages
+and it's a great summary of all your
+sources. all at once. This is a little
+bit different than when you click on a
+source and you got this summary
+overview. This is from your entire
+knowledge base here on this notebook and
+is one of my favorite things to do when
+I create a notebook. The next one is
+called a study guide. So again, this is
+another useful option that converts all
+your sources into a study guide. And the
+study guide will create quizzes with
+questions and answers for you. It will
+also give you essay format questions, a
+glossery of key terms. Here on the
+bottom, you have FAQ here. So FAQ,
+exactly what it sounds like. It's going
+to make frequently asked questions based
+on the notes that you have, all your
+sources. And in this case, it created
+eight different questions for us. Now,
+this next one, timeline, is also very
+useful. So anything that has a timeline
+order to it, like historical events or
+project milestone, any type of education
+content where a timeline makes sense,
+this will be really useful. And in this
+case, I start a notebook about the
+evolution of Google Gemini and it gave
+me a timeline just like that. Now,
+anytime you create any type of a doc
+like this or you add any type of note,
+you could convert this note into a
+source. So, it will have the more
+compressed version instead of all these
+sources, you could add this right here
+to a source and it moves it here on the
+left side. So, this will show you that
+timeline as the source. So then I could
+easily chat with it and it will always
+be a part of my knowledge base too. And
+by the way, any of these could be turned
+off here. So if you want to have a chat
+but not use all these documents, you
+could individually turn any of these off
+or you could turn everything off and
+just chat with one document by selecting
+it this way too. And another really
+useful option is adding your own notes
+manually. So you'll see this option that
+says add note. So let's say as I'm going
+through this, I have my own thoughts, my
+own ideas. I could just type that in and
+I could convert my own notes into a
+source and it'll move them here to the
+left side, too. Next, let me show you
+how to analyze YouTube videos. One of my
+favorite ways to use Notebook LM. So,
+here inside of a new notebook, instead
+of choosing the traditional sources that
+I've shown you so far, we're going to go
+ahead and choose YouTube this time. And
+you just have to paste a YouTube link
+here. And with the YouTube video added
+over here, you could ask any type of a
+question here. and anything I showed you
+so far, like clicking that link, you
+will get that summary over here. You
+will get the key topics over here. And
+then you could ask any type of follow-up
+questions like this using chat. So, this
+is one of my favorite ways to interact
+with longer videos. So, for example,
+this video is something like 30 minutes
+long. Well, this gives me a quick
+overview and I do all the things that I
+show you so far, right? This gave me the
+key summary quickly, but usually I'll
+get a briefing doc. If I want to dive
+deeper, I'll even create like a video or
+audio overview. And if I want to put
+this out publicly or internally, I might
+combine it with AI avatars and things
+like that to make a new type of content
+from an existing video. Now, you also
+have this option that again is very
+useful where you could interact with
+individual website links or multiple
+different links and all you need is the
+URL from that website. So, let's say I'm
+researching generative AI. I could take
+this link over here. I go back to my
+notebook. I paste that link. I insert it
+and all the things I've shown you so far
+become available based on this link. So
+I could get my quick summary over here
+and then all the other options that I
+shown you so far are available for
+interacting with any individual website
+links or a combination of multiple
+different links. Now with the free plan
+they make it really easy to share these
+notebooks. So right on top you have a
+share option and you could copy the link
+from here or you could add people to
+this notebook LM project. And this works
+a lot like Google Docs or anything
+inside of your Google Drive. So if you
+use Google products, this is very
+familiar to you. Now, let me show you
+notebook in the pro plan. So with the
+pro plan, you're going to get a lot more
+usage. So you could get five times more
+audio overviews, you could create more
+notebooks, you could ask more questions,
+and you get up to 300 sources per
+notebook instead of the 50 that I showed
+you in the free plan. And there's some
+other option here that I want to show
+you with my paid account. You have this
+option right here where you could
+configure your notebook. So this will
+allow you to customize how the notebook
+actually interacts with you. So for
+example, the conversational style, you
+could change that. So if you are
+analyzing something, this might make
+more sense than the default that we had
+in the free plan. And the length of the
+response also could be changed. So if
+you really want just short answers, this
+will change that. And then you could
+save that. So all the chats you're
+having with your sources will follow
+these instructions here that you don't
+otherwise have with the free plan. And
+with the paid plan, the sharing option
+actually looks a whole lot different,
+right? So you're going to have different
+options like a welcome note that you
+could add. You could restrict this
+notebook. So this is very very useful.
+So instead of anyone with a link, it
+will be restricted to people that you
+invite. And you could change how the
+viewers could access it. So it could be
+just a chat. So they could chat with
+your knowledge base but not see the
+entire notebook or just a notebook. This
+is probably one of the best options
+available with the paid plan. And you
+also get analytics. So when you shared
+this with someone, you could see how
+other people have interacted with it.
+Now that's your crash course of
+everything Notebook LM could do. But I
+have a three-hour course showing you
+lots of practical examples on how you
+could utilize it for work and business.
+So I'll put a link in the description to
+that. That's part of Skillap, our
+e-learning platform. And we have a free
+trial right now, so you can watch this
+course. But we have well over 25
+different courses, seven different
+instructors, a live community, and all
+kinds of different resources that you
+get with a subscription if you stay past
+the free trial. I also made a similar
+video about perplexity AI and everything
+that app could do and I'll link that
+over here

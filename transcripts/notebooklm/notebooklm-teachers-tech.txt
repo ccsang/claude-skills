@@ -1,0 +1,296 @@
+Hey everyone, Jamie here from Teachers Tech. How 
+many times have you felt like you're trying to  
+drink from a fire hose when you're trying to learn 
+something new or even just keep up with the latest  
+in your field? Piles of research papers, endless 
+articles online. It can feel overwhelming, right?
+Today, we're diving into Google's notebook LM. 
+It's not just another chatbot. It's a game changer  
+for how we learn and research, made even more 
+powerful by its latest updates. To put it to the  
+test, we'll tackle quantum computing. I'll show 
+you how Notebook LM breaks it down step by step.  
+We'll explore the fantastic new features like the 
+redesign studio panel and the mind-blowing video  
+overviews. Whether you're a teacher, student, or 
+just a curious learner, this is the tool you need  
+to see. Let's get started. Let's get logged into 
+Notebook LM. If you haven't been there before,  
+I'll put a link in the description or you 
+can just go to notebookm.goole. I'm going to  
+click on this. And right away, I just want to 
+show you a new feature. And depending on what  
+uh if you're logged into an education account or 
+personal account, this might not be here. These  
+are feature notebooks. So what these are curated 
+by experts, they could be authors or scientists.  
+So if I go ahead and click in on this one, all the 
+sources in here have been collected and curated.  
+So if you start using Notebook LM, that's where 
+they're going to be pulling the information from.  
+So that's a neat feature. But like I said, in 
+the education accounts, you might not see that.  
+I've switched over to my education account and 
+you can see that there's no feature notebooks  
+here. Let's go ahead and create a new uh notebook 
+and see all the great new features. So, create  
+new. We're going to have to upload sources. Like I 
+said, we're trying to demystify quantum computing  
+with notebook LM. So, I need to upload some 
+sources. I have a PDF. I have a YouTube video.  
+I have a article from a website. And I have notes 
+in Google Docs. Let's go ahead hit upload. We're  
+going to grab this PDF and open. So, this gets 
+uploaded to Notebook LM. And if you've never used  
+this before, what it will do, the AI is reading 
+this right now, and it's going to give a summation  
+of this right here. I could save this summation 
+as a note, or I could copy the summary as well. I  
+could start using its features about adding audio 
+overview or mind maps. I'm going to come back to  
+it when I have more sources. Now, first of all, 
+I don't want it to call this uh this. I'm going  
+to rename it. So, I'm going to type in quantum 
+computing 101. Little bit about navigation. If  
+I click on this right up top here, you'll notice 
+here is the notebook that I just created and I can  
+go back to it. Let's add another source. So this 
+time I want to grab this YouTube video. So I'm  
+going to go in here C for copy and I'm going to go 
+to YouTube and just paste the link in like that.  
+So now I have two sources. I'm going to go grab 
+this website here, copy, bring it back over here,  
+hit add, and then I'm going to link the website. 
+So I paste it in. If you have multiple websites,  
+I could hit enter and do multiple ones in here 
+so you don't have to keep doing it again. Some  
+websites are behind payw wall. So you'll notice 
+that it'll get an error, won't read it. I'm going  
+to hit insert. And lastly, I'm going to go back 
+and hit add. This is coming from my Google Drive.  
+I can go slides or docs. Here's the notes. Let's 
+say you take some notes and I hit insert. Now I  
+have these four things. The other thing you could 
+do if uh from a website you could copy paste text  
+over or if you're taking notes if I go to add 
+I can go to paste text copy and I could paste  
+it right in here and that would be a source. 
+Now that we have some uh information in here  
+we're ready to start even using more in some of 
+these new features. Here's a great feature. If  
+you need more sources the discover sources. 
+So if I click on this I can give it a topic.  
+So let's say quantum computing. I can submit this 
+and it's going to do searching for more articles,  
+PDFs that I can add to my sources. So this is 
+a great way. So you can see these are all the  
+different sources. I can see this is a PDF. We 
+have different uh websites we have from Wikipedia,  
+Caltech. So if I go ahead and pick I can unselect 
+them all with this one or pick maybe I want to add  
+this one and this one here. So I'm going to import 
+those two. So now I've added a few more sources to  
+it. With any of these sources, I can click on them 
+individually to see the summary of each of these.  
+And I can also start a chat by clicking on any of 
+these key topics that the AI pulled from there.  
+The other thing you can do, you'll notice that 
+you can go and remove sources or rename them.  
+Here's a couple key features I just want to show 
+you in settings. If we click on settings up top,  
+you can see there is an output language. We can 
+choose from the long list here. So, whatever what  
+you need to work with. And the other thing is 
+under settings, we can also go from light mode  
+to dark mode. So, if I switch over to light mode, 
+depending on what you would like to work on. I'm  
+going to be working from dark mode. Now that the 
+AI has read all the sources, I can start asking  
+questions towards all of them. Notice down here 
+where I start typing, it says six sources. If I  
+uncheck some of these, then it's going to say four 
+sources. So, that's what I would be referring to.  
+I'm going to keep them all on. And it's suggesting 
+a question. If I if I kind of go over, you can see  
+all the different questions it's kind of picking 
+up. I could start by those ones. But I'm curious  
+about this. What is a cubit in simple terms? If I 
+send this off, it's going to research through all  
+of these different sources. And what I really like 
+about Notebook LM, how everything is cited. So I  
+know it's going to be grounded on the resources 
+that I've curated. So here it is in the simple  
+terms. It's a basic unit of quantum information. 
+If I hover over the one, it shows me the  
+information where it was coming from. If I click 
+on number one, it will actually bring me to where  
+it was in there. So, I can go ahead a little bit. 
+I can open this in a new tab. I can close this  
+down to bring it back. Let's try another question. 
+So, let's try this one. So, explain the concept of  
+superposition based on my sources. So, here we 
+go. We have this information just like before.  
+But what I'm thinking this sounds a little bit 
+too complicated. So I'm going to go and want to  
+know explain it to me like I'm 10. Notice now how 
+the language has changed. And this is something  
+important to know to tell AI is how do you want it 
+to be told to you? I like it. All of a sudden it  
+has analogies in here to make things simpler and 
+more connections to it. The other thing I want  
+to point out is right here configure notebook. If 
+you go to that, you can define your conversational  
+style. You can see the different ones you can 
+pick and the length of the responses. I'm just  
+leaving mine at default. If you want to save the 
+information you get, make sure you turn it into a  
+note. So just click on save to note and you'll see 
+that it generates it over here where I can click  
+on it. We have this information. The other good 
+thing is we can convert this to a source. So, if  
+I click convert to source, it adds it over here. 
+And then this is a part that it's going to be  
+pulled from. Remember what I said before, we can 
+remove sources and we can delete these notes as  
+well. And then we'll be back to empty. Let's move 
+on now. So, this is where the magic happens. And  
+you can see kind of how they've updated the look 
+of the studio with this nice clean look. And this  
+is all brand new here. This video overview. It's 
+like it makes a slideshow, puts the voice to it,  
+and you have a video. So, I'm excited to show you 
+that audio overview. I just find the quality is  
+getting better in the podcast. It doesn't sound 
+as much AI as it used to. We have our mind map  
+and our reports. So, first of all, let's take 
+a look at the reports. We can quickly turn all  
+this information into these quick ones here. So, 
+if we wanted a study guide from here, all I have  
+to do is click on it. It's going to be going 
+through the six sources here, and it's going to  
+create me that study guide. So, here we have our 
+study guide. I want to point out here too, we can  
+convert this to source. So, it would put it over 
+here if I wanted it. If I click on it and open it,  
+you can see we have this study guide. It's taken 
+from the information here. As I go through,  
+it's put it into a nice way to consume. So, that's 
+a quick way if you want to learn something to pull  
+from your sources, you can do that. Remember, you 
+can close the view and it goes back. The mind map  
+here is another way to dig down deeper. And this 
+really allows people, maybe you see things uh want  
+to see things a little bit differently. A mind 
+map will allow you to dig down. And I'll show you  
+how this branches out. Here's our mind map. Let's 
+go ahead and open this up. Now, you can see as I  
+expand it, it breaks down all the concepts. And so 
+I can go through. And if you're a visual learner  
+that likes to break down the learning, you can see 
+these step by step. You can zoom out on your mind  
+map to see the different connections here. You 
+can even download this. So, if I click download,  
+this will download it as a uh PNG file. If I 
+click and open this up, I'll bring this over. So,  
+now I have this right here as a PNG file that I 
+have. Remember, you can close it down. Close it  
+down here. Everything's here still. We can delete 
+it if we don't want it. All right. Now, the audio  
+overview. Remember, with any of these, I don't 
+have to have all these checked. If I want to have  
+less sources, I can go ahead and do this. With the 
+audio overview, you can customize this. I like now  
+that you can go shorter or longer. So, if I make 
+it shorter, is there something I want them to  
+focus on? Uh, you can see the different examples. 
+I'm just going to hit generate for a shorter one,  
+and we'll go through and do a little preview of 
+this. We have our audio file all finished here.  
+Let's give it a little test. This is interactive 
+mode. I'm going to come back to this in a moment.  
+Let's just hit play. Okay, let's uh let's unpack 
+this. You know how some of these big sort of buzzy  
+terms like quantum information deep wonder what 
+they really mean for us beyond just you know being  
+cutting edge tech the most important bits what QIC 
+actually is why it's apparently so vital and yes  
+some of the truly mindbend it's sounding really 
+good you can change the speed too so if I go to  
+this want a little faster stuff it promises we 
+want you to walk away with a solid grasp of its  
+potential impact and you can adjust to what makes 
+it good for you the other thing I want to point  
+out you can download this as as a file and you 
+can even share from here. So if I click share,  
+you can just add the people that you want here, 
+get them notified and you can see that if you  
+want to have access to the full notebook as 
+well. Let's jump back. I'm going to close this.  
+I want to test out the interactive mode. I'm just 
+going to press on this. So as soon as I hit play,  
+then I can uh listen to it. If I have 
+a question, I can go ahead and ask it.
+Okay, let's uh let's unpack this. Do you know 
+how sometimes you hear these big sort of buzzy  
+terms? Oh, hey there. How could we help? Hey, I'm 
+just wondering what's the simplest way you could  
+explain quantum computing to me. I'm really having 
+troubles understanding. That is an excellent  
+question. It's totally understandable. Yeah, it's 
+one of those things that sounds super complex.  
+Absolutely. The simplest way to think about it 
+is this. Imagine your regular computer, right?  
+It uses bits like light switches. They're either 
+on or off, a zero or a one. Simple, clearcut. So,  
+look at that. I was able to join the podcast. It's 
+like phoning into a podcast and getting them to  
+help me out with a question. I love having that 
+option. Now, the video overview, this brand new  
+feature. I'm going to go and look at customize 
+and I'm going to give it some information. I'm  
+just going to say present this to a grade six 
+class because I'm curious of how it will make  
+this. I'm going to click generate just like 
+before. We have to wait a while. But remember,  
+this is going to create a video for me with like 
+a slideshow with it with the talking. All right,  
+here we go. It's all done here. Uh, like before, 
+you can rename, download, share, delete. Let's  
+go ahead and play this. So, this is going to 
+open up. This is a preview window. I can go  
+uh full screen. Remember, if I download this, then 
+I'd have this on my computer. I can open up. I'm  
+just playing from here. Let's go ahead hit play. 
+I'm going to listen to it for a bit. Hey everyone,  
+and welcome to the explainer. Today, we're heading 
+out on a really special adventure. Think of it  
+like a quest. a quest into a secret world that's 
+being built. I can see already grade sixes being  
+really interested about this. This really builds 
+a lot of curiosity what they're even talking about  
+as we speak. A world that is going to change 
+well pretty much everything. So, want to know a  
+secret? I mean a real secret about what's coming 
+next. I can jump ahead. This amazing new world,  
+this future powered by quantum technology, it's 
+not just going to build itself. It needs pioneers.  
+It needs creators. It needs a new kind of hero. 
+And who knows, by the end of this, you might  
+just realize that one of those heroes could be 
+you. Now, well, this is really interesting. Just  
+listening to the way it's done and everything. 
+Uh, this is something that could be quite useful  
+and engaging to use another way to learn these 
+different topics. Again, all the things that I've  
+showed you before, everything works pretty easy. 
+We can share it here. We can close it down. Now  
+from all these sources over here, we have these 
+new sources from uh the study guide to our mind  
+map to our podcast now to a video. I hope you 
+found this guide to notebook LM helpful and  
+it's something that you can put to use right 
+away. Really excited to see people's comments  
+about the video feature and what they think of 
+it or something that they could use. Thanks for  
+watching this time on Teachers Tech. I'll see 
+you next time with more tech tips and tutorials.

@@ -4,8 +4,12 @@
   "private": true,
   "description": "Root workspace for Claude Skills",
   "scripts": {
-    "test": "pnpm -r test"
+    "test": "pnpm -r test",
+    "link-all": "for d in skills/*; do (cd $d && npm link); done"
   },
+  "workspaces": [
+    "skills/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT"

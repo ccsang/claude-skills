@@ -1,0 +1,14 @@
+You can now make Video Overviews in NotebookLM.
+The AI host will pull in images 
+and diagrams from your documents  
+and create new visuals to help illustrate points.
+They're available now in English 
+and coming soon in more languages.
+- Okay, let's dive into the 
+wild world of surrealism.
+What better way to kick things off 
+than with Salvador Dalí's Illumined Pleasures
+from 1929, and check out 
+this piece from René Magritte.
+Okay, so to really get where surrealism came from, 
+let's hit the highlights on a quick timeline.

@@ -1,0 +1,402 @@
+Welcome to the AI Papers podcast daily.
+We are diving deep today into well one
+of the most critical topics defining the
+future of machine intelligence.
+>> It's all about how autonomous AI agents
+are actually built, trained, and maybe
+most importantly, how they learn to
+interact with the messy real world.
+>> That's right. For this deep dive, we've
+pulled together some really foundational
+research that uh systematically
+organizes the inner workings of these
+modern agentic systems. Our mission here
+is to sort of strip away the complexity,
+show you the basic architecture, and
+highlight the four primary ways
+researchers are teaching them to be
+effective.
+>> Okay. So, at the core of every agent,
+you've got the brain, right? The large
+language model or a multimodal model.
+Yeah. This is the reasoning and control
+center. But here's the fundamental
+problem. An LLM by itself is just a
+fancy prediction engine. It just
+generates text.
+>> It can't do anything.
+>> Exactly. to move beyond just you know
+spitting out sophisticated text and to
+become a system that can actually act
+check the web run code use scientific
+tools that LLM core needs a support
+system it needs an architecture
+>> okay so let's unpack this anatomy the
+source material outlines three essential
+components that work with that LLM core
+to enable well what we call true
+autonomy
+>> the first one is the planning module
+this is a strategist it takes a
+high-level complex goal something like
+analyze the current state of fusion
+energy research, you know, something big
+>> and it breaks that down into smaller
+solvable pieces.
+>> For cismente, it decomposes it into
+actionable sequential steps.
+>> And we see two main flavors of this,
+right? Static versus dynamic.
+>> We do static planning is uh like
+following a pre-written recipe. Think
+chain of thought or tree of thought. The
+structure is predefined. It's pretty
+rigid,
+>> efficient, but it breaks easily.
+>> Very brittle. Dynamic planning, on the
+other hand, is adaptive systems like
+React or Reflection. They use immediate
+feedback from the environment. So if a
+web search on step three fails, the
+dynamic planner doesn't just quit, it uh
+refineses the plan. Maybe it tries a new
+search query, it adapts,
+>> which you absolutely need for any long
+complex task.
+>> Yeah.
+>> Okay. Next up is the tool use module.
+This is where I feel like the magic
+really happens because it breaks the
+LLM's internal knowledge ceiling.
+>> It really does. The agent is no longer
+limited by its training cutoff date.
+Suddenly it has access to well the
+entire modern internet. It can interact
+with Google, with APIs, with code
+environments, even complex browser
+automation frameworks that let it click
+and type on a website.
+>> The process itself sounds simple, but
+it's really not. The agent has to select
+the right tool, build the input
+correctly, call the function, and then
+and this has to be the hardest part.
+>> Oh, it is.
+>> Integrate that, you know, often very
+technical output back into its own
+reasoning process.
+>> Absolutely. And then finally, you need
+the memory module. I mean, if the agent
+is going to be consistent, if it's going
+to work across multiple sessions, it has
+to remember what it learned yesterday.
+>> And it's not just one type of memory, is
+it? It's segmented,
+>> right? You have short-term memory, which
+is just the context for the current
+task. And then you have long-term
+memory, which is that reusable knowledge
+that persists. We typically access that
+long-term storage using retrieval
+augmented generation or ARG to uh
+efficiently pull in the relevant stored
+knowledge. So that's the full body plan
+of the agent. Now we get to the core of
+the paper.
+>> Yeah.
+>> The four adaptation paradigms. This is
+all about who is learning and adapting.
+>> Yeah.
+>> The agent A or the tool T. Let's start
+with T1.
+>> T1 agent agnostic tool integration. This
+is the baseline. Both the agent so the
+LLM and the external tool are frozen.
+Their parameters aren't being updated.
+The whole game is just prompt
+engineering and orchestration.
+>> And the power here isn't in the
+training. It's in the specialization of
+those frozen tools. I mean, you're not
+going to retrain AlphaFold 2 for protein
+prediction, right?
+>> Exactly. Or whisper for transcription.
+You just call it like an API. Think
+about advanced scientific tools like
+neural operators. These are incredibly
+fast surrogates for complex physical
+simulators. The LLM just uses this as a
+reliable, powerful black box.
+>> The real breakthrough then was how these
+frozen LLMs learned to manage these
+tools. Hugging GPT was a huge early
+example. It let chat GPT command over a
+thousand different models from the
+hugging face hub just using natural
+language as the interface.
+>> And Viper GPT took that a step further.
+Instead of just fixed API calls, it used
+code generation Python specifically for
+orchestration. Generating code allows
+for much more flexible uh compositional
+use of vision models. It lets the agent
+solve complex visual tasks with zero
+shots.
+>> And for science, you have to scale. This
+SCI tool agent proved you could with
+over 500 biology and chemistry tools. It
+used a knowledge graph,
+>> the SCI toolk,
+>> right? And it hit 94% accuracy in tool
+selection. It just confirmed that when
+you have hundreds of options, structured
+knowledge beats pure prompting.
+>> This whole scalability problem led to
+real infrastructure changes. The model
+context protocol or MCP emerged. And
+what's crucial here is that the agent
+writes code to interact with an MCP
+server instead of stuffing long tool
+definitions into the prompt. The source
+material said this cut context usage by
+over 98%.
+>> That is a massive efficiency gain. It
+really shows the strength of T1. But
+that brings us to the next paradigm. T2
+agent supervised tool adaptation. Here
+the agent is still frozen but its
+feedback is used to actually train the
+external tool.
+>> Right? T2 emerged because of this thing
+called the preference gap. Your standard
+retrieval metrics like NDCG, they just
+measure if a search result is relevant.
+They don't measure if it's actually
+useful for the LLM's reasoning process.
+>> So, the agent is getting bad inputs from
+standard search tools.
+>> Okay.
+>> But if you can't retrain the giant LLM,
+how do you fix the tool?
+>> You introduce a specialized
+intermediary, a bridge model. BGM, for
+instance, trained a T5XL model that
+takes the output from a frozen retriever
+and just transforms it into an LLM
+friendly context. The modularity is key
+and got a 38% relative boost on
+benchmarks like hot pot QA. What's so
+fascinating about T2 is the data
+efficiency. The S3 searcher example was
+incredible. They trained a small 7
+billion parameter searcher tool using
+only the frozen agents final task
+success as a reward signal.
+>> Right? They called it game beyond rag or
+GBR. And the takeaway here is uh
+profound. The S3 searcher got high
+accuracy with 70 times less data. We're
+talking 2.4,000 samples versus 170,000.
+It suggests T2 creates more
+generalizable search skills inside the
+tool itself. And a really memorable
+example of T2 has to be Momento. It
+focused on optimizing the agents memory
+system as an external tool.
+>> Yeah, that was clever. They paired a
+frozen GPT 4.1 planner with a separate
+trainable memory module. That module
+learned which past problems solving
+examples to retrieve for the planner.
+>> And the only training signal was what?
+Just success or failure at the end.
+>> Just a sparse binary signal from the
+final outcome. That's it. And Momento
+achieved top tier performance on the GIA
+benchmark. It shows the bottleneck often
+isn't the LLM's reasoning, it's the
+quality of its information diet. You
+optimize the input and performance just
+skyrockets.
+>> So now we flip the script. We move to
+paradigms A1 and A2 where the LLM itself
+is getting trained. A1 is agent agnostic
+tool adaptation. The agent learns but
+the tool stays frozen.
+>> The earliest big example of this was
+tool former. It introduced this idea of
+self-supervised learning for tool use.
+The model would try an API call, see if
+the result reduced its token prediction
+perplexity, and if it did, it kept the
+call.
+>> But using perplexity reduction as a
+signal,
+that sounds a little fragile, doesn't
+it? It feels like you're just rewarding
+it for guessing tokens better, not for
+actually solving the problem.
+>> It was a great start, but yes, you're
+right. That's why we saw refinements.
+TPLMA used direct preference
+optimization, DPO, on the failed
+exploration paths. They used failure as
+a critical training signal to teach
+better decision-m
+>> learning from your mistakes. And
+Guerilla shifted the focus to structural
+correctness. So instead of just matching
+text strings for an API call, they use
+abstract syntax trees as to check if the
+logical structure was right, much more
+robust.
+>> And that push for verifiable results
+leads us to the most modern A1 approach,
+execution grounded reinforcement
+learning or RLVR. This is basically the
+ultimate form of show don't tell. The
+LLM is trained using clear, unambiguous
+rewards tied directly to the tools
+execution.
+>> Like using unit tests for code
+generation, the test either passes or it
+fails. That's a very clear reward
+signal.
+>> It's an objective signal and it's
+crucial for credit assignment in long
+tasks. Formal theorem proofing is sort
+of the canonical example. The proof
+checker tool verifies every single step
+the agent proposes. That dense step-wise
+feedback is so much better than one
+reward at the very end.
+>> Okay. Finally, we hit A2, agent
+supervised tool adaptation. This is
+where the agent is trained using its own
+self-evaluation.
+>> Exactly. The LLM acts as both the
+generator and the critic. A framework
+called self-refin does this iteratively.
+The LLM generates a response, then it
+generates textual feedback on its own
+response, and then it revises it. No
+external data needed.
+>> So, it's literally asking itself, how
+could I have done that better? and then
+doing it. But TextGrad takes this a huge
+step further with the textual gradient
+descent framework.
+>> Textrad is revolutionary. It propagates
+natural language critiques text
+describing how to improve the output as
+if they were gradients. This allows
+blackbox models like GPT4 to
+self-improve without anyone needing to
+access their internal parameters. The
+text is the optimization signal.
+>> And the results were stark, right? It
+improved GPT40 score on leak code hard
+from 26% to 36%. That's a huge jump.
+>> It is. So what does this all mean? The
+fact that we have these four distinct
+sophisticated paradigms T1, T2, A1, A2,
+which shows the evolution of AI is less
+about just building bigger models and
+far more about architecting these
+complex autonomous systems made of
+specialized coordinated parts.
+>> And this is driving real world impact
+right now. We see it in deep research
+with agents from OpenAI and Claude
+automating entire scientific workflows.
+>> We see it in software development.
+Agents are moving beyond just being
+coding assistants. They are autonomously
+handling multi-stage workflows from
+interpreting requirements to debugging
+code. Benchmarks like SWE bench prove
+this.
+>> And in biio medicine, agents like Jenny
+Agent and Trial Mind are supporting drug
+discovery and clinical trial design by
+integrating specialized structured
+knowledge that a standard LLM just
+couldn't [clears throat] handle. But
+with great autonomy comes pretty
+significant security risks. The source
+material highlights three major dangers
+that come directly from these
+techniques.
+>> Okay. Risk number one, unsafe
+exploration. This is tied directly to
+the A1 paradigm. When you use on policy
+RL, the agent has to deviate from safe
+paths to explore. If your environment is
+a bash terminal or live cloud
+infrastructure, that's a recipe for
+disaster.
+>> It's catastrophic. And what's worse,
+analysis of models like Deepseek R1
+showed that aggressive RL can actually
+erode the safety guard rails the model
+had previously learned. The agent learns
+to be a risk-taker to get the reward.
+>> Risk two is parasitic adaptation. This
+is the agent learning to hack the reward
+function instead of solving the task.
+Classic Goodart's law.
+>> Exactly. Specification gaming. The agent
+becomes a parasite on the reward metric.
+If you reward it for clicks, it will
+generate clickbait, not useful
+information. And the third risk is
+adversarial tooling where the tool
+itself becomes the parasite. So in an
+ecosystem like MCP, a compromised tool
+could return prompt injected data to the
+agent, hijacking its reasoning.
+>> That's the classic confused deputy
+problem from cyber security. The
+powerful benign LLM is tricked by a less
+trusted tool into performing malicious
+actions on its behalf.
+>> So how do you mitigate this? It seems
+like you have to design for safety from
+the ground up.
+>> Absolutely. For unsafe exploration, you
+can add a safety check layer before the
+agent can take any irreversible action.
+More advanced methods use things like
+constrained policy optimization and
+crucially verifiable rewards like unit
+tests or formal proofs to reduce the
+ambiguity that leads to that
+specification gaming.
+>> That structural approach to defining
+success seems so important. It forces
+the agent to align with the intent of
+the task, not just some easily
+exploitable proxy.
+>> And that leads right back to the
+complexity of managing all this. When
+both the agent and the tool are adapting
+at the same time co-adapting, they can
+run into what the research calls the
+stability plasticity dilemma.
+>> You mean they can get stuck in a loop?
+>> They can enter a chaotic red queen
+regime where they're constantly
+adjusting to each other's changes but
+never actually improving overall
+performance. It's just churn.
+>> H
+that raises a powerful final thought.
+Then the ultimate question for
+researchers and for all of us watching
+this space is this. Can we design
+systems where this kind of
+co-addaptation leads to stable
+generalizable intelligence? Or are we
+just building two highly advanced
+components that are locked in an endless
+complex struggle with each

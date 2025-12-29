@@ -9,11 +9,11 @@ Generate high-quality AI images using Google's Gemini API with customizable aspe
 
 
 ## Usage
-To generate an image, run the `scripts/generate.js` script using `node` or the `run_command` tool.
+To generate an image, run the `ai-image` command.
 
 **Syntax**:
 ```bash
-node skills/ai-image/scripts/generate.js "<prompt>" [options]
+ai-image "<prompt>" [options]
 ```
 
 **Options**:
@@ -29,8 +29,8 @@ node skills/ai-image/scripts/generate.js "<prompt>" [options]
 
 **Examples**:
 ```bash
-node skills/ai-image/scripts/generate.js "a serene mountain landscape" --theme photorealistic --ratio 16:9
-node skills/ai-image/scripts/generate.js "cyberpunk city" --theme anime --ratio 1:1 --output-dir ./my-images
+ai-image "a serene mountain landscape" --theme photorealistic --ratio 16:9
+ai-image "cyberpunk city" --theme anime --ratio 1:1 --output-dir ./my-images
 ```
 
 **Output**:

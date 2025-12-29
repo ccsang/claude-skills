@@ -1,0 +1,187 @@
+There are many agentic AI frameworks out
+there and we are going to talk about
+some of the no code and with code
+frameworks. In with code frameworks
+we'll discuss agno, langraph, crewi etc.
+In no code will quickly review nit and
+make. Let's talk about eggno. It's very
+lightweight and super fast framework to
+build agentic application. If you want
+to build an agent that performs really
+fast and also you want to save on your
+development time then agno should be
+your choice. You can see that creating
+agent is is as easy as writing this one
+line where you specify model then tools
+then instructions and when you run this
+code it will write a report on Nvidia.
+So see I run this code and it will write
+a comprehensive report on Nvidia. Eggno
+comes up with lot of tools. So uh if you
+look at their tools you will see they
+have so many different tools integrated
+say Discord, email, Gmail like Slack
+whatever and then they also have this
+MCP integration. So if you want to use
+some of the existing MCP servers, you
+can just import MCP tools and you can
+use that MCP tool as a tools argument in
+your agent class. And that way you can
+uh utilize all the MCP servers which are
+out there uh on the internet. They also
+provide knowledge, memory, reasoning or
+whatever support you need to build a
+reliable agent. On their GitHub, you can
+check some of their performance
+statistics. they have compared it with
+langraph and you will see based on this
+statistics agno is super fast. The
+second one is langraph which is a
+reliable multi-step custom workflow
+framework. So if you want to build
+something really custom
+multi-step
+workflow which is very reliable then
+langraph should be your choice. Langraph
+is part of langchain ecosystem.
+Langchain is one of the most popular
+library out there when you talk about
+building LLM application. So Langraph
+obviously is very popular. It is being
+used by many companies. Uh Langchain and
+Langraph have one issue which is they
+release a new version and it will be
+sometimes backward incompatible. So I
+know some of my friends who are working
+with this and they were getting
+extremely frustrated with this backward
+incompatible change. But now they have
+improved you know they are also becoming
+mature and this is the framework that
+you must know if you are building agent
+AI applications. Here I want to also
+show you the code for lang graph where
+you can build this kind of stateful
+graph. Okay this is a simple graph but
+you can have a complex graph and you can
+orchestrate your work via this graph.
+There can be retry, there can be
+feedback loop. Okay. So this can build a
+reliable agent with multi-turn approach
+for you. Then comes crew AI. This is
+useful especially when you are building
+multi- aent systems with orchestration.
+So here I have a sample code where I
+have created a crew. So crew means
+multiple agent right. So here in the
+crew class you will specify both of your
+agent. You will also specify task which
+it will execute in sequence. Okay. And
+if you look at agent there is a research
+agent and there is a writer agent. Okay.
+And also you have tools here. See here
+you have ser dev tool. So now you
+specify all these agents as a crew.
+Okay. So crew is mainly for building
+multi- aent system where you specify
+crew which is individual agents and they
+will work together to perform set of
+task. Then comes Google ADK and open
+AIDK. Google ADK provides tight GCP uh
+integration. I have a friend who is a
+head of chatbot division in a company
+here in US that uses Google mainly.
+Okay, they use Vortex, they use Google
+cloud. So for companies which are deep
+into Google ecosystem, it makes sense
+that you use Google ADK. But one
+downside of Google and even OpenAI ADK
+is that these ADKs are designed
+specifically for their LLM. So open AI
+ADK will have a very good integration
+with OpenAI models. But let's say using
+open AI ADK if you want to integrate
+with Google model or let's say claude
+model I mean they will provide support
+but I don't think it is in their best
+interest to provide integration with
+some third party LLMs right so because
+of this vendor lockins what I personally
+like is some kind of opensource model
+agnostic framework like langraph or agno
+you know they are not tied to a specific
+vendor whereas these uh frameworks are
+designed by specific companies and they
+have this interest that okay you know
+clients should be using their own LLMs
+okay so if let's say you are using open
+AI already like in your organization you
+have been using open AI you're deep into
+open AI ecosystem then of course you can
+go ahead and use it otherwise I would
+personally prefer using kui langraph
+agno etc so this is a table which will
+provide you a quick summary so langraph
+is a reliable multi-step workflow
+framework it is uh having these key
+features state machine graph memory
+retries and the learning curve is
+medium. Now if you look at the most
+easiest learning curve that is Agno.
+Okay. So if you want to build uh super
+fast quick agents go with Agno. If you
+want to build multi-step workflows with
+state machines you know state graphs go
+with lang graph. For multi- aent system
+go with crewi. And if you are deeper
+into openi or google adk
+google ecosystem you know in your
+company then you can choose one of these
+two. To learn some of these frameworks.
+I have complete tutorials. I will
+provide link of all these tutorials
+below so you can have like a complete
+crash course. Now talking about no code
+we have n and make there are many other
+tools out there but n is kind of very
+popular nowadays. So let me just show
+you. So n provides this kind of low code
+um agent building. So let's say if you
+are a person who doesn't know coding,
+you are a marketing person, you are a
+salesperson and you want to use drag and
+drop to build agentic workflows then
+nitn and even make.com is perfect for
+you. Here you're using graphical user
+interface. You can see see you can
+integrate with different platforms like
+HubSpot, Outlook and you know you can
+integrate different models like
+anthropic or Google Gemini you can
+connect with Postgress and so on you can
+then send a message to uh the Slack
+channel. So these kind of low code
+frameworks are making it easy for
+non-technical folks to build agentic AI
+workflows.
+All right folks so which framework is
+the best? Well, it depends. If you don't
+want to do coding, if you want to build
+agents using no code uh graphical user
+interface, then go with nine or make. If
+you want to build customized workflows,
+right? And uh if you want to build very
+fast agents, then go with agno. If you
+want to build uh super customized
+stateful agents, then go with langraph.
+For multi- aents, go with crew AI. And
+uh if you are into Google or OpenAI
+ecosystem uh you can choose one of these
+two. So based on the situation you can
+evaluate which framework is the best one
+for you. I hope you like this video. If
+you have any question post in the
+comment box below. If you if you like
+the content, please give it a thumbs up
+and share it with your friends who are
+learning agenti.

@@ -12,10 +12,10 @@ Search for videos on YouTube using the YouTube Data API v3.
 
 ```bash
 # Search for videos
-node skills/youtube-search/bin/youtube-search "search query"
+youtube-search "search query"
 
 # Limit results
-node skills/youtube-search/bin/youtube-search "search query" -n 3
+youtube-search "search query" -n 3
 ```
 
 ## Requirements

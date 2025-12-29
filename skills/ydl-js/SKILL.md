@@ -17,25 +17,25 @@ By default, it downloads English subtitles in SRT format.
 **Download English subtitles (default):**
 
 ```bash
-node skills/ydl-js/bin/ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 **Download subtitles in a specific language (e.g., Spanish):**
 
 ```bash
-node skills/ydl-js/bin/ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -l es
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -l es
 ```
 
 **Output to a file:**
 
 ```bash
-node skills/ydl-js/bin/ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -o subtitles.srt
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -o subtitles.srt
 ```
 
 **Get output in JSON format:**
 
 ```bash
-node skills/ydl-js/bin/ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f json
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f json
 ```
 
 ## Options
