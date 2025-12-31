@@ -120,6 +120,9 @@ importers:
       ora:
         specifier: ^7.0.1
         version: 7.0.1
+      puppeteer:
+        specifier: ^24.32.1
+        version: 24.32.1
 
   skills/ydl-js:
     dependencies:
