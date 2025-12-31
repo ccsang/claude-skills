@@ -4,9 +4,12 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import fs from 'fs';
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const packageJson = require('../package.json');
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const packageJson = JSON.parse(fs.readFileSync(join(__dirname, '../package.json'), 'utf-8'));
 
 import { downloadSubtitles, toSRT, toText } from '../src/index.js';
 

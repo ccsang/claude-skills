@@ -5,8 +5,8 @@
  * This simulates the skill functionality without Claude Code framework
  */
 
-const GeminiImageClient = require('./src/lib/gemini-client');
-const { validatePrompt, validateTheme, validateAspectRatio } = require('./src/utils/validation');
+import GeminiImageClient from './src/lib/gemini-client.js';
+import { validatePrompt, validateTheme, validateAspectRatio } from './src/utils/validation.js';
 
 async function testImageGeneration() {
   console.log('🎨 Testing Gemini Image Generator Skill');

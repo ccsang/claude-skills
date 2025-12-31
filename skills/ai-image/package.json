@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Claude Code skill for generating high-quality AI images using Google's Gemini API",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "ai-image": "./index.js"
   },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
   },
   "keywords": [
     "claude",

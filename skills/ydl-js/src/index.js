@@ -5,11 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import os from 'os';
 import dotenv from 'dotenv';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-const ytdlParams = require('@ybd-project/ytdl-core');
-const ytdl = ytdlParams.default || ytdlParams;
+import ytdl from '@ybd-project/ytdl-core';
 
 dotenv.config();
 

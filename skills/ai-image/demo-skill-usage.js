@@ -5,8 +5,10 @@
  * This demonstrates how the skill would work with a real API
  */
 
-const { validatePrompt, validateTheme, validateAspectRatio } = require('./src/utils/validation');
-const { parseCommand } = require('./src/utils/options');
+import { validatePrompt, validateTheme, validateAspectRatio } from './src/utils/validation.js';
+import { parseCommand } from './src/utils/options.js';
+import fs from 'fs';
+import path from 'path';
 
 // Mock Gemini response for demonstration
 const mockGeminiResponse = {
@@ -41,8 +43,6 @@ function simulateGeminiAPI(prompt, options) {
 }
 
 async function saveMockImage(imageData, filename) {
-  const fs = require('fs');
-  const path = require('path');
 
   // Create output directory
   const outputDir = './output';

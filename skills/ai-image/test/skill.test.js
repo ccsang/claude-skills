@@ -2,8 +2,8 @@
  * Test suite for Gemini Image Generator Skill
  */
 
-const { validatePrompt, validateTheme, validateAspectRatio, validateOptions } = require('../src/utils/validation');
-const { parseOptions, extractPrompt, parseCommand } = require('../src/utils/options');
+import { validatePrompt, validateTheme, validateAspectRatio, validateOptions } from '../src/utils/validation.js';
+import { parseOptions, extractPrompt, parseCommand } from '../src/utils/options.js';
 
 describe('Validation Utils', () => {
   describe('validatePrompt', () => {

@@ -1,7 +1,7 @@
-const { GoogleGenAI } = require('@google/genai');
-const fs = require('fs');
-const path = require('path');
-const mime = require('mime').default || require('mime');
+import { GoogleGenAI } from '@google/genai';
+import fs from 'fs';
+import path from 'path';
+import mime from 'mime';
 
 class GeminiImageClient {
   constructor() {
@@ -101,10 +101,8 @@ class GeminiImageClient {
             const fileExtension = mime.getExtension(inlineData.mimeType || 'image/png');
             const buffer = Buffer.from(inlineData.data || '', 'base64');
 
-            // Save the image
-            const savedPath = await this.saveImageBuffer(buffer, `${fileName}.${fileExtension}`);
+            // Store the image data
             generatedImages.push({
-              path: savedPath,
               mimeType: inlineData.mimeType,
               data: inlineData.data
             });
@@ -114,7 +112,6 @@ class GeminiImageClient {
               onProgress({
                 type: 'image',
                 fileName: `${fileName}.${fileExtension}`,
-                path: savedPath,
                 index: generatedImages.length - 1
               });
             }
@@ -278,9 +275,25 @@ class GeminiImageClient {
    * @returns {string} Unique filename
    */
   generateFilename(prompt, theme) {
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const promptSlug = prompt.toLowerCase().replace(/[^a-z0-9]/g, '-').slice(0, 20);
-    return `${promptSlug}-${theme}-${timestamp}.png`;
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hour = String(now.getHours()).padStart(2, '0');
+    const minute = String(now.getMinutes()).padStart(2, '0');
+    const second = String(now.getSeconds()).padStart(2, '0');
+    const timestamp = `${year}${month}${day}-${hour}${minute}${second}`;
+
+    // Get first 4 valid characters
+    let prefix = prompt.trim()
+      .replace(/[^\p{L}\p{N}]/gu, '')
+      .slice(0, 4);
+
+    if (!prefix) {
+      prefix = 'img';
+    }
+
+    return `${prefix}-${timestamp}.png`;
   }
 
   /**
@@ -317,4 +330,4 @@ class GeminiImageClient {
   }
 }
 
-module.exports = GeminiImageClient;
+export default GeminiImageClient;

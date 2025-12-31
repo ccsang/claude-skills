@@ -5,8 +5,11 @@
  * This script validates the complete skill structure and dependencies
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 console.log('🔍 Validating Gemini Image Generator Skill...\n');
 
@@ -50,7 +53,7 @@ try {
   });
 
   // Check dependencies
-  if (packageJson.dependencies && packageJson.dependencies['@google-ai/generativelanguage']) {
+  if (packageJson.dependencies && (packageJson.dependencies['@google/genai'] || packageJson.dependencies['@google/generative-ai'])) {
     console.log('  ✅ Gemini API dependency');
   } else {
     console.log('  ❌ Gemini API dependency missing');

@@ -1,7 +1,7 @@
 // Test script for the new Gemini Image Generator with streaming support
 // Usage: node test-new-features.js
 
-const GeminiImageClient = require('./src/lib/gemini-client');
+import GeminiImageClient from './src/lib/gemini-client.js';
 
 async function testNewFeatures() {
   console.log('🚀 Testing New Gemini Image Generator Features\n');

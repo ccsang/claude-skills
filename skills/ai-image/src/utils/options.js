@@ -254,7 +254,7 @@ function generateHelpText(schema) {
   return help;
 }
 
-module.exports = {
+export {
   parseOptions,
   parseLongOption,
   parseShortOption,

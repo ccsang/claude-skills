@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-const { Command } = require('commander');
-const GeminiImageClient = require('./src/lib/gemini-client');
-require('dotenv').config();
+import { Command } from 'commander';
+import GeminiImageClient from './src/lib/gemini-client.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const program = new Command();
 
@@ -48,10 +49,27 @@ program
         throw new Error(result.error);
       }
 
-      if (options.save) {
-        const filename = options.filename || client.generateFilename(prompt, options.theme);
-        const savedPath = await client.saveImage(result.imageData, filename, options.outputDir);
-        console.log(`✅ Image saved to: ${savedPath}`);
+      if (options.save && result.images && result.images.length > 0) {
+        for (let i = 0; i < result.images.length; i++) {
+          const img = result.images[i];
+          let filename = options.filename;
+
+          if (!filename) {
+            filename = client.generateFilename(prompt, options.theme);
+          }
+
+          // If multiple images and filename provided or generated, ensure uniqueness
+          if (result.images.length > 1) {
+            const ext = filename.split('.').pop();
+            const base = filename.substring(0, filename.lastIndexOf('.'));
+            filename = `${base}_${i}.${ext}`;
+          }
+
+          const savedPath = await client.saveImage(img.data, filename, options.outputDir);
+          console.log(`✅ Image saved to: ${savedPath}`);
+        }
+      } else if (options.save) {
+        console.warn('⚠️ No images generated to save.');
       } else {
         console.log('✅ Image generated successfully (not saved). Use --save to write to disk.');
       }

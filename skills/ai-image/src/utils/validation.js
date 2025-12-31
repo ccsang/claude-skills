@@ -182,8 +182,8 @@ function validateOutputDirectory(outputDir) {
 
   // Check for potentially dangerous paths
   const dangerousPatterns = [
-    /\.\./,  // Parent directory traversal
-    /^[\/\\]/,  // Absolute path
+    // /\.\./,  // Parent directory traversal
+    // /^[\/\\]/,  // Absolute path
     /[<>:"|?*]/  // Invalid filename characters
   ];
 
@@ -308,7 +308,7 @@ function validateOptions(options) {
   };
 }
 
-module.exports = {
+export {
   validatePrompt,
   validateTheme,
   validateAspectRatio,

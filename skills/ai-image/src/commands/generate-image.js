@@ -1,7 +1,7 @@
-const { Command } = require('@claudeai/skill-sdk');
-const GeminiImageClient = require('../lib/gemini-client');
-const { validatePrompt, validateTheme, validateAspectRatio } = require('../utils/validation');
-const { parseOptions } = require('../utils/options');
+import { Command } from '@claudeai/skill-sdk';
+import GeminiImageClient from '../lib/gemini-client.js';
+import { validatePrompt, validateTheme, validateAspectRatio } from '../utils/validation.js';
+import { parseOptions } from '../utils/options.js';
 
 class GenerateImageCommand extends Command {
   constructor() {
@@ -250,4 +250,4 @@ class GenerateImageCommand extends Command {
   }
 }
 
-module.exports = GenerateImageCommand;
+export default GenerateImageCommand;

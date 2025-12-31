@@ -1,6 +1,12 @@
-#!/usr/bin/env node
-const path = require('path');
-const dotenv = require('dotenv');
+import path from 'path';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+import GeminiImageClient from '../src/lib/gemini-client.js';
+import { validatePrompt, validateOptions } from '../src/utils/validation.js';
+import { parseCommand, generateHelpText } from '../src/utils/options.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables from .env file in the skill root
 const skillRoot = path.resolve(__dirname, '..');
@@ -9,10 +15,6 @@ dotenv.config({ path: path.join(skillRoot, '.env') });
 if (!process.env.GEMINI_API_KEY) {
     dotenv.config({ path: path.join(skillRoot, '../../.env') });
 }
-
-const GeminiImageClient = require('../src/lib/gemini-client');
-const { validatePrompt, validateOptions } = require('../src/utils/validation');
-const { parseCommand, generateHelpText } = require('../src/utils/options');
 
 // Define options schema
 const optionsSchema = [
