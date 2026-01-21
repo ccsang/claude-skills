@@ -11,6 +11,7 @@ description: Learn and imitate writing styles from URLs or text files. Support c
 - **Continuous Learning:** Feed multiple articles into the same style to evolve it.
 - **No Recency Bias:** Synthesizes a master style guide from all observed sources.
 - **Localized:** Automatically generates instructions in the same language as the source text.
+- **Deep Structure & Tone Analysis:** Specifically targets **Article Structure** and **Tone/Voice** to capture the essence of the author's logic and persona.
 
 ## Prerequisites
 

@@ -1,0 +1,456 @@
+I am sure you've seen [music] this ad
+or this one. Your dream of earning a six
+or a seven figure salary will never come
+true if you don't start using AI and
+charge GPD at your workplace. [music] If
+you think this is another video like
+that, close the tab right now. We are
+not talking about prompt engineering.
+[music]
+We're going to talk about the actual
+skills that matter. In this video, we're
+going to look at four core functions
+that really drive value in every
+organization. And in each function, I'll
+give you the exact skills that will help
+you thrive in your career in 2026. I've
+spent the last 30 days going through
+thousands of job descriptions, seeing
+skills that they highlight, talking to
+experts, and speaking with 4,500
+professionals in our community who have
+a median work experience of 10 years. I
+asked them one question. What AI skills
+actually move the needle? Let's start
+with the generalists. We're now glad to
+be a part of the 01 media network by
+Zeroda. Generalist, COO, chief of staff,
+strategy lead, ops head, whatever your
+title is. Your core job is if a task in
+your company takes let's say 10 hours,
+can you build a system that does it in
+just 1 minute with AI? There are three
+skills that you can develop to actually
+make this happen. Let's start with
+automating business operations. A
+business operation is any repeated
+process like replying to customer emails
+or doing employee onboarding or invoice
+processing. See these operations have
+steps. Invoice arrives, someone extracts
+a data, someone matches it to a purchase
+order, another person approves it and
+finally someone processes the payment.
+Five people are touching one invoice.
+[music] AI automation changes this.
+Invoice arrives, automation extracts the
+data, matches to the purchase order,
+checks amounts, updates your system, and
+schedules a payment. Zero humans for the
+standard case. Look at Flipkart. Their
+vendor onboarding used to take 4 days.
+Now it takes 4 hours. But there's a
+small limitation. Workflows only handle
+the happy path. A happy path is
+basically when everything works as
+expected, right? But when an invoice has
+a handwritten note saying approved by
+CFO in the Tuesday meeting, the workflow
+will fail, right? It needs human
+intervention, your job is to automate
+the 80% of the happy tasks and let 20%
+be managed by humans. The next skill
+that's super hot in 2026 is actually
+developing agentic workflows for
+enterprise systems. Now before I get
+started, let me explain the difference
+in workflows and agents. Workflows will
+typically follow a set of rules, but
+agents have goals and they can make
+their own rules to achieve that goal.
+Let me take an example. Let's say you've
+built a workflow for automating
+invoices. [music] Now, that workflow
+will see a 10,000 rupee invoice and
+escalate it to a manager every single
+time. But an agent that's trying to
+solve it will see the same invoice.
+It'll recognize that it is your regular
+vendor. It'll check monthly ordering
+patterns. It'll see previous CFO
+approvals and it'll approve it
+instantly. As you saw here, the workflow
+had a set of rules it had to follow. But
+the agent has a goal. It does not matter
+how it does it. This is an insanely
+valuable skill in 2026. Let me tell you
+something that validates this. [music] Y
+Combinator which is the largest and most
+prestigious startup accelerator have
+said that there is a humongous demand in
+companies and people who have the skills
+to do this and so are other VCs by the
+way. They're obsessed with this because
+the average Fortune 500 company runs on
+tens and thousands of different software
+systems. WhatsApp, Salesforce, Oracle,
+Workday, plus decades of custom
+applications and 73%
+of their business process still needs a
+human intervention. A workflow in an
+enterprise company can save 2 to8
+million. My prediction is that this will
+be one of the highest paying jobs in
+2026. The third skill to build in 2026
+is AI adoption strategy. Once you've
+built all the automations, you've
+deployed your agents, but you actually
+have your 10,000 employees to use them,
+right? See, this is where all AI
+transformations fail because they forget
+that they are still needing humans to
+adopt their systems. See, [music] let's
+be honest, the fear is actually real.
+Sales thinks that AI will replace them.
+Finance worries about compliance. Legal
+is panicking about liability. People
+will trust AI [music] only when they
+know what it's doing. where the AI can
+go wrong. And the most important part is
+that they are the ones in charge.
+According to LinkedIn skills growth,
+[music] AI strategy is listed as the
+skill that grew from 5,000 profiles in
+2022 to 50,000 profiles in 2024. I've
+seen so many Growth X members over the
+last 6 months building these skills over
+our events and meetups. Building agents
+and workflows has become the top thing
+everyone's chasing right now in the
+community. Now let's move to product.
+The first skill is AI product strategy.
+Think about AI product strategy like a
+hospital that's deciding who to get
+treated first. Not every patient needs
+surgery. Some just need medication. Some
+don't even need any treatment. But what
+do most product teams do? They are
+basically saying every feature gets AI.
+Let's say add AI in our search. Let's
+add AI everywhere. AI is to SAS
+companies what protein is to D2C
+companies right now. Right? But good
+product strategy is asking where will AI
+actually move the needle. Which problems
+does AI solve better than traditional
+code? It's about connecting AI
+capabilities to revenue, retention, and
+conversion, actual freaking business
+metrics. And no, looking cool on social
+media is not one of them. Here's an
+example. Let's say you work for a SAS
+company. Your churn is 8% [music]
+and support tickets take 6 hours to
+resolve. Your activation rate is 40%,
+which problem does AI solve best? A bad
+PM will say, "Let's build an AI chatbot
+for support." A good PM says, "Our data
+shows that users churn because they
+don't activate within [music] 7 days."
+An AI onboarding assistant will cut
+churn by three points. That's worth $2
+million annually. A support chatbot just
+saves two lak rupees. We are building on
+boarding first. Did you see the
+difference? It's about impact.
+Basically, the skill set that you really
+want to develop here is around three
+things. Where should AI be implemented?
+What parts of AI should you build versus
+buy out as a software? And which [music]
+AI features will help you pull ahead in
+front of your competitors. The next
+skill is AI prototyping. AI prototyping
+became hot in 2025 and it will stay hot
+in 2026. Here's why. Think about how
+products get built today. You have an
+idea. You write specifications on a
+document. Engineers spend weeks coding
+that idea. Then you discover that the
+idea doesn't work as well as you
+thought. You just burned 3 to four weeks
+of dev time. AI prototyping changes
+[music] this. You build a working
+version of your idea in an hour instead
+of a month. Not a mockup. a functional
+prototype that the users can actually
+click, go through and test. Recently,
+Vishal Virani who's the founder of
+Rocket as well as a growth member since
+2023 raised
+120 crores in seed round. His company
+rocket helps people go from idea to a
+working product in minutes. He did a
+private session for growth members on
+how to build functional products in just
+[music] an hour. Not wireframes, working
+software. The next set of skills that I
+will be mentioning here are valid for
+both engineers and PMs. However, what
+they do for those skills is different.
+Let's dive in. Context engineering. See,
+most people have heard about prompt
+engineering, act as a senior developer,
+all that stuff. Context engineering is
+different and way bigger. Let me show
+you with an example. You tell an AI
+agent, book me a hotel in Paris for the
+DevOps conference next month. The agent
+books you best western in Paris,
+Kentucky. Your conference is in Paris,
+France. Is that a prompt problem? No,
+it's a [music] context problem. Context
+engineering is building the entire
+system around AI so it figures things
+out itself. The agent should check your
+calendar to see where the conference
+exactly is. Retrieve your company's
+travel policy for budget limits.
+Remember past conversations and track
+the state across multiple bookings. What
+do PMs do here? They design the context
+flow. What information does the AI need
+at each step? And engineers, they build
+a retrieval pipeline, manage the token
+limits and handle failures. Context
+[music] engineering is going to be the
+new prompt engineering. The next skill
+is rag. Rag stands for retrieval
+augmented generation. Now, let me
+explain rag to you. But before that, a
+quick question. What do you think is the
+temperature outside right now? No, no,
+no. Do not look at your phone. Just try
+[music] to guess. Is it 32? Is it 28? Is
+it 25? Let's say it was actually 30.4°
+C. Now, you probably knew it was either
+hot or cold or pleasant. You might have
+stepped out this morning. You felt it.
+But the exact number, that's not how our
+brain works. You store feelings,
+patterns, not precise data points. AI
+models hit the same wall. Asked GPT the
+current temperature in Bangalore. It has
+no clue. It knows Bangalore's climate
+patterns. It knows December is pleasant,
+January gets cooler, April gets hot, but
+right now it's guessing, which is why
+when you ask it, it actually searches
+the web and gets you the exact data.
+This is rag. And [music] let me tell
+you, every single internet company right
+now is scrambling to add AI features.
+Every single one of them. Take Swiggy.
+They're building an AI chatbot. It needs
+to know which restaurants are open right
+now. today's menu current delivery time
+in your area not a guess or look at
+zeroda they want [music] AI to answer
+what's my portfolio worth that means
+pulling your actual holdings not taking
+an estimation with market price it's not
+guessing it needs real data now let's
+move to [music] the next one AI agents
+everyone is talking about agents AI
+agent this [music] AI agent that nine
+out of 10 people don't even know what an
+AI agent is let me tell you something
+that you might have not known Chad at
+GPT isn't a model, it's an agent. The
+model underneath, that's chat GPT4 or
+GPT 3.5. Just the brain. The model
+generates a text. That's it. Pure
+language generation. The agent decides
+what to do with that ability. Should I
+search the web, run this Python code,
+create an image? The agent is making
+those calls. When you type something in
+chat GPT, you're not directly talking to
+chat GPT4. You're actually talking to an
+agent that uses GPT4. Why does this
+matter though? Because 2026 isn't
+[music] about building models. Your
+likes of OpenAI, Anthropic, Google,
+they'll handle that. It's about building
+agents that use those models. Microsoft
+says that 87% of Fortune 500 companies
+will be deploying agents by the end of
+2026. Now, as a PM, what should you do?
+You should be figuring out the designing
+of the workflow. Which tools can the
+agents access? What needs approval?
+What's the failure path? And what will
+engineers do? You want to build a tool
+integration, manage state between
+actions, and implement a guardrail so
+that the agent doesn't burn through your
+API budget. And see, while I say all of
+these skills, I understand that what
+skill to build is easy. But actually
+building that skill requires so much
+effort and most importantly motivation.
+Content cannot solve for motivation. We
+are actually as humans really motivated
+when we are around people that are doing
+crazy things. They're actually inspiring
+us to do more. They push us, right? And
+Crotex is exactly that place where
+you're surrounded by 4,863
+members as of this moment who are
+leaders from companies like Google,
+Meta, Lovable, Nike, Serameai, 11 Labs,
+and more. The community is not open to
+all, however, and that's because
+curating the right audience is core to
+Growth X. But if you want to check if
+you're eligible, check out the link in
+the description. You can check if you're
+eligible for growth in 2 minutes. Final
+skill for product and engineers to
+master is AI evaluations. You built your
+AI feature. Now, how do you know if it
+actually works? See, this is where AI
+evaluation comes in. Think of it like
+this. When you write regular software,
+it's very predictable. You test it once,
+it always works the same way. But with
+AI, you ask the same question twice, you
+will get two different answers. Now,
+both of them can be right or both of
+them can be wrong. product lead at
+Amazon, the head of product at OpenAI
+and even the CEO of Y Combinator all are
+saying that AI evals is going to be a
+critical skill for you to build. Now
+let's shift our focus to marketing ask
+engine optimization or AEO is going to
+be the hottest skill for marketers in
+2026. You see today people are asking AI
+almost as much as Google or sometimes
+even more. And just like it was
+important to get your brand in search
+results, getting your brand mentioned
+inside GPT is going to be the skill to
+build in 2026. So for example, let's say
+when I'm asking GPT here, what are the
+top Asian restaurants around me? And you
+can see these results inside GPT, how
+can you get your restaurant or your
+brand mentioned here? That's AEO and
+it's going to be very important because
+2 billion searches are happening inside
+AI agents by the way. And the latest
+data says that people are having a two
+times intent to buy when they come from
+a chat GPT than they come from a Google
+search. The second skill [music] is AI
+ad generation. See, I want you to look
+at this ad.
+And now this one.
+All of these ads have been made by large
+brands completely with AI. Earlier to
+create an ad like this, it would take
+you months and cost thousands of dollars
+at least. But today, you can do that in
+a fraction of a cost [music] and in
+oneth of the time. Here's why this
+matters. First is the speed at which you
+can deploy. Before you would get an
+insight from your [music] users and then
+making that ad what probably took you
+like weeks or months. You had to brief
+your designers, multiple rounds of
+feedback, approval change. Now one
+prompt ad generated. You can test ideas
+the same day you get them. The third
+skill is Aileled performance marketing.
+Now when you have so many ads and so
+many things going on, it's going to be
+very hard to manage all your ad
+campaigns. Typically managing a
+performance marketing at this scale
+would need an agency or a team of three
+to four. Now you can be the person with
+AI and do the three to four people's job
+by just one person. With AIE performance
+marketing, you get AI to do a lot of the
+grunt work. Whether it's adjusting bids,
+relocating your budget, [music] sifting
+ad targeting, or even rotating your
+creatives. All of this is done in real
+time based on performance data. when
+you're spending 1 cr rupees a month on
+ads. Let's say even a 3% optimization
+saves 3 lak rupees or 36 lakh rupees
+annually. Let's move to the next skill
+which is AI content production. I'm sure
+you've seen Vun Maya's AI clone all over
+the internet. The AI generates
+everything. These videos are getting
+massive traction, millions of views and
+real [music] engagement. But the actual
+advantage isn't that they are AI made,
+but it's basically that AI is allowing
+anyone to produce at scale. [music]
+Instead of making five highquality
+videos manually, now they can do 50 at
+the same cost. All right, folks. 2026 is
+just 2 months away. [music] And let's
+recap on all the skills that we spoke
+about. Let's start with generalists. You
+make AI actually transform operations,
+automating workflows, deploying agentic
+systems [music] and driving adoption
+across the organization. PMS, you should
+master AI product strategy and
+prototyping. You decide what to build
+and prove it before a single line of
+code gets written. [music]
+Engineers, you build a systems, context
+engineering, rag, agents, and
+evaluations. You turn those product
+ideas into working AI products that
+actually drive impact. Marketers, you
+should focus on mastering AEO, ad
+generation [music] at scale, AIEL
+performance marketing, and content
+production. Now, we've covered four
+functions in this video, but let's be
+honest, AI touches every role. HR is
+using AI for talent matching. Sales
+using AI for cold emails. Analytics is
+building AI powered recommendation
+engines. designers are using AI for
+research and UX. We have created an
+insanely comprehensive resource covering
+all of these functions and also the
+current functions but in a lot more
+depth. Check out the link in the
+description for the full resource. And
+look, you might be thinking this is too
+much. I'm already behind. Everyone else
+is moving faster. [music] Stop. The
+people who mastered digital marketing in
+2010 were not smarter than you. They
+just started. The people who learned
+mobile app development in 2012 weren't
+more capable. They just moved. You have
+two months until 2026. That is enough
+time to master one skill for your
+function. Don't pick all of these
+skills. Just pick one. You're starting
+today that already pulls you ahead of
+every single one who's still watching
+tutorials about prompt engineering and
+mastering Chad GBT. 2026 is yours. Go
+build your unfair advantage.

@@ -82,25 +82,84 @@ async function downloadAndTranscribe(videoId, lang) {
 }
 
 async function downloadAudio(url, outputPath) {
-    return new Promise((resolve, reject) => {
-        const stream = new ytdl(url, {
+    // Try yt-dlp CLI first (more reliable against YouTube bot detection)
+    try {
+        await downloadWithYtDlp(url, outputPath);
+        return;
+    } catch (ytDlpError) {
+        // yt-dlp not available or failed, try ytdl-core
+        console.log('yt-dlp not available, trying ytdl-core...');
+    }
+
+    // Fallback to ytdl-core
+    let stream;
+    try {
+        const agent = new ytdl.default({
+            clients: ['web', 'webCreator', 'tvEmbedded', 'ios', 'android'],
+            disablePoTokenAutoGeneration: true,
             filter: format => format.container === 'm4a' && !format.hasVideo,
             quality: 'highestaudio'
         });
 
-        stream.pipe(fs.createWriteStream(outputPath));
+        stream = await agent.download(url);
+    } catch (error) {
+        const errorStr = String(error.message || error);
+        const isBotDetection =
+            errorStr.includes('Sign in to confirm') ||
+            errorStr.includes('bot') ||
+            error.playabilityStatus?.includes('bot');
 
-        stream.on('end', resolve);
+        if (isBotDetection) {
+            throw new Error(
+                'YouTube bot detection triggered. Solutions:\n' +
+                '1. Install yt-dlp: brew install yt-dlp\n' +
+                '2. Try again later\n' +
+                '3. Use a VPN or proxy'
+            );
+        } else {
+            throw error;
+        }
+    }
+
+    // Write stream to file
+    return new Promise((resolve, reject) => {
+        const writeStream = fs.createWriteStream(outputPath);
+        stream.pipe(writeStream);
+        writeStream.on('finish', resolve);
+        writeStream.on('error', reject);
         stream.on('error', reject);
+    });
+}
+
+async function downloadWithYtDlp(url, outputPath) {
+    const { execSync } = await import('child_process');
+
+    // Check if yt-dlp is available
+    try {
+        execSync('which yt-dlp', { stdio: 'ignore' });
+    } catch {
+        throw new Error('yt-dlp not installed');
+    }
+
+    // Remove .m4a extension if present, yt-dlp will add it
+    const basePath = outputPath.replace(/\.m4a$/, '');
+
+    // Download audio using yt-dlp with Chrome cookies for authentication
+    // -x: extract audio
+    // --audio-format m4a: convert to m4a
+    // --cookies-from-browser chrome: use Chrome cookies to bypass bot detection
+    // -o: output template (yt-dlp adds extension automatically)
+    execSync(`yt-dlp --cookies-from-browser chrome -x --audio-format m4a -o "${basePath}.%(ext)s" "${url}"`, {
+        stdio: 'inherit'
     });
 }
 
 async function transcribeAudio(audioPath, lang) {
     const apiKey = getGeminiApiKey();
-    const fileManager = new GoogleAIFileManager({ apiKey });
-    const genAI = new GoogleGenerativeAI({ apiKey });
+    const fileManager = new GoogleAIFileManager(apiKey);
+    const genAI = new GoogleGenerativeAI(apiKey);
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
     const uploadResult = await fileManager.uploadFile(audioPath, {
         mimeType: "audio/mp4", // m4a is mp4 audio

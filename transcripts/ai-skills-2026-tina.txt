@@ -1,0 +1,621 @@
+Here are the essential AI skills that I
+think you should know in 2026. Starting
+from beginner, intermediate to advanced.
+And there is one AI trend that actually
+really caught me by surprise, but I
+really think we'll be transforming
+[music] the world of AI in 2026, which
+for some reason nobody is talking about.
+But before I get to that, let us start
+from the beginning, the [music] basics.
+A portion of this video is sponsored by
+Perplexity. Since the launch [music] of
+ChachiBT in late 2022, the rise of
+generative AI has been meteoric. So
+unless you literally live under a rock,
+I am certain that you have come in
+contact with Gen AI at some point now in
+the form of algorithms, emails, images,
+videos, chat bots, products. It is
+literally everywhere. So if you still
+don't really have a grasp of what Gen AI
+is and how it works, I really recommend
+that you check out this video over here
+where I summarize Google's 8 hour AI
+essentials course in just 15 minutes.
+That should be enough to get you
+started. Now, on top of this just
+general knowledge, there is one skill
+and a suite of tools that I [music]
+think any modern human that participates
+in society should know. Now, if you can
+guess what that skill is, please put it
+in the comments and you'll get an
+imaginary cookie. Okay, did you get it?
+Yes, it is prompting. And when it comes
+to prompting, if you can just remember
+two frameworks, you would be better at
+prompting than like 98% of the
+population. The first framework is
+called the tiny crabs write enormous
+iguanas framework, which stands for
+task, context, references, evaluate, and
+iterate. I'm going to put a screenshot
+now of an example of how to use this
+framework when prompting any general AI
+chatbot. This works well with any of
+your general chatbots like Perplexity,
+Chat BT, Gemini, Claude, Deep Sea,
+Grock, etc., etc. And if for some reason
+you're still not really getting [music]
+the results that you're looking for,
+there is a second framework that you can
+try called the ramen saves tragic idiots
+framework. I'm going to put on screen
+now examples of how to use the different
+parts of this framework. Now, if you
+want more details, explanations, and
+more examples of how to use these
+frameworks, as well as more advanced
+prompting techniques, please do check
+out this video that I have over here
+because I did a full video summarizing
+Google's 9-hour prompt engineering
+course in just 20 minutes. That one was
+a really good course. And prompting is a
+skill that I highly recommend that you
+[music] really have a good grasp of
+because it is the single most important
+skill that will help you unlock all the
+tools and more advanced levels of AI.
+It's kind of like if you're going to be
+like a sword person, like a samurai, you
+first got to learn how to swing your
+sword. Otherwise, it doesn't actually
+matter how good your sword is and how
+fancy it is if you don't know how to
+swing your sword, you know. Now, after
+you learn how to prompt correctly, there
+is a suite of AI tools that I think any
+modern human participating in society
+should know. The good news is that you
+don't need to actually learn a lot of
+tools. The first tool is a generalized
+AI chatbot that can help you answer your
+questions, like what is this plant in
+this picture? Also, be able to help
+rewrite emails, simple reports, analyze
+pictures, data, [music] and videos. You
+also probably want a tool that can help
+you look into news and research. For
+example, this is my personalized news
+feed. And here's an example of a AI
+generated research report diving deep
+into building products, which is what
+I'm interested in right now. Next up, I
+think everybody should master a tool
+that can help you use AI to learn things
+faster. If there's a single most
+powerful meta skill that I can think of,
+it would be the ability to learn things
+quickly. And AI can really, really
+supercharge this for you. And finally, a
+tool that can help you execute and do
+stuff like making slides, dashboards,
+simple apps. Now, the good news is that
+a generalized chatbot has a lot of
+different features now. So, most of them
+are able to help you like answer
+questions, write stuff, research for
+you, help you learn things and build
+things as well. So, it's not like you
+have to learn like a bunch of different
+tools and like pay for a lot of
+subscriptions. So, you can really just
+choose one generalized chatbot like Chad
+GPT or Gemini or Claude and just like
+learn that really really well. But for
+those of you who really do want to
+optimize and just like get everything
+you can out of AI, I will put on screen
+now the stack of tools that I personally
+use on a day-to-day basis. Like I
+personally use each of these tools on a
+day-to-day basis for specific types of
+task. I also do have deep dives into
+most of these tools that I listed here
+which I will also link in the
+description if you want to check them
+out. Another tool that I've been using
+for the past few months that just like
+seamlessly integrates into my own
+workflow is comet which is Perplexity's
+free browser. I want to show you some
+other ways I use Comet now that is
+really really cool and useful. So, here
+is a mutual fund that I'm looking into
+that I might want to invest in. And say
+like I see here it's like a style box
+and it shows this box and I don't really
+know what that means. So, I can type
+here, explain to me what does the VFAX
+style box mean. Okay. And it tells me a
+quick visual way of showing that this
+fund holds large cap US stocks with a
+blend of value and growth
+characteristics rather than purely value
+or purely growth. And it goes to a lot
+more information about this. You can do
+this for anything that you're browsing
+that you're not sure about. Another
+example, I have an email chain going on.
+Uh, and there's like quite a few emails
+that's going on here. So, instead of
+having to look through all of it, I can
+just say summarize this email chain and
+suggest next steps. And comment agent is
+telling me email chain covers your
+invitation, scheduling, recording, and
+post recording follow-up for your guest
+appearance on HubSpot's marketing
+against the grain. Okay? Etc., etc. And
+then it says, okay, we've already done
+this. Preparing your own promotional
+plan and creating a simple internal doc.
+Those are the next steps that maybe I
+should consider. And then it says,
+here's for suggested next steps. Draft
+and send a follow-up email, ask for
+estimated publish date, and then prepare
+your own promotion plans. So, here I
+noticed from this email that Ibrahim
+from our team has added a lot of
+comments into this Google doc that we're
+working on together. Now, instead of
+just like going back and forth on a
+Google doc, at this point, I kind of
+just want to, you know, set up a meeting
+with him instead. So, with common agent,
+I can just write schedule a meeting with
+Ibraim for tomorrow at 9:00 a.m. Hong
+Kong time, 30 minutes. And Common Agent
+does its thing. It's able to plug
+straight into Google Workplace. I
+confirmed it and there you go. It
+successfully scheduled a meeting with
+Ibrahim for tomorrow at 9:00 a.m. Hong
+Kong time for 30 minutes. Pretty handy,
+right? Don't need to contact switch
+between a bunch of different tabs. But
+that's not all. Here's an example in
+which I am having sleep problems, which
+is true. And I'm trying to look at
+natural sleep aids to get better sleep.
+Telling me stuff like, "Oh, melatonin.
+Okay. Okay. Valyan root. All right. Uh,
+and then it goes like lavender. Hm. That
+sounds a little bit like pseudociency to
+me. I don't know about that." So,
+whenever I'm reading through an article
+like this, I kind of want to fact check
+some stuff. Um I would just directly
+write check the usage of lavender for
+sleep for accuracy and sources. Comment
+was searched through perplexity showing
+me some different evidence that suggests
+okay like lavender essential oils
+associated with improved sleep quality
+in adults uh etc. meta analysis etc etc.
+So you know maybe I can be convinced.
+Okay last example. Say you want to now
+buy some supplements for a friend of
+yours. Now, instead of going through all
+the different retailers, looking at
+their reviews and their prices, I could
+just ask Comet Assistant, compare
+melatonin 3MG supplements across
+different retailers for price and
+delivery date. So, it's telling me that
+this Amazon website that I'm seeing here
+doesn't actually deliver to Hong Kong.
+But here are some other places that I
+can buy it from, different types of
+retailers, how much they cost, and tells
+me the best option here is that maybe I
+could consider sites like I Herb, which
+I can attest because I have ordered from
+there before has good prices and good
+supplements. Great. Didn't have to open
+like 10 different tabs looking at all of
+them and trying to pick the right one.
+Comet is free right now, so if you want
+to try it out, check it out in the link
+in the description. Thank you so much
+Plexity for sponsoring this portion of
+the video. And by the way, if you're
+interested in learning more about how I
+use AI in my daily life, literally a
+video called 101 ways that I use AI in
+my daily life. So you can check it out
+if you want. I think you may be
+surprised by how much AI can augment
+your life in a lot of different tiny
+ways. Onto the next essential topic in
+2026, AI agents. AI agents are defined
+as software systems that use AI to
+pursue goals and complete task on behalf
+of users. For example, a customer
+service AI agent is able to autonomously
+answer questions from customers like
+through email or even phone calls while
+a coding AI agent is able to write code
+for you. So these are examples of
+independent agentic [music] AI products.
+But for the past year or so, many
+companies are realizing that in order to
+actually use these independent AI
+products, they need to actually think
+carefully about how to integrate them
+into their existing workflows cuz
+they're not going to like just entirely
+change their existing workflow, right?
+And in a lot of cases, companies
+actually need to build their own custom
+AI solutions to really take advantage of
+this agentic AI. Let me give you a
+couple examples because us as a company,
+we actually do quite a lot of B2B
+consulting and also building B2B AI
+solutions for different companies. For
+example, we built a custom product
+retention AI agent that specifically
+addresses when people try to unsubscribe
+from their product. Now, prior to this
+agentic workflow, there's a very
+standard track. Like the customer will
+try to unsubscribe and they will have
+like one upsell saying like, "Hey, like
+here's 10% off this platform. Please
+don't go." And then that's pretty much
+it, right? But with this custom agentic
+solution, when a customer tries to
+unsubscribe and they say what their
+reason is, we're able to craft a custom
+email back to them and offer them custom
+discounts and like credits to address
+the reason why they're unsubscribing.
+Like for example, somebody might be
+emailing saying like, "Oh, this specific
+feature like there's just not enough
+credits, not good return on investment."
+So the AI agent can actually write a
+targeted email saying, "Hey, like I
+understand that you think that this
+feature is very expensive. Here's like
+20 free credits that you can use for
+this feature." And because the email
+feels personal, is targeted to that
+person's problem. They would be less
+likely to unsubscribe. And this has very
+much been the case. Another popular
+custom AI agent type that we build is
+reporting agents. Many companies spend
+significant time and resources just on
+reporting, reporting their earnings,
+reporting stuff to their investors or
+shareholders, just a lot of data having
+to be transmitted. So when we're able to
+make an agentic system to help with this
+reporting process that integrates
+directly into their existing databases,
+this can be really really helpful
+especially for companies that have
+specific privacy and compliance
+regulations like those in finance and
+healthcare. So the skill that I really
+recommend you learning is building
+custom AI agents. There are a lot of
+agentic AI frameworks that you can learn
+in order to build these custom agents
+and I'll put some of them on screen
+right now. So take a screenshot if you
+like. Some of them are no code, some of
+them are code, some of them are more
+niche for like specific type of agents
+that you're building. But regardless of
+whatever tool it is that you're using,
+the underlying skill of integrating a
+Gentic AI in a custom way for different
+companies, that is such a valuable skill
+and so in demand for companies, both
+like internally and also as freelancing.
+Like that is literally what we do. If
+you are interested in learning these
+skills, I'll link some videos below in
+the description that you can check out.
+I made quite a few videos on it. We also
+do run like an entire boot camp, like a
+28-day AI agent boot camp. So there's
+like way more information than I can
+possibly fit into this video here. So if
+you are interested, do check it out.
+I'll leave a link in the description as
+well.
+>> [music]
+>> Okay, so here's a thing that really came
+out of left field for me. Like I was
+really not expecting this and that is
+the rise of open-source AI pioneered by
+China. So just to make sure that we're
+all on the same page here, open source
+AI refers to AI systems where some or
+all of the core components are publicly
+available involving things like model
+architecture, model weights, training
+data or inference data. Licenses for
+use, modification and redistributions
+with conditions. This is in contrast to
+closed source AI which refers to AI
+systems where the models weights and
+training process are proprietary and
+users can usually only access them
+through APIs, web apps or enterprise
+platforms. Some examples of the most
+popular close source AIS would include
+stuff like opens chatbt, anthropic
+claude, Google Gemini, etc., etc. Closed
+source AI has really been dominating the
+field since 2022 and primarily led by
+the western countries mostly in the
+United States. And the reason for this
+is that proprietary closed source AI has
+just been performing much better than
+open source AI until if you guys
+remember not that long ago when Deepseek
+came out. And this was a really big deal
+because DeepSseek is open- source and it
+was able to perform just as well as this
+closed source AI while having all of the
+massive benefits of open source. Open
+source is a lot cheaper and at scale
+that difference is massive. Open source
+also allows the user to have full
+control over the model. So it can be run
+anywhere like on prem, edge, private
+clouds, whatever you like. You don't
+need to go through other people's APIs,
+other people's systems. Now they're also
+much more customizable. Allows you to do
+stuff like fine-tuning, modifying
+architecture, even adding your own guard
+rails and building on top of it. So
+there's a lot more freedom and
+independent developers can improve them
+by themselves. When you use open source
+models, there's also no vendor lock in.
+Like if you want to use OpenAI's models
+for example, you're kind of like locked
+into their entire ecosystem. And
+finally, it's auditable. This is massive
+because for many regulated industries
+like finance and healthcare and these
+places, policies and regulations require
+transparency, which is something that
+you cannot have with closed source
+models because they are closed source.
+Like we don't actually know what's going
+on inside the private companies, but
+they can use open source models and
+products and tweak them to the
+specifications that they want. So with
+all oops so with open source models
+performing just as well as closed source
+models plus you have all these
+advantages it kind of became a
+no-brainer for a lot of companies to
+switch to open source models which is
+exactly what happened and what makes it
+particularly interesting is that these
+top open-source AI models are Chinese
+models. If you check out this graph here
+open source is kind of like gaining in
+popularity and then there was like this
+massive increase and a flip in which
+China started dominating the open-source
+landscape. In fact, A16Z recently
+reported a major shift where 80% of AI
+startups pitching them are now built on
+Chinese open source AI models like
+DeepSeek and Alibaba's Quinn. I recently
+also gave a talk in a venture capital
+firm in which they are investing a lot
+into open source AI. I was honestly
+really shocked by how fast these
+developer communities were growing
+around these open source models and
+yeah, like it totally makes sense. In
+fact, if I were to make a prediction,
+and I hope I'm not wrong about this, I
+was very wrong. Whatever. If I were to
+make a prediction, I think in 2026, this
+whole like open-source movement is going
+to like skyrocket even higher with a lot
+of developers moving to open source
+models. And because of these
+geopolitical factors, I actually think a
+lot of Western companies are probably
+going to start open sourcing a lot of
+their AI models and like surrounding
+frameworks and architecture as well. And
+yeah, like AI as a whole might just be
+moving towards open source, which I
+think that's actually great for
+everybody. Lower cost, more innovation,
+more transparency. I think that's great.
+I will probably be making a full open
+source video for like open source models
+and open source products. And we haven't
+publicly announced this yet, but it has
+been decided already that we'll be
+hosting a free in-person open source
+workshop in Hong Kong as well in
+January. So for those of you who are
+based in Hong Kong, I hope you guys can
+come. For those of you who are not based
+in Hong Kong, that is totally fine as
+well because we'll be sending summaries
+and key insights to our mailing list. So
+either case, you should sign up for the
+mailing list. It is completely free if
+you're interested in our future like
+events and workshops and things like
+that. In the meantime though, I highly
+recommend that you check out some of the
+open source AI models and products. And
+if you are a builder or developer, you
+should definitely check out open source.
+I will put on screen now some of the
+different models and products that you
+can try out. Take a screenshot if you
+like.
+And [music] finally, I want to talk
+about the last essential skill in my
+opinion for 2026, which is AI assisted
+coding, aka vibe coding. I am genuinely
+convinced at this point that for anybody
+that wants to build a product can build
+a product. Whether you know how to code,
+don't know how to code, have any
+experience building products, it is so
+easy to build a product these days.
+[music] You legit can just go on a vibe
+coding tool and just type what you want
+to build, like build a manga creator
+tool where the user inputs a manga
+concept and description characters and
+outputs manga and the tool will build it
+for you. Of course, there are things
+that you need to tweak and certain
+things that you need to add in order to
+make it scalable. But you can do all of
+this without even knowing how to code
+now, which is insane. Like literally a
+year ago, this was not possible. like
+you need to be a developer to build
+stuff like this. And for those of you
+who are developers, if you're not using
+an AI assisted coding tool, I don't know
+what to say because using a tool like
+this, like I'm able to code things and
+build things like 10 times faster. I'm
+also able to learn things like 10 times
+faster. The cool thing is that over the
+past year or so, there are a lot of AI
+assisted coding tools now. They range
+from products that are built for people
+who have no coding experience, like very
+beginners, all the way to those for pro
+developers. A full spectrum of different
+products. I'm not going to go into too
+much detail about all of them right now
+cuz I don't want to make this video
+super long. So, I'm going to put on
+screen kind of like a spectrum of
+different coding tools and you can like
+kind of try out the ones that you think
+fits you the best. In the past couple
+months, we've also seen a lot more
+open-sourcebased vibe coding tools which
+are a lot cheaper. So, I would not be
+surprised to see even more options in
+2026. In any case, regardless of which
+tool that you choose, I do think that AI
+assisted coding, vibe coding, just like
+building products is very much a skill
+that is essential for 2026. I also have
+an entire video that covers the
+fundamentals of vibe coding. So, if you
+want to check it out, if you want to get
+started, then you can check it out over
+here.
+All right, so before I end this video, I
+do want to mention a couple more trends
+that I really see emerging and
+significantly developing in 2026. I
+wouldn't consider them like essential
+yet, [music] but I do want to get them
+on your radar. The first one is
+multimodality. And by multimodality, I
+mean using Gen AI for images, video, and
+audio. Multimodality models are just
+getting better and better. In my humble
+opinion, audio is pretty much there
+already. AI generated audio is virtually
+indistinguishable from people audio now.
+>> So Tina here was just mentioning how
+real AI voices are getting. And well,
+here I am to prove it.
+>> Like, could you tell that that was an AI
+voice? Like I have a hard time telling
+that was an AI generated voice and AI
+music as well.
+>> This sounds really legit to me. Like
+granted, I'm not a musician, so maybe
+like if you're a musician, you would be
+able to catch that it's doing strange
+things, but to me, I'm like, this is
+really good. And when it comes to images
+and video as well, it's just getting
+better and better. I think the release
+of Google's Nano Banana model was a very
+defining moment because prior to the
+Nano Banana model, there's this really
+big issue of character consistency. Like
+if you generate a specific character and
+you try to generate like multiple
+versions of that character doing
+different things, the character would be
+like slightly different for each image.
+And in video as well, like does the
+frames progress, there's like slight
+differences in the character, so it
+doesn't feel real. Now, the Nano Banana
+model is way better at keeping character
+consistency. It's still not perfect,
+like it's definitely not 100%, but it
+was a very big leap and I would not be
+surprised if this problem is solved in
+2026. There are also a lot of open
+source multimodality models that are
+popping up as well. And the final trend
+I want to touch on today is AI safety. I
+actually made a video about AI safety.
+And that video really did not do well.
+It was not a popular video at all.
+Probably because it's like not a cool
+topic, right? It's like not like visual
+and trendy and cool because it's like
+safety. It's like boring sounding. But
+regardless, this is a really really
+important topic cuz as AI progresses and
+all these things become available, the
+safety part of stuff that also becomes
+really important as well because with
+great power comes great responsibility.
+So please, I am imploring people who are
+watching this video if you are
+interested in AI safety. First, I guess
+like check out that video and if it is
+something that you're interested in,
+please do dive deeper into this trend
+because I promise you this is going to
+become increasingly more important in
+2026. You can quote me on that one. All
+right, thank you so much for watching
+until the end of this video. I hope you
+feel inspired. I hope you feel excited
+to learn these new skills now. And let
+me know in the comments what AI skills
+are you particularly interested in
+learning right now. And I will see you
+guys in the next video or live stream.

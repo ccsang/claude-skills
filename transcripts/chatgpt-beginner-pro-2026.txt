@@ -1,0 +1,370 @@
+I've been programming since I was 17,
+and even I feel the pressure to keep up
+with AI. New tools drop daily.
+Everyone's an expert, and the more you
+search for answers, the harder it gets
+to move forward. But after diving deep,
+learning everything I could about AI,
+building my own AI companies, I've
+realized something. The real problem
+isn't that AI is hard to learn. It's
+that you're stuck in the noise. So today
+I'm going to break down a simple four-
+stage road map to go from AI beginner to
+AI pro even if you have zero technical
+background. Stage one, choose your AI
+toolkit. I've got a friend. He's a
+freaking genius. His name is Chris. He
+literally goes chasing AI tool, knows
+them all, tells you how they all work.
+But when you look at his life, he's the
+same Chris I met 10 years ago. And the
+reason why is he keeps resetting. See,
+most people get into this squirrel
+mentality of collecting information
+about AI. What's more important is that
+you apply it and actually get a result
+from it. Most people have too many
+options. They think they don't have
+enough. So, they're worried that they're
+going to fail by not saying yes to
+everything. I'm telling you, it's the
+saying no to all the options and picking
+one and going hard in the paint. Instead
+of going a mile wide and an inch deep,
+go a mile deep and learn these tools.
+See, most beginners die from
+indigestion, not starvation. So, here's
+how to pick your toolkit. First off, we
+have to audit your task list. We got to
+look at all the things that you're doing
+every day that's just sucking up your
+time that's draining your energy that AI
+was specifically designed to help you
+overcome. Make that list and start
+looking for groups of activities that
+you can use AI to do for you. Next, you
+have to think about what is a bucket of
+things that you're working on that AI
+could help you with and pick two tools
+for that specific task. If it's
+copywriting, if it's answering phone
+calls, if it's writing emails, if it's
+coming up with ideas, and you think
+there's no way that AI can do it, trust
+me, it can. The reason we want two tools
+is so that we can figure out which one's
+going to best accomplish it for the way
+we like. See, a lot of people don't like
+AI cuz it doesn't feel like the way I do
+it. Okay, guess what? Two tools, two
+different outcomes. Pick the one that
+feels most organic to you and run with
+it. Next, we want to commit to seven
+days in a row of doing the work, picking
+that one tool and applying it to that
+task until we figure it out. And I get
+it. You might overwhelm yourself. You
+might get frustrated. It may not
+initially do it exactly the way you
+want, but just play with it. The cool
+thing about AI, it gets better and
+better every freaking week. Finally,
+make it a habit. I call this habit
+stacking. See, most people have a hard
+time adding something new to their life
+because they don't force themselves to
+wake up and stack that against another
+habit. So the way I do it is I find
+something that today I do no matter
+what. And then I add to that new
+behavior so that I stack it against
+something else. So I like to read every
+day in the morning. So when I really
+wanted to plug in this AI world of mine,
+I added prompting AI after I read in the
+same chair three prompts every day for
+months. Now my default is to go to AI.
+I've already used it 26 times today and
+it's the first thing in the morning. Now
+that you've chosen which tool to use,
+it's time to get really freaking good at
+how to use them. I call this prompt like
+a pro. The other day I was hanging out
+with my buddy and he's like, I use AI.
+Look at this. Hey AI, tell me what the
+weather's going to look like tomorrow.
+Isn't that cool? I'm like, bro, do not
+think asking it to tell you what the
+weather is tomorrow is using AI. It can
+do way more. For example, I sit on a
+board. incredible company. I was busy
+with a lot of other projects. I got the
+board packed. This is all the
+information, the financial analysis, the
+update from the CEO, any other notes
+from anybody else on those executive
+teams. And I didn't have a chance to
+look it over. So, what did I do? I took
+all that information and I plugged it
+into my own private AI cuz it's private
+and it's secure and it's safe. And then
+I asked it, hey, act as an investor and
+tell me what are the five questions I
+should be asking the CEO based on this
+information. The call started, everybody
+starts asking questions, and then
+finally I get my turn. The first
+questions got the CEO looking at me
+like, "How did you know that?" That
+information around gross margin was on
+page 27 of the financial plan and I
+didn't even know it and you asked me
+about it. The truth is, I don't like to
+work hard. I like to work smart, and AI
+makes me wildly smart. You essentially
+need to become a prompt engineer, but
+I'll show you how to get the same
+results without spending years trying to
+become one. So, this is my four-step
+prompting process to go from AI beginner
+to AI pro. The first one is the role.
+You have to tell it act like it. I
+literally get really fun with these. I
+tell it to act like the most eccentric
+version of the person because what that
+does is it allows the AI to look at all
+the information it has and discount or
+add things that it knows only that kind
+of person would be interested in. Next,
+we want to give it the context. I like
+using AI to help me with financial
+planning. So, what did I give it? I gave
+it everything. I gave it my bank
+statements. I gave it all of my past
+investments. I gave it all the legal
+documents. Then I ask it questions like
+based on my age and my goals, what do
+you think I should consider adjusting?
+These are things that people pay some
+other person to do for them that AI can
+not only do it better faster without the
+freaking attitude. Next, we want to give
+it the command. Essentially, we want to
+tell it what we want. So if you want it,
+for example, to draft a legal document,
+you have to give it the command for what
+it's trying to accomplish based on what
+you gave it. Next, we want to give it
+the format. And this for me, I think a
+lot of people misunderstand how powerful
+this is. Format, yes, is a list, but
+format's also a spreadsheet, a PDF, a
+JSON output for the nerds in the
+audience. You can literally ask it to
+write the code for your next idea and
+watch it spit back code. Now, this is a
+cheat code of cheat codes. At the end,
+once you've talked to AI and you've
+given all the prompt engineering, you
+gotten to an answer you like, here's a
+really great way to get there faster,
+ask it to write the prompt that would
+have got you to that result faster and
+it will give it to you. And then all of
+a sudden, now you're learning how to
+talk to AI in a more productive manner.
+Which, by the way, if you're a business
+owner and you want my stepbystep
+prompting format for all areas of your
+business, just go find me on Instagram.
+It's Dan Martell to Elsa Martell and
+follow me. then message me the word
+YouTube prompt and I will send it
+directly to you. So now you know which
+tools and how to use them. But with how
+fast everything's changing, you have to
+create your own learning rhythm. Schools
+don't teach kids AI. If anything, they
+get in massive trouble if they even
+consider using it. Now, I get it. Some
+teachers are like, "Yeah, but you don't
+understand. If you let them use it,
+they're never going to learn anything."
+I completely disagree. I have been
+teaching my kids AI from the moment it
+was released. They use it every day for
+their creative projects. And what I'm
+supposed to pretend like the future
+doesn't have AI in it. That's like when
+before we had the internet, if people
+wanted to learn something, they had to
+like walk to the library to get a book
+and find the right book. They had the
+answer to their question. And then the
+internet came along and all of a sudden
+it got brought to us. AI is the exact
+same thing. And you're telling me we
+shouldn't let people use the internet
+and instead force them to walk to the
+library to learn? Not something I can
+support. Because once you stop learning,
+you start dying. This is the AI learning
+rhythm that's going to turn you into a
+pro. First, it comes down to daily
+consumption. I'm a big fan of using my
+feed to feed my mind. So, I want to make
+sure that wherever I put my time and
+attention, it's feeding me the things
+that I want to get better. So, here's
+how I do it. I open up my phone and I go
+to Tik Tok and I search for AI
+construction or whatever your field is
+and then I give it a FYP in the comments
+of the videos that it shows me. So, it
+tells the algorithm to change my
+algorithm to only show me things that is
+relevant to what I'm doing. Whatever
+your role is, you literally do that. And
+now, when you go on TikTok, you will
+have a feed that's going to teach you
+how to become an AI pro. Next, you want
+to create your weekly mastermind. I'm a
+big fan of learning through osmosis. So,
+what I did months ago is I decided to do
+a weekly mastermind with people I saw
+online creating content. And it's very
+simple. They don't even know me. I reach
+out to them. them. I ask them if they
+want to come have lunch on Zoom and we
+just talk. One of my favorite questions
+to ask them right now is what do you
+think they're going to release in the
+next frontier model. Talking to people
+that are doing it at the frontier that
+you find on social media using the first
+step is how you stay competitive. Next,
+we want to do a monthly tool audit. Go
+back to step one and go back to all the
+tasks that you're working on and
+specifically the things that suck your
+energy that you really don't want to do
+and ask yourself, can AI today replace
+that work? See what you can do today
+changes every 3 months in a massive way.
+Finally, a quarterly event or going to a
+workshop. At the end of the day, there's
+no way that you on your own with your
+assistant can recruit and have these
+meetings every week and it's going to
+give you coverage. What I want to
+encourage you to do is find the AI
+focused event in your industry or at
+least the industry event and hopefully
+they have a whole section on AI. I'd be
+a little bit concerned if they didn't.
+And go sit in that room. Be around those
+people. That's where you find potential
+peers, advisors or vendors that can help
+you solve the biggest problems you've
+got using AI so you can get leverage
+because you don't want to default to
+labor. You want to look for leverage.
+But there's one last shift, and
+honestly, it's the one that will make
+sure you stay ahead because it's not
+just about using AI to get stuff done.
+You need to become a director, not a
+doer. People ask me all the time, will
+AI replace me? How do I stay
+competitive? Here's what I've learned.
+There's only three things AI won't
+replace. One, vision. Can you predict
+and see a future that doesn't exist yet
+that should? taste. See, AI, just like
+great music, it doesn't know when to
+stop taking things away to consider
+something complete. Your taste by
+reviewing 1,500 different Facebook ads,
+but understanding what the market's
+going to resonate with. That is
+invaluable. And lastly, it's care. A lot
+of people call this EQ, emotional
+intelligence. Your ability to care for
+people, to interact with people in a
+caring way that AI will not disrupt. So,
+you need to become a visionary. You need
+to become somebody that can predict and
+see around the corner because AI will
+take care of the last mile. So this is
+how you become a director, not a doer.
+First, we have to stop being busy. A lot
+of people confuse busyiness with motion.
+If most of your day is just busy task
+work, backto back. You have to step back
+and look for ways automating all of that
+stuff because in 10 years, AI will be
+doing 99% of your to-do list. Next, we
+have to upgrade our taste. This is about
+understanding what great output looks
+like. It doesn't matter if it's art or
+business or leadership. You want to
+study the best in the world. You want to
+look at what they're doing and ask
+yourself, what's the pattern that
+they're all following that's
+contributing to that success? Honestly,
+that's why I love social media. A lot of
+people say it can be used for harm. I
+think it's the most helpful thing in the
+world if you use it properly. So go find
+those examples, follow those people,
+study those videos on YouTube, and just
+go and bathe in worldclass mastery.
+Next, we have to simplify our thinking.
+See, to be a great director, you need to
+be able to explain complex problems in a
+simple way. Let other people go, "Oh,
+that makes sense." So, being able to
+understand what's available out there,
+but then create a plan that's simple,
+but powerful, that's going to make you
+an AI pro. And lastly, we have to
+practice self-reflection. A life
+unexamined is a life not lived. We have
+to look at ways that we can get feedback
+from other people. It could be our team.
+It could be our family members. You have
+to be willing to seek the feedback, the
+self-reflection to understand, is my
+calendar getting better? Am I becoming
+more effective? Is AI giving me more
+time back? I know AI is overwhelming,
+but honestly, if you follow this simple
+road map, you'll stay ahead of 99% of
+the people. You're watching this because
+you're like, "Hey, I don't want to be
+one of those people that wake up and go,
+hey, what happened to the horse and
+buggy and why is everybody driving
+around these cars?" But here's what I've
+seen cuz I'm a technology guy. When Uber
+launched, are all the people that drive
+Uber's previous taxi drivers or are they
+just normal people that shifted into new
+roles? Most of them never drove a taxi
+before they drove Uber. The truth is is
+as innovation creates new opportunity,
+we're just going to have people migrate
+from one skilled area to another. That's
+what happened in the industrial
+revolution and many other transitions
+along the way. But the difference is the
+people that were here ahead of the curve
+and wanted to take advantage, they sold
+the picks and shovels to all the people
+looking for gold. That's the opportunity
+in front of you. Now, if you want to
+learn how to get rich in the new AI era,
+click the video and I'll see you on the
+other

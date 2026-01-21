@@ -1,8 +1,6 @@
 # ydl-js
 
-A fast, reliable YouTube subtitle downloader library and CLI tool, written in JavaScript.
-
- Inspired by [ydl-rs](https://github.com/tyrchen/ydl-rs).
+`ydl-js` is a fast, reliable YouTube subtitle downloader library and CLI tool, written in JavaScript.
 
 ## Features
 
@@ -17,21 +15,46 @@ A fast, reliable YouTube subtitle downloader library and CLI tool, written in Ja
 pnpm install
 ```
 
-## CLI Usage
+## Usage
 
+To download subtitles, run the `ydl-js` command.
+
+**Syntax**:
 ```bash
-# Run via node
-node bin/ydl-js <video_url> [options]
-
-# Example: Download English subtitles to a file
-node bin/ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -o my_subtitles.srt
+ydl-js <video_url> [options]
 ```
 
-### Options
+**Options**:
+*   `-l, --lang <lang>`: Subtitle language (default: 'en').
+*   `-f, --format <format>`: Output format ('srt', 'json', or 'txt', default: 'srt').
+*   `-o, --output <file>`: Output file path.
 
-*   `-l, --lang <lang>`: Specify language code (default: `en`).
-*   `-f, --format <format>`: Specify output format: `srt` or `json` (default: `srt`).
-*   `-o, --output <file>`: Save output to a file.
+**Examples**:
+
+**1. Download English subtitles (default)**
+```bash
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ
+```
+
+**2. Download subtitles in a specific language (e.g., Spanish)**
+```bash
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -l es
+```
+
+**3. Output to a file**
+```bash
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -o subtitles.srt
+```
+
+**4. Get output in JSON format**
+```bash
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f json
+```
+
+**5. Get output in TXT format**
+```bash
+ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f txt
+```
 
 ## Library Usage
 

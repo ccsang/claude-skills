@@ -2,6 +2,8 @@
 import { Command } from 'commander';
 import GeminiImageClient from './src/lib/gemini-client.js';
 import dotenv from 'dotenv';
+import path from 'path';
+import mime from 'mime';
 dotenv.config();
 
 const program = new Command();
@@ -56,6 +58,14 @@ program
 
           if (!filename) {
             filename = client.generateFilename(prompt, options.theme);
+          } else {
+            // If filename is provided but has no extension, append one based on mime type
+            if (!path.extname(filename)) {
+              const ext = mime.getExtension(img.mimeType || 'image/png');
+              if (ext) {
+                filename = `${filename}.${ext}`;
+              }
+            }
           }
 
           // If multiple images and filename provided or generated, ensure uniqueness

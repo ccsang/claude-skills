@@ -1,0 +1,82 @@
+So, if you have been anywhere near cloud code community lately,
+you have probably seen people talking about autonomous AI loops.
+That means running cloud code for hours, not minutes, like hours.
+People are literally going to sleep and waking up to finish features or they think so.
+And it kind of indicates where autonomous coding agent is going in 2026.
+The technique is called Ralph Viggham.
+Yeah, like the Simpson character, the kid who eats glues and says, "I'm in danger while everything is on fire around him."
+And honestly, that's not an accident, that's the whole point. I'll explain.
+Okay, but first, why does this even exist? What problem was someone trying to solve?
+You are in the middle of a task, it is going great, and then it goes, "I have completed your request," and you are sitting there like, "No, no, you haven't.
+You just maybe did a third of what I asked you." And then you have to reprompt it and it does a little more, and then it stops again.
+And you're just babysitting, which defeats the entire purpose, right?
+Like I'm using cloud code to save time, but if I have to check on it every five minutes, I'm not saving time.
+Now, the worst part, every time you start a new session, it forgets everything, all the context from the last conversation is gone.
+You have to explain everything again from scratch.
+So, there is this guy called Jeffrey Huntley.
+So, he came up with a very interesting and a simple solution.
+And he said, "What if we just don't let it stop?" What if every time cloud code finishes and tries to exit, we just feed it the prompt again?
+And he named it Ralph Viggham.
+Because Ralph, the character, he just keeps going, he doesn't know he's failing. So, Jeffrey's whole thing was, "What if we leaned into that?"
+Now, here's the wild part, this is the whole technique, just a wild loop where you're piping prompt.md into cloud code. That's it. That's rough Viggham in a nutshell. It's simply a bash loop.
+It just feeds the same prompt to cloud code over and over.
+That sounds like it would just do the same thing repeatedly.
+But here's the thing, you write a prompt.md, your instruction, cloud code reads it, does some work, writes some files, then it exits, and the loop catches that and feeds the prompt back in.
+But this is the key, each time cloud code starts up, it looks at the project, it sees the files that exist, the code that's already written, so it's not starting from zero.
+It's seeing its own previous work and going, "Okay, what's next?"
+So, the file system becomes the memory, not the conversation, the actual files on disc is the memory now.
+And that's how it maintains the context across loops. Now, here is where it gets interesting.
+So, he said, "The technique is deterministically bad in an undeterministic world." So, when Ralph fails, and it will fail, the fear failures are predictable.
+They're not random chaos, there's a pattern, you can actually learn something from them.
+Every failure tells you what the prompt was missing, what edge cases you forgot, or maybe the assumptions that you made were wrong.
+So, over time, you stop trying to control every step, you stop saying, "Do this, then do this, then this."
+You start saying, here is what done looks like, figure it out. And you just trust if you give it enough iteration, it will converge, not perfectly, but functionally.
+And that's the faith in eventual consistency, which sounds insane, but seems like it works.
+But keep in mind, not always.
+And we're going to look at where you should not be using this.
+Okay, so when does this actually work and when should you even try this?
+It's great for Greenfield projects, you have specs, what you want, there's nothing to break.
+Let Ralph iterate until it matches the specs.
+For big refactors like you're converting a class-based code to function code or migrating from one tech stack to another, stuff that's repetitive and well-defined.
+Even test coverage, so for example, you can say write tests until you hit 80% coverage.
+That's a measurable goal.
+Ralph can iterate until it's done.
+And another example would be batch operations. This include documentation, cleanup, anything where you clearly define success and let it grind.
+But there are things where you need to be careful about when not to use.
+And this is the part that nobody talks about, because all of this sounds amazing, right?
+Why won't you just use it for everything?
+And the reason is because there are ways this goes very wrong.
+So, number one, anything security critical,
+authentication, encryption, payment processing, do not use Ralph, because Ralph will happily iterate on insecure code.
+It will write auth that passes tests, the tests will be green, and the code will be full of holes. Okay, second, and this is a big one, architectural decisions, which you should not be leaving to AI in any case.
+So, for example, should we use microservices or a monolith approach, SQL versus no SQL.
+Ralph will pick something, because it's just using cloud and the background and it will be confident about it, and it might completely be wrong for your use case.
+So, these decisions requires context Ralph does not understand, or even your cloud code does not understand. These could include business constraints, team expertise.
+Just like any other AI system, you shouldn't use these for architectural decisions, but rather to implement your architecture.
+Now, another example where not to use an approach like this is exploration.
+So, look at this prompt, figure out why the app is slow. What does done look like here? How does Ralph even know when to stop? It doesn't.
+Either it will loop forever, or it decides, "I found something and stops," even if it found a thing that is wrong.
+So, exploration needs humans in the loop, you need to have a very well-defined success criteria for it to actually work.
+Okay, last but not the least,
+is the cost aspect. This is where people get burned.
+50 iteration on a large code base can easily hit $100 or more per session, because we are talking about cloud Opus here. I have learned of people racking up a few hundred dollars bills because they didn't set limits on it.
+So, don't use this on cloud API.
+If you are on a max plan, you could give it a shot.
+Now, always set the max iteration parameter.
+I would say this is not optional, you're running a loop that spends money.
+So, put a cap on it. Maybe start with 10 or 20 iteration, see how it goes.
+Only increase when you understand what exactly is happening.
+Now, when should you think about using Ralph versus not using Ralph?
+So, for single pass, it's probably fine for something like bug fixes, small features, targeted refactors, anything with a clear scope, just ask cloud code, let it cook.
+I think you don't need rough for that.
+But you still want to explore this for multi-day projects where you have to do massive migration or generating entire test suites and you just want to walk away.
+Now, it will do wonder if it works and that really is dependent on how well-defined and measurable your test cases are.
+Okay, so I wanted to cover the theoretical aspects in this video.
+We'll be creating a more practical example video later.
+But here are main takeaways. So, Ralph is a philosophy, not just a tool, it changes how you think about working with AI, so you can have these autonomous loops now.
+You stop directing and start defining outcomes. The second thing is failures are data, so when rough screws up, it's telling you something about your prompt.
+Don't blame the AI, fix the specs and that is going to do wonders for you. And know when not to use it.
+Security, architecture, exploration, these need human judgment still. Ralph or any AI can't replace that yet. And for the love of God and your wallet, set max iteration, this will help you protect your wallet.
+If you like these detailed explanations, please do like and comment on this video.
+I will try to create more of these.
+Anyways, I hope you found this video useful. Thanks for watching and as always, see you in the next one.

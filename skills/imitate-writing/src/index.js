@@ -123,13 +123,13 @@ async function analyzeContent(content, source) {
     **Goal**: Create a structured analysis that can be used later to build a style guide.
 
     **Output JSON Structure**:
-    - "language": Detected language of the text.
+    - "language": Full English name of the language (e.g., "Simplified Chinese", "English", "Japanese").
     - "analysis":
-        - "tone_voice": specific adjectives.
+        - "tone_voice": specific adjectives. Describe the emotional weight, attitude, and persona.
+        - "article_structure": Detailed analysis of how the article is organized (intro, body, main arguments, conclusion, transitions, logic flow).
         - "sentence_rhythm": description of flow and cadence.
         - "vocabulary": formality, jargon, specific quirks.
         - "micro_habits": punctuation, formatting choices.
-        - "structure": typical organization.
     - "classic_patterns": Array of objects { "excerpt": "verbatim text", "pattern_analysis": "explanation" } (Select 3-4 distinct high-quality examples).
     
     **IMPORTANT**: The analysis (values) MUST be written in the SAME language as the source text.
@@ -157,9 +157,18 @@ async function compileStyle(name) {
 
     if (allAnalyses.length === 0) return;
 
-    // Detect language from the latest analysis
-    const latestAnalysis = allAnalyses[allAnalyses.length - 1];
-    const language = latestAnalysis.language || latestAnalysis.analysis?.language || 'English';
+    // Sort by analyzedAt to prioritize recent analyses
+    allAnalyses.sort((a, b) => new Date(a.analyzedAt) - new Date(b.analyzedAt));
+
+    // Try to find a defined language from any analysis, prioritizing the latest
+    let language = 'the same language as the source text';
+    for (let i = allAnalyses.length - 1; i >= 0; i--) {
+        const langCandidate = allAnalyses[i].language || allAnalyses[i].analysis?.language;
+        if (langCandidate) {
+            language = langCandidate;
+            break;
+        }
+    }
 
     const model = getGeminiModel();
     const prompt = `
@@ -173,10 +182,10 @@ async function compileStyle(name) {
     **Output Requirement**:
     Output a JSON object with a single field: "instruction".
     The "instruction" must be a Markdown-formatted System Prompt that:
-    1. **Synthesizes** the commonalities across all analyses (Role, Tone, Rhythm, etc.).
+    1. **Synthesizes** the commonalities across all analyses. **CRITICAL**: You must specifically analyze and describe the **Article Structure** (how the author organizes arguments, narratives, or information) and **Tone/Voice** (the emotional weight, attitude, and persona).
     2. **Unified Voice**: Resolve any contradictions by prioritizing the most distinct/frequent traits.
     3. **Curated Examples**: Select the TOP 5-6 "Classic Sentence Patterns" from the provided list. Choose the ones that are most representative and diverse.
-    4. **Language**: The instruction MUST be written in ${language}.
+    4. **Language**: The instruction MUST be written in ${language}. If the language is not explicitly specified, detect it from the input analysis content and match it.
     
     Output JSON ONLY.
     `;

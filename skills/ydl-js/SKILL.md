@@ -41,5 +41,5 @@ ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f json
 ## Options
 
 *   `-l, --lang <lang>`: Subtitle language (default: 'en').
-*   `-f, --format <format>`: Output format ('srt' or 'json', default: 'srt').
+*   `-f, --format <format>`: Output format ('srt', 'json', or 'txt', default: 'srt').
 *   `-o, --output <file>`: Output file path.
