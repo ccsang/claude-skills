@@ -15,11 +15,11 @@ program
 
 program
   .argument('<prompt>', 'Prompt for image generation')
-  .option('-t, --theme <theme>', 'Artistic theme', 'photorealistic')
+  .option('-t, --theme <theme>', 'Artistic theme (see "Supported Themes" below)', 'photorealistic')
   .option('-r, --ratio <ratio>', 'Aspect ratio (e.g., 16:9, 1:1)', '16:9')
   .option('-s, --style <style>', 'Additional style description', '')
   .option('-q, --quality <number>', 'Image quality (1-100)', '80')
-  .option('--save', 'Save the generated image to file', false)
+  .option('--save', 'Save the generated image to file', true)
   .option('-o, --output-dir <path>', 'Output directory', './output')
   .option('--filename <name>', 'Custom filename', null)
   .option('-v, --verbose', 'Enable verbose output', false)
@@ -89,5 +89,15 @@ program
       process.exit(1);
     }
   });
+
+// Generate dynamic help text for themes
+const themesList = Object.keys(GeminiImageClient.THEMES)
+  .map(theme => `  - ${theme}`)
+  .join('\n');
+
+program.addHelpText('after', `
+Supported Themes:
+${themesList}
+`);
 
 program.parse();

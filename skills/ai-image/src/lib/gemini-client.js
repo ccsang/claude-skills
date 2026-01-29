@@ -4,6 +4,39 @@ import path from 'path';
 import mime from 'mime';
 
 class GeminiImageClient {
+  static get THEMES() {
+    return {
+      'photorealistic': 'photorealistic, highly detailed, professional photography, natural lighting, realistic textures',
+      'anime': 'anime style, manga art, Japanese animation style, vibrant colors, clean lines',
+      'oil-painting': 'oil painting, classical art, brush strokes visible, rich textures, artistic masterpiece',
+      'watercolor': 'watercolor painting, soft edges, transparent colors, wet on wet technique, artistic',
+      'digital-art': 'digital art, modern illustration, clean, professional digital artwork',
+      'sketch': 'pencil sketch, charcoal drawing, black and white, detailed line work',
+      'impressionist': 'impressionist style, loose brush strokes, play of light, artistic interpretation',
+      'surreal': 'surrealism, dreamlike, abstract, imaginative, otherworldly',
+      'cyberpunk': 'cyberpunk aesthetic, neon colors, futuristic, sci-fi, high-tech low-life',
+      'fantasy': 'fantasy art, magical, ethereal, mythical, imaginative',
+      'vintage': 'vintage style, retro, aged, classic, nostalgic feel',
+      'minimalist': 'minimalist design, clean, simple, reduced complexity, essential elements',
+      'hand-drawn': 'minimalist hand-drawn sketch, traditional graphite pencil art, organic lines, rough paper texture, visible fibers, monochrome graphite tones, centered composition with generous negative space, avoiding digital smoothness or vector style',
+      'comic-sketch': 'minimalist black and white comic manuscript style, raw expressionist sketch, multi-panel comic layout with hand-drawn irregular borders, flat 2D perspective, heavy negative space, jagged organic lines, high contrast, off-white paper texture, dark graphite lines, indie graphic novel aesthetic, avoiding color, gradients, and vector smoothness',
+      'shin-hanga': 'Shin-hanga style, 20th century Japanese New Print movement, Ukiyo-e aesthetics combined with Western Impressionist lighting, serene melancholy, atmospheric landscape. Woodblock print texture with Bokashi color gradients and Goma-zuri granular effects. Washi paper texture, organic lines with geometric color blocks, diagonal composition. Low saturation cool tones palette (Prussian Blue, Slate Grey, Paper White, Charcoal Black). Avoiding photorealism, digital smoothness, persistent 3D rendering, or heavy oil painting impasto.',
+      'swiss-tech': 'Swiss Style technical deconstruction illustration, absolute rationality and precision engineering aesthetics. Orthographic view, invisible grid alignment, hard-edge vector line art, geometric accuracy, uniform line weights. Black and white color scheme: black lines (#000000), "ink black" fills for main areas, single "Cinnabar Red" highlight for core functional parts. Background: vintage plotting paper texture with slight grain. Avoiding photorealism, complex lighting, gradients, chaos. Absolute flatness and diagrammatic look.'
+    };
+  }
+
+  static get RATIOS() {
+    return {
+      '1:1': 'square composition, balanced',
+      '16:9': 'wide landscape, cinematic composition',
+      '4:3': 'standard composition, traditional',
+      '3:2': 'photography standard, well-balanced',
+      '2:1': 'panoramic, wide format',
+      '9:16': 'portrait orientation, vertical composition',
+      '3:4': 'vertical portrait, traditional'
+    };
+  }
+
   constructor() {
     this.apiKey = process.env.GEMINI_API_KEY;
     if (!this.apiKey) {
@@ -171,37 +204,8 @@ class GeminiImageClient {
    * @returns {string} Enhanced prompt
    */
   buildEnhancedPrompt(basePrompt, theme, style, aspectRatio) {
-    const themePrompts = {
-      'photorealistic': 'photorealistic, highly detailed, professional photography, natural lighting, realistic textures',
-      'anime': 'anime style, manga art, Japanese animation style, vibrant colors, clean lines',
-      'oil-painting': 'oil painting, classical art, brush strokes visible, rich textures, artistic masterpiece',
-      'watercolor': 'watercolor painting, soft edges, transparent colors, wet on wet technique, artistic',
-      'digital-art': 'digital art, modern illustration, clean, professional digital artwork',
-      'sketch': 'pencil sketch, charcoal drawing, black and white, detailed line work',
-      'impressionist': 'impressionist style, loose brush strokes, play of light, artistic interpretation',
-      'surreal': 'surrealism, dreamlike, abstract, imaginative, otherworldly',
-      'cyberpunk': 'cyberpunk aesthetic, neon colors, futuristic, sci-fi, high-tech low-life',
-      'fantasy': 'fantasy art, magical, ethereal, mythical, imaginative',
-      'vintage': 'vintage style, retro, aged, classic, nostalgic feel',
-      'minimalist': 'minimalist design, clean, simple, reduced complexity, essential elements',
-      'hand-drawn': 'minimalist hand-drawn sketch, traditional graphite pencil art, organic lines, rough paper texture, visible fibers, monochrome graphite tones, centered composition with generous negative space, avoiding digital smoothness or vector style',
-      'comic-sketch': 'minimalist black and white comic manuscript style, raw expressionist sketch, multi-panel comic layout with hand-drawn irregular borders, flat 2D perspective, heavy negative space, jagged organic lines, high contrast, off-white paper texture, dark graphite lines, indie graphic novel aesthetic, avoiding color, gradients, and vector smoothness',
-      'shin-hanga': 'Shin-hanga style, 20th century Japanese New Print movement, Ukiyo-e aesthetics combined with Western Impressionist lighting, serene melancholy, atmospheric landscape. Woodblock print texture with Bokashi color gradients and Goma-zuri granular effects. Washi paper texture, organic lines with geometric color blocks, diagonal composition. Low saturation cool tones palette (Prussian Blue, Slate Grey, Paper White, Charcoal Black). Avoiding photorealism, digital smoothness, persistent 3D rendering, or heavy oil painting impasto.',
-      'swiss-tech': 'Swiss Style technical deconstruction illustration, absolute rationality and precision engineering aesthetics. Orthographic view, invisible grid alignment, hard-edge vector line art, geometric accuracy, uniform line weights. Black and white color scheme: black lines (#000000), "ink black" fills for main areas, single "Cinnabar Red" highlight for core functional parts. Background: vintage plotting paper texture with slight grain. Avoiding photorealism, complex lighting, gradients, chaos. Absolute flatness and diagrammatic look.'
-    };
-
-    const ratioPrompts = {
-      '1:1': 'square composition, balanced',
-      '16:9': 'wide landscape, cinematic composition',
-      '4:3': 'standard composition, traditional',
-      '3:2': 'photography standard, well-balanced',
-      '2:1': 'panoramic, wide format',
-      '9:16': 'portrait orientation, vertical composition',
-      '3:4': 'vertical portrait, traditional'
-    };
-
-    const themeDescription = themePrompts[theme] || themePrompts['photorealistic'];
-    const ratioDescription = ratioPrompts[aspectRatio] || ratioPrompts['16:9'];
+    const themeDescription = GeminiImageClient.THEMES[theme] || GeminiImageClient.THEMES['photorealistic'];
+    const ratioDescription = GeminiImageClient.RATIOS[aspectRatio] || GeminiImageClient.RATIOS['16:9'];
 
     let enhancedPrompt = `Generate a ${themeDescription} image of: ${basePrompt}. `;
 
