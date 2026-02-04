@@ -10,19 +10,72 @@ import puppeteer from 'puppeteer';
 import dotenv from 'dotenv';
 dotenv.config();
 
+const PROXY_CONFIG = {
+    apiKey: "sk-5e8f1c572e2d44a3b6a7f62147513472",
+    endpoint: "http://127.0.0.1:8045",
+    model: "gemini-3-flash"
+};
+
 const STORAGE_DIR = path.join(os.homedir(), '.imitate-writing', 'styles');
 
-// API Helper
-function getGeminiModel() {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-        throw new Error('GEMINI_API_KEY is not set in environment variables.');
+// API Wrapper with Fallback
+class ProxyModel {
+    constructor() {
+        this.fallbackKey = process.env.GEMINI_API_KEY;
     }
-    const genAI = new GoogleGenerativeAI(apiKey);
-    return genAI.getGenerativeModel({
-        model: "gemini-3-flash-preview",
-        generationConfig: { responseMimeType: "application/json" }
-    });
+
+    async generateContent(prompt) {
+        // 1. Try Proxy
+        try {
+            const url = `${PROXY_CONFIG.endpoint}/v1beta/models/${PROXY_CONFIG.model}:generateContent?key=${PROXY_CONFIG.apiKey}`;
+            const payload = {
+                contents: [{ role: "user", parts: [{ text: prompt }] }],
+                generationConfig: { responseMimeType: "application/json" }
+            };
+
+            const response = await axios.post(url, payload, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-goog-api-key': PROXY_CONFIG.apiKey
+                },
+                timeout: 30000 // 30s timeout for proxy
+            });
+
+            // Mimic SDK Response Structure
+            return {
+                response: {
+                    text: () => {
+                        const candidate = response.data.candidates?.[0];
+                        const part = candidate?.content?.parts?.[0];
+                        return part?.text || '';
+                    }
+                }
+            };
+
+        } catch (proxyErr) {
+            const errorDetails = proxyErr.response
+                ? JSON.stringify(proxyErr.response.data)
+                : proxyErr.message;
+            console.warn(`Local proxy failed (${errorDetails}). Falling back to standard API...`);
+        }
+
+        // 2. Fallback to Standard SDK
+        if (!this.fallbackKey) {
+            throw new Error('GEMINI_API_KEY is not set in environment variables (needed for fallback).');
+        }
+
+        const genAI = new GoogleGenerativeAI(this.fallbackKey);
+        const model = genAI.getGenerativeModel({
+            model: "gemini-3-flash-preview",
+            generationConfig: { responseMimeType: "application/json" }
+        });
+
+        return await model.generateContent(prompt);
+    }
+}
+
+function getGeminiModel() {
+    return new ProxyModel();
 }
 
 // Ensure storage exists
@@ -140,7 +193,9 @@ async function analyzeContent(content, source) {
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    return JSON.parse(response.text());
+    const text = response.text();
+    const cleanJson = text.replace(/```json|```/g, '').trim();
+    return JSON.parse(cleanJson);
 }
 
 // 2. Compile all analyses into one Master Instruction
@@ -192,7 +247,9 @@ async function compileStyle(name) {
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const json = JSON.parse(response.text());
+    const text = response.text();
+    const cleanJson = text.replace(/```json|```/g, '').trim();
+    const json = JSON.parse(cleanJson);
 
     // Save the compiled instruction
     fs.writeFileSync(path.join(styleDir, 'instructions.md'), json.instruction);

@@ -64,22 +64,95 @@ class GeminiImageClient {
    * @returns {Promise<Object>} Generated image data
    */
   async generateImage(prompt, options = {}) {
+    const {
+      theme = 'photorealistic',
+      aspectRatio = '16:9',
+      style = '',
+      quality = 80,
+      enableGoogleSearch = false,
+      imageSize = '1K',
+      onProgress = null
+    } = options;
+
+    // Enhance prompt with theme and style
+    const enhancedPrompt = this.buildEnhancedPrompt(prompt, theme, style, aspectRatio);
+
+    console.log('Generating image with prompt:', enhancedPrompt);
+
+    // PRIORITY: Try Custom Proxy first (using @google/genai SDK)
     try {
-      const {
-        theme = 'photorealistic',
-        aspectRatio = '16:9',
-        style = '',
-        quality = 80,
-        enableGoogleSearch = false,
-        imageSize = '1K',
-        onProgress = null
-      } = options;
+      console.log('Attempting to use custom proxy for generation...');
 
-      // Enhance prompt with theme and style
-      const enhancedPrompt = this.buildEnhancedPrompt(prompt, theme, style, aspectRatio);
+      const proxyBase = 'http://127.0.0.1:8045'; // Configured for @google/genai
+      const proxyKey = 'sk-5e8f1c572e2d44a3b6a7f62147513472';
+      const modelName = 'gemini-3-pro-image';
 
-      console.log('Generating image with prompt:', enhancedPrompt);
+      // Create a fresh client for the proxy connection
+      const proxyClient = new GoogleGenAI({
+        apiKey: proxyKey,
+        httpOptions: {
+          baseUrl: proxyBase
+        }
+      });
 
+      // Simple generation request
+      const result = await proxyClient.models.generateContent({
+        model: modelName,
+        contents: [{ role: 'user', parts: [{ text: enhancedPrompt }] }],
+        config: {
+          responseModalities: ["IMAGE"]
+        }
+      });
+
+      const generatedImages = [];
+      if (result.candidates && result.candidates[0] && result.candidates[0].content && result.candidates[0].content.parts) {
+        for (const part of result.candidates[0].content.parts) {
+          if (part.inlineData) {
+            generatedImages.push({
+              mimeType: part.inlineData.mimeType,
+              data: part.inlineData.data
+            });
+          }
+        }
+      }
+
+      if (generatedImages.length > 0) {
+        console.log('✅ Custom proxy generation successful.');
+        return {
+          success: true,
+          images: generatedImages,
+          text: '',
+          metadata: {
+            prompt: enhancedPrompt,
+            theme: theme,
+            aspectRatio: aspectRatio,
+            quality: quality,
+            imageSize: imageSize,
+            model: `${modelName} (proxy)`,
+            timestamp: new Date().toISOString()
+          }
+        };
+      } else {
+        // Check for text fallback if any (e.g. error message in text)
+        const textParts = result.candidates?.[0]?.content?.parts?.filter(p => p.text).map(p => p.text).join(' ');
+        if (textParts) {
+          console.log('Proxy returned text:', textParts);
+          throw new Error(`Proxy returned text instead of image: ${textParts.substring(0, 100)}...`);
+        }
+        throw new Error('No images returned from proxy');
+      }
+
+    } catch (proxyError) {
+      console.warn(`⚠️ Custom proxy failed: ${proxyError.message}`);
+      // Connection errors often show up as fetch failures inside the SDK
+      if (proxyError.message && (proxyError.message.includes('fetch failed') || proxyError.message.includes('ECONNREFUSED'))) {
+        console.warn('   (Is the local proxy running at http://127.0.0.1:8045?)');
+      }
+      console.log('Falling back to standard Node.js client...');
+    }
+
+    // FALLBACK: Existing Node.js Implementation
+    try {
       // Configure tools
       const tools = [];
       if (enableGoogleSearch) {
