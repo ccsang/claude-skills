@@ -16,12 +16,13 @@ program
 program
   .argument('<prompt>', 'Prompt for image generation')
   .option('-t, --theme <theme>', 'Artistic theme (see "Supported Themes" below)', 'photorealistic')
-  .option('-r, --ratio <ratio>', 'Aspect ratio (e.g., 16:9, 1:1)', '16:9')
+  .option('-r, --ratio <ratio>', 'Aspect ratio (e.g., 16:9, 1:1). Custom ratios allowed.', '16:9')
   .option('-s, --style <style>', 'Additional style description', '')
   .option('-q, --quality <number>', 'Image quality (1-100)', '80')
   .option('--save', 'Save the generated image to file', true)
   .option('-o, --output-dir <path>', 'Output directory', './output')
   .option('--filename <name>', 'Custom filename', null)
+  .option('-n, --number <count>', 'Number of images to generate', '1')
   .option('-v, --verbose', 'Enable verbose output', false)
   .action(async (prompt, options) => {
     try {
@@ -44,7 +45,8 @@ program
         theme: options.theme,
         aspectRatio: options.ratio,
         style: options.style,
-        quality: parseInt(options.quality)
+        quality: parseInt(options.quality),
+        number: parseInt(options.number)
       });
 
       if (!result.success) {

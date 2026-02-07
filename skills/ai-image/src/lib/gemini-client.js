@@ -71,7 +71,8 @@ class GeminiImageClient {
       quality = 80,
       enableGoogleSearch = false,
       imageSize = '1K',
-      onProgress = null
+      onProgress = null,
+      number = 1
     } = options;
 
     // Enhance prompt with theme and style
@@ -100,7 +101,8 @@ class GeminiImageClient {
         model: modelName,
         contents: [{ role: 'user', parts: [{ text: enhancedPrompt }] }],
         config: {
-          responseModalities: ["IMAGE"]
+          responseModalities: ["IMAGE"],
+          sampleCount: number
         }
       });
 
@@ -164,6 +166,7 @@ class GeminiImageClient {
       // Configure generation
       const config = {
         responseModalities: ['IMAGE', 'TEXT'],
+        sampleCount: number,
         imageConfig: {
           imageSize: imageSize,
         },
@@ -278,7 +281,15 @@ class GeminiImageClient {
    */
   buildEnhancedPrompt(basePrompt, theme, style, aspectRatio) {
     const themeDescription = GeminiImageClient.THEMES[theme] || GeminiImageClient.THEMES['photorealistic'];
-    const ratioDescription = GeminiImageClient.RATIOS[aspectRatio] || GeminiImageClient.RATIOS['16:9'];
+
+    let ratioDescription = GeminiImageClient.RATIOS[aspectRatio];
+    if (!ratioDescription) {
+      if (/^\d+:\d+$/.test(aspectRatio)) {
+        ratioDescription = aspectRatio;
+      } else {
+        ratioDescription = GeminiImageClient.RATIOS['16:9'];
+      }
+    }
 
     let enhancedPrompt = `Generate a ${themeDescription} image of: ${basePrompt}. `;
 

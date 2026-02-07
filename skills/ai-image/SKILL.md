@@ -19,9 +19,10 @@ ai-image "<prompt>" [options]
 **Options**:
 - `--theme <theme>`: Artistic theme (default: `photorealistic`). See [Available Styles](#available-styles) below.
 - `--ratio <ratio>`: Aspect ratio (default: `16:9`).
-  - Supported: `1:1`, `4:3`, `16:9`, `3:2`, `2:1`, `9:16`, `3:4`.
+  - Supported: `1:1`, `4:3`, `16:9`, `3:2`, `2:1`, `9:16`, `3:4` or any custom ratio (e.g. `21:9`).
 - `--style <style>`: Additional style parameters to refine the output.
 - `--quality <level>`: Quality factor (1-100).
+- `--number <count>`: Number of images to generate (default: `1`).
 - `--save`: Save generated image to file (default: `true`).
 - `--output-dir <path>`: Directory to save image (default: `./output`).
 - `--filename <name>`: Custom filename (without extension).
@@ -84,4 +85,4 @@ ai-image "floating island in the sky" --theme fantasy --style "dramatic lighting
 
 ## Configuration
 - **Supported Themes**: See [Available Styles](#available-styles) list above.
-- **Supported Ratios**: `1:1`, `4:3`, `16:9`, `3:2`, `2:1`, `9:16`, `3:4`.
+- **Supported Ratios**: `1:1`, `4:3`, `16:9`, `3:2`, `2:1`, `9:16`, `3:4` or any custom `W:H` ratio.
