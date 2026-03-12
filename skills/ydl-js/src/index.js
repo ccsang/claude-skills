@@ -439,7 +439,7 @@ Input JSON: ${JSON.stringify(chunk)}`;
         try {
             responseText = await translateChunk(chunk);
         } catch (err) {
-            console.error(`Translation failed for chunk ${i}: ${errErr.message}. Using original.`);
+            console.error(`Translation failed for chunk ${i}: ${err.message}. Using original.`);
             translated.push(...chunk);
             continue;
         }
