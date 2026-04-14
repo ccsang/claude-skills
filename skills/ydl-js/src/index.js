@@ -1,6 +1,5 @@
 import { getSubtitles } from 'youtube-caption-extractor';
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import { GoogleAIFileManager } from '@google/generative-ai/server';
+import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
@@ -19,21 +18,35 @@ export async function downloadSubtitles(videoId, lang = 'en') {
     try {
         const hasGeminiKey = Boolean(getGeminiApiKey());
 
-        // Force-fetch from the timedtext endpoint for the requested language.
-        let subtitles = await fetchTimedtextSubtitles(videoId, lang);
-
-        // If timedtext is empty (common when YouTube blocks that endpoint), fall back to extractor.
-        if (!subtitles || subtitles.length === 0) {
-            subtitles = await getSubtitles({ videoID: videoId, lang });
+        // Strategy 1: yt-dlp subtitle extraction (most reliable in 2026)
+        let subtitles = null;
+        try {
+            subtitles = await fetchSubtitlesWithYtDlp(videoId, lang);
+        } catch (e) {
+            console.warn(`yt-dlp subtitle extraction failed: ${e.message}`);
         }
 
-        // If we still have nothing, try Gemini transcription if available.
+        // Strategy 2: Google timedtext endpoint (often blocked)
         if (!subtitles || subtitles.length === 0) {
-            if (process.env.GEMINI_API_KEY) {
-                console.log('Subtitle download failed, falling back to Gemini Audio API...');
+            subtitles = await fetchTimedtextSubtitles(videoId, lang);
+        }
+
+        // Strategy 3: youtube-caption-extractor library
+        if (!subtitles || subtitles.length === 0) {
+            try {
+                subtitles = await getSubtitles({ videoID: videoId, lang });
+            } catch (e) {
+                console.warn(`youtube-caption-extractor failed: ${e.message}`);
+            }
+        }
+
+        // Strategy 4: Gemini audio transcription (last resort)
+        if (!subtitles || subtitles.length === 0) {
+            if (hasGeminiKey) {
+                console.log('All subtitle methods failed, falling back to Gemini Audio API...');
                 return await downloadAndTranscribe(videoId, lang);
             }
-            throw new Error('No subtitles found');
+            throw new Error('No subtitles found. Install yt-dlp (brew install yt-dlp) or set GEMINI_API_KEY for audio transcription.');
         }
 
         // Validate language heuristically to avoid silent fallbacks.
@@ -156,24 +169,26 @@ async function downloadWithYtDlp(url, outputPath) {
 
 async function transcribeAudio(audioPath, lang) {
     const apiKey = getGeminiApiKey();
-    const fileManager = new GoogleAIFileManager(apiKey);
-    const genAI = new GoogleGenerativeAI(apiKey);
+    const ai = new GoogleGenAI({ apiKey });
 
-    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
-
-    const uploadResult = await fileManager.uploadFile(audioPath, {
-        mimeType: "audio/mp4", // m4a is mp4 audio
-        displayName: "YouTube Audio",
+    // Upload audio file via the unified Files API
+    const uploadResult = await ai.files.upload({
+        file: audioPath,
+        config: {
+            mimeType: 'audio/mp4', // m4a is mp4 audio
+            displayName: 'YouTube Audio',
+        },
     });
 
-    let file = await fileManager.getFile(uploadResult.file.name);
-    while (file.state === "PROCESSING") {
+    // Wait for file processing to complete
+    let file = await ai.files.get({ name: uploadResult.name });
+    while (file.state === 'PROCESSING') {
         await new Promise((resolve) => setTimeout(resolve, 2000));
-        file = await fileManager.getFile(uploadResult.file.name);
+        file = await ai.files.get({ name: uploadResult.name });
     }
 
-    if (file.state === "FAILED") {
-        throw new Error("Audio processing failed.");
+    if (file.state === 'FAILED') {
+        throw new Error('Audio processing failed.');
     }
 
     const prompt = `Transcribe the audio speech to text in ${lang || 'English'}. 
@@ -184,24 +199,27 @@ async function transcribeAudio(audioPath, lang) {
     - "text": the transcribed text string
     Ensure the JSON is raw and not wrapped in markdown block.`;
 
-    const result = await model.generateContent([
-        prompt,
-        {
-            fileData: {
-                fileUri: uploadResult.file.uri,
-                mimeType: uploadResult.file.mimeType,
+    const result = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: [
+            {
+                role: 'user',
+                parts: [
+                    { text: prompt },
+                    { fileData: { fileUri: file.uri, mimeType: file.mimeType } },
+                ],
             },
-        },
-    ]);
+        ],
+    });
 
-    const responseText = result.response.text();
+    const responseText = result.text;
     // Clean markdown code blocks if any
     const cleanJson = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
 
     try {
         return JSON.parse(cleanJson);
     } catch (e) {
-        throw new Error("Failed to parse Gemini response as JSON: " + responseText);
+        throw new Error('Failed to parse Gemini response as JSON: ' + responseText);
     }
 }
 
@@ -240,6 +258,69 @@ function formatTime(seconds) {
     date.setMilliseconds(seconds * 1000);
     const timeStr = date.toISOString().substr(11, 12).replace('.', ',');
     return timeStr;
+}
+/**
+ * Fetch subtitles using yt-dlp CLI (most reliable method).
+ * Downloads subtitles in json3 format and parses into standard objects.
+ * @param {string} videoId
+ * @param {string} lang
+ * @returns {Promise<Array<{start: number, dur: number, text: string}>>}
+ */
+async function fetchSubtitlesWithYtDlp(videoId, lang) {
+    const { execSync } = await import('child_process');
+
+    // Check if yt-dlp is available
+    try {
+        execSync('which yt-dlp', { stdio: 'ignore' });
+    } catch {
+        throw new Error('yt-dlp not installed');
+    }
+
+    const url = `https://www.youtube.com/watch?v=${videoId}`;
+    const tmpDir = path.join(os.tmpdir(), `ydl-sub-${videoId}-${Date.now()}`);
+    fs.mkdirSync(tmpDir, { recursive: true });
+
+    try {
+        // Try downloading manual subtitles first, then auto-generated
+        const outputTemplate = path.join(tmpDir, '%(id)s');
+
+        // First try manual subs, then auto subs
+        for (const subFlag of ['--write-sub', '--write-auto-sub']) {
+            try {
+                execSync(
+                    `yt-dlp --cookies-from-browser chrome ${subFlag} --sub-lang "${lang}" --sub-format json3 --skip-download -o "${outputTemplate}" "${url}"`,
+                    { stdio: 'pipe', timeout: 30000 }
+                );
+
+                // Find the downloaded subtitle file
+                const files = fs.readdirSync(tmpDir).filter(f => f.endsWith('.json3'));
+                if (files.length > 0) {
+                    const subData = JSON.parse(fs.readFileSync(path.join(tmpDir, files[0]), 'utf8'));
+                    const events = subData.events || [];
+                    const subtitles = events
+                        .filter(e => e.segs && e.segs.length > 0)
+                        .map(e => ({
+                            start: (e.tStartMs || 0) / 1000,
+                            dur: (e.dDurationMs || 0) / 1000,
+                            text: e.segs.map(s => s.utf8 || '').join('').trim()
+                        }))
+                        .filter(s => s.text && s.text !== '\n');
+
+                    if (subtitles.length > 0) {
+                        console.log(`Fetched ${subtitles.length} subtitle entries via yt-dlp (${subFlag})`);
+                        return subtitles;
+                    }
+                }
+            } catch (e) {
+                // Continue to next strategy
+            }
+        }
+
+        return [];
+    } finally {
+        // Clean up temp dir
+        fs.rmSync(tmpDir, { recursive: true, force: true });
+    }
 }
 
 /**
@@ -353,10 +434,12 @@ ${sample}`;
         const apiKey = getGeminiApiKey();
         if (!apiKey) return false;
 
-        const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-001" });
-        const result = await model.generateContent(prompt);
-        return parseLanguageResponse(result.response.text(), targetLang);
+        const ai = new GoogleGenAI({ apiKey });
+        const result = await ai.models.generateContent({
+            model: 'gemini-2.5-flash',
+            contents: prompt,
+        });
+        return parseLanguageResponse(result.text, targetLang);
     } catch (e) {
         console.warn('Gemini language detection failed:', e.message);
         return true; // Fail open
@@ -388,13 +471,6 @@ function parseLanguageResponse(responseText, targetLang) {
  * @returns {Promise<Array<{start:number|string,dur:number|string,text:string}>>}
  */
 async function translateSubtitles(subtitles, targetLang) {
-    let GoogleGenAI;
-    try {
-        ({ GoogleGenAI } = await import('@google/genai'));
-    } catch (e) {
-        throw new Error('Translation requires @google/genai. Please install it (pnpm add @google/genai).');
-    }
-
     const chunkSize = 40;
     const translated = [];
 
@@ -412,8 +488,7 @@ Keep the same start and dur values; only translate text.
 Input JSON: ${JSON.stringify(chunk)}`;
 
         const stream = await client.models.generateContentStream({
-            model: 'gemini-3-pro-preview',
-            config: { thinkingConfig: { thinkingLevel: 'LOW' } },
+            model: 'gemini-2.5-flash',
             contents: [{ role: 'user', parts: [{ text: prompt }] }],
         });
 

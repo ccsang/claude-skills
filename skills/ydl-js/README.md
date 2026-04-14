@@ -6,8 +6,15 @@
 
 *   Download YouTube subtitles/captions.
 *   Support for multiple languages.
-*   Output in SRT or JSON format.
+*   Output in SRT, JSON, or TXT format.
 *   CLI and Library usage.
+*   Multi-strategy fallback: yt-dlp → timedtext API → youtube-caption-extractor → Gemini audio transcription.
+
+## Requirements
+
+- **Node.js** ≥ 18
+- **yt-dlp** (strongly recommended): `brew install yt-dlp`
+- **GEMINI_API_KEY** (optional, for audio transcription and translation fallback)
 
 ## Installation
 
@@ -56,15 +63,28 @@ ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f json
 ydl-js https://www.youtube.com/watch?v=dQw4w9WgXcQ -f txt
 ```
 
+## How It Works
+
+ydl-js uses a multi-strategy fallback to maximize success:
+
+1. **yt-dlp subtitle extraction** (recommended) — downloads subtitle tracks directly via yt-dlp (manual subs first, then auto-generated)
+2. **Google timedtext API** — direct request for subtitle tracks (this endpoint is unreliable now)
+3. **youtube-caption-extractor** — backup subtitle extraction library
+4. **Gemini audio transcription** (requires `GEMINI_API_KEY`) — downloads audio and transcribes via Gemini API
+5. **Gemini translation** (requires `GEMINI_API_KEY`) — auto-translates when subtitle language doesn't match request
+
 ## Library Usage
 
 ```javascript
-import { downloadSubtitles, toSRT } from './src/index.js';
+import { downloadSubtitles, toSRT, toText } from 'ydl-js';
 
 // Get subtitles as array of objects
 const subtitles = await downloadSubtitles('dQw4w9WgXcQ', 'en');
+// => [{ start: 0.32, dur: 1.68, text: "[♪♪♪]" }, ...]
 
 // Convert to SRT string
 const srtContent = toSRT(subtitles);
-console.log(srtContent);
+
+// Convert to plain text (no timestamps)
+const textContent = toText(subtitles);
 ```

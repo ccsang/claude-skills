@@ -11,10 +11,11 @@ YouTube 字幕下载工具，支持 CLI 命令行和 JavaScript API 两种使用
 
 ydl-js 采用多级回退策略获取字幕，确保最大成功率：
 
-1. **Google timedtext API** — 直接请求指定语言的字幕轨道
-2. **youtube-caption-extractor** — 备用字幕提取库
-3. **Gemini 音频转写**（需要 `GEMINI_API_KEY`）— 下载音频后通过 Gemini API 转录为文字
-4. **Gemini 语言翻译**（需要 `GEMINI_API_KEY`）— 当获取到的字幕语言与请求语言不匹配时，自动翻译
+1. **yt-dlp 字幕提取**（推荐）— 通过 yt-dlp 直接下载字幕轨道（手工字幕优先，其次自动生成字幕）
+2. **Google timedtext API** — 直接请求指定语言的字幕轨道（该端点已不稳定）
+3. **youtube-caption-extractor** — 备用字幕提取库
+4. **Gemini 音频转写**（需要 `GEMINI_API_KEY`）— 下载音频后通过 Gemini API 转录为文字
+5. **Gemini 语言翻译**（需要 `GEMINI_API_KEY`）— 当获取到的字幕语言与请求语言不匹配时，自动翻译
 
 音频下载优先使用 `yt-dlp`（需安装），回退到 `ytdl-core`。
 
@@ -80,6 +81,6 @@ const text = toText(subtitles);
 
 ## 环境要求
 
-- **Node.js** ≥ 18
-- **yt-dlp**（推荐安装，提高音频下载成功率）：`brew install yt-dlp`
+- **Node.js** ≥ 18（必须）
+- **yt-dlp**（强烈推荐，字幕获取的首选策略）：`brew install yt-dlp`
 - **GEMINI_API_KEY**（可选，启用 Gemini 音频转写和字幕翻译能力）
