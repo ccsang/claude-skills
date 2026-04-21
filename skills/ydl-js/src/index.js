@@ -200,7 +200,7 @@ async function transcribeAudio(audioPath, lang) {
     Ensure the JSON is raw and not wrapped in markdown block.`;
 
     const result = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3-flash-preview',
         contents: [
             {
                 role: 'user',
@@ -436,7 +436,7 @@ ${sample}`;
 
         const ai = new GoogleGenAI({ apiKey });
         const result = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-3-flash-preview',
             contents: prompt,
         });
         return parseLanguageResponse(result.text, targetLang);
