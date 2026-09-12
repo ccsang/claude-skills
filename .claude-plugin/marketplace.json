@@ -19,7 +19,8 @@
                 "./skills/youtube-search",
                 "./skills/wx-uploader",
                 "./skills/imitate-writing",
-                "./skills/ai-detect"
+                "./skills/ai-detect",
+                "./skills/creative-design-workflow"
             ]
         }
     ]
